@@ -1,4 +1,5 @@
-# <img src="logo/logo_evo2sim_small.png" width="80"> Evo<sup>2</sup>Sim 1.0.1
+<img src="logo/logo_evo2sim_small.png">
+# Evo<sup>2</sup>Sim 1.0.1
 
 Evo<sup>2</sup>Sim is a new multi-scale model of <em>in silico</em> experimental evolution, the virtual pendant of experimental evolution in laboratory. The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis, and, most importantly, allowing for evolvable ecological interactions.
 
@@ -69,5 +70,11 @@ When Evo<sup>2</sup>Sim is compiled in DEBUG mode, a lot of tests are computed o
 #### Executable files emplacement
 Binary executable files are in <code>build/bin</code> folder.
 
+## Typical usage
 
+Evo<sup>2</sup>Sim includes three main executables (<code>evo2sim_create</code>, <code>evo2sim_bootstrap</code> and <code>evo2sim_run</code>), and a set of executables dedicated to post-treatments, data recovery or tests.
+
+Everything in Evo<sup>2</sup>Sim relies on an ad-hoc file organization where all the data for a simulation is stored: populations in the <code>population</code> directory, environments in <code>environment</code>, phylogenetic and lineage trees in <code>tree</code> and so on. It is not recommended to manually modify these files since this may cause some inconsistency leading to undefined behavior. Besides, most of these files are compressed.
+
+Open a terminal and use the <code>cd</code> command to navigate to Evo<sup>2</sup>Sim directory. A typical parameters file is provided in the folder <code>example</code> (an exhaustive description of the parameters is available in chapter “Parameters description”). Navigate to this folder using the <code>cd</code> command. Then follow the steps below for a first usage of the software.
 
