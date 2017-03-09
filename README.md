@@ -1,5 +1,4 @@
-<img src="logo/logo_evo2sim_small.png">
-# Evo<sup>2</sup>Sim 1.0.1
+# <img src="logo/logo_evo2sim_small.png" width=80> Evo<sup>2</sup>Sim 1.0.1
 
 Evo<sup>2</sup>Sim is a new multi-scale model of <em>in silico</em> experimental evolution, the virtual pendant of experimental evolution in laboratory. The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis, and, most importantly, allowing for evolvable ecological interactions.
 
