@@ -1,0 +1,10 @@
+build/bin/**
+*.pyc
+*.a
+cmake/CmakeFiles/
+cmake/CMakeCache.txt
+cmake/cmake_install.cmake
+cmake/Makefile
+cmake/Config.h
+example/**
+!example/parameters.txt
