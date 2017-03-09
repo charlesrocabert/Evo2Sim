@@ -5,7 +5,7 @@ Evo<sup>2</sup>Sim is a new multi-scale model of <em>in silico</em> experimental
 Digital organisms with an evolvable genome structure, encoding evolvable genetic regulation and metabolic networks are evolved for tens of thousands of generations in environments mimicking the dynamics of real controlled environments, including chemostat or batch culture.
 Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evoevo.eu/), a FP7-ICT project funded by the European Commission (FP7-ICT-610427).
 
-## License
+# <img src="logo/logo_evo2sim_small.png" width=48> License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -13,11 +13,11 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
-## Community
+# <img src="logo/logo_evo2sim_small.png" width=48> Community
 
 Evo<sup>2</sup>Sim is developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the EvoEvo project. The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community on http://www.evoevo.eu/community/.
 
-## Installation instructions
+# <img src="logo/logo_evo2sim_small.png" width=48> Installation instructions
 
 Installation instructions are also available in the [User Manual](doc/user_manual/user_manual.pdf).
 
@@ -26,7 +26,7 @@ Download the latest release of Evo<sup>2</sup>Sim, and save it to a directory of
 ### 1. Supported platforms
 Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
 
-### 2. Required dependencies
+## 2. Required dependencies
 * A C++ compiler (GCC, LLVM, ...) ∙ CMake (command line version)
 * zlib
 * GSL
@@ -69,7 +69,7 @@ When Evo<sup>2</sup>Sim is compiled in DEBUG mode, a lot of tests are computed o
 #### Executable files emplacement
 Binary executable files are in <code>build/bin</code> folder.
 
-## Typical usage
+# <img src="logo/logo_evo2sim_small.png" width=48> Typical usage
 
 Evo<sup>2</sup>Sim includes three main executables (<code>evo2sim_create</code>, <code>evo2sim_bootstrap</code> and <code>evo2sim_run</code>), and a set of executables dedicated to post-treatments, data recovery or tests.
 
