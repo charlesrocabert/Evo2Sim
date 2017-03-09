@@ -1,4 +1,6 @@
-<center># Evo2Sim 1.0.1</center>
+
+# <img src="logo/logo_evo2sim_small.png" width="48"> Evo2Sim 1.0.1
+
 Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
 All rights reserved
 
