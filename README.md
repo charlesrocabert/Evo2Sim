@@ -19,7 +19,23 @@ Evo<sup>2</sup>Sim is developed by Charles Rocabert, Carole Knibbe and Guillaume
 
 # Installation instructions
 
+Installation instructions are also available in the [User Manual](doc/user_manual/user_manual.pdf).
+
 Download the latest release of Evo<sup>2</sup>Sim, and save it to a directory of your choice. Open a terminal and use the <code>cd</code> command to navigate to this directory. Then follow the steps below to compile and build the executables.
 
-## Supported platforms
+### 1. Supported platforms
 Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
+
+### 2. Required dependencies
+* A C++ compiler (GCC, LLVM, ...) ∙ CMake (command line version)
+* zlib
+* GSL
+* CBLAS
+* TBB
+* R (packages ape and RColorBrewer are needed)
+
+### 3. Optional dependencies (for graphical outputs)
+* X11 (or XQuartz on latest OSX version)
+* SFML 2
+* matplotlib (this python library is needed for the script track_cell.py (see below)
+
