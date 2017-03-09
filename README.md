@@ -27,7 +27,8 @@ Download the latest release of Evo<sup>2</sup>Sim, and save it to a directory of
 Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
 
 ### 2. Required dependencies
-* A C++ compiler (GCC, LLVM, ...) ∙ CMake (command line version)
+* A C++ compiler (GCC, LLVM, ...)
+* CMake (command line version)
 * zlib
 * GSL
 * CBLAS
