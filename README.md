@@ -75,5 +75,34 @@ Evo<sup>2</sup>Sim includes three main executables (<code>evo2sim_create</code>,
 
 Everything in Evo<sup>2</sup>Sim relies on an ad-hoc file organization where all the data for a simulation is stored: populations in the <code>population</code> directory, environments in <code>environment</code>, phylogenetic and lineage trees in <code>tree</code> and so on. It is not recommended to manually modify these files since this may cause some inconsistency leading to undefined behavior. Besides, most of these files are compressed.
 
-Open a terminal and use the <code>cd</code> command to navigate to Evo<sup>2</sup>Sim directory. A typical parameters file is provided in the folder <code>example</code> (an exhaustive description of the parameters is available in chapter “Parameters description”). Navigate to this folder using the <code>cd</code> command. Then follow the steps below for a first usage of the software.
+Open a terminal and use the <code>cd</code> command to navigate to Evo<sup>2</sup>Sim directory. A typical parameters file is provided in the folder <code>example</code> (an exhaustive description of the parameters is available in the [User Manual](doc/user_manual/user_manual.pdf)). Navigate to this folder using the <code>cd</code> command. Then follow the steps below for a first usage of the software.
+
+### 1. Create a simulation
+Create a fresh simulation from the parameters file (by default <code>parameters.txt</code>):
+
+    ../build/bin/evo2sim_create
+
+Several folders have been created. They mainly contain simulation backups (population, environment, trees, parameters, ...). Additional files and folders have also been created:
+* <code>version.txt</code>: this file indicates the version of the software. This information is useful to ensure that the code version is compatible with the backup files (<em>e.g.</em>, in case of post-treatments).
+* <code>track_cell.py</code>: when executed, this python script displays on the fly the internal protein and metabolic concentrations of the cell at position 0 × 0 on the grid. This script is useful to get an idea of internal cell’s dynamics (metabolic fluxes, regulation,).
+* <code>viewer</code> folder: the viewer is central to the usage of Evo2Sim (see [User Manual](doc/user_manual/user_manual.pdf)). To access the viewer, open the html page <code>viewer/viewer.html</code> in an internet browser.
+
+### 2. Generate viable initial conditions with a bootstrap
+Alternatively to the <code>evo2sim_create</code> executable, use a bootstrap to find a simulation with good initial properties from the parameters file:
+
+    ../build/bin/evo2sim_bootstrap
+
+A fresh simulation with an updated parameters file will be automatically created if a suitable seed is found.
+
+### 3. Run a simulation
+In Evo<sup>2</sup>Sim, running a simulation necessitates to load it from backup files. Here, we will run a simulation from freshly created backups (see above):
+
+    ../build/bin/evo2sim_run -b 0 -t 10000 -g
+
+
+with <code>-b</code> the date of the backup, here 0 (fresh simulation), <code>-t</code> the simulation time, here 10,000 time-steps. Option <code>-g</code> activates the graphical output (does not work if the software has been compiled with the no-graphics option). At any moment during the simulation, you can take a closer look at the evolution of the system by opening <code>viewer/viewer.html</code> in an internet browser. You can track internal cell’s dynamics by executing the script <code>track_cell.py</code>.
+
+Other main executables are described in the [User Manual](doc/user_manual/user_manual.pdf) (section “Main executables description”). You can also obtain help by running the executable with the <code>-h</code> option (<em>e.g.</em> <code>evo2sim_create -h</code>)
+
+
 
