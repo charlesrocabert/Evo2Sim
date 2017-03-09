@@ -1,0 +1,38 @@
+\chapter{Introduction}
+
+\section{Introducing \packageName}
+
+{\packageName} is a new multi-scale model of \textit{in silico} experimental evolution, the virtual pendant of experimental evolution in wet laboratory (see Fig~\ref{general_algorithm}).
+The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis, and, most importantly, allowing for evolvable ecological interactions. Digital organisms with an evolvable genome structure, encoding evolvable genetic regulation and metabolic networks are evolved for tens of thousands of generations in environments mimicking the dynamics of real controlled environments, including chemostat or batch culture.
+
+{\packageName} was developed under \textsc{EvoEvo} (\href{http://www.evoevo.eu/}{http://www.evoevo.eu/}), a FP7-ICT project funded by the European Commission (FP7-ICT-610427). The source code is written in C++.
+
+You can find more details on software description and development on \href{http://www.evoevo.eu/evo2sim-software/}{http://www.evoevo.eu/evo2sim-software/}. A website fully dedicated to {\packageName} is coming soon. The software is still in beta, thus be aware that backward compatibility is not yet ensured.
+
+\begin{figurehere}
+\centering 
+\includegraphics[width=0.85\textwidth]{figures/general_algorithm.pdf}
+\caption[Global picture of {\packageName}.]{\small{\textbf{Global picture of {\packageName}.} The genotype-to-phenotype mapping, as well as the population and environment, are represented here. \textbf{(A) Description of the genotype-to-phenotype mapping.} Organisms own a coarse-grained genome made of genomic units. This genome is a circular single-strand sequence, with a unique reading frame. Non coding units \textbf{(NC, grey circles)} are not functional \textbf{(A.1)}. The arrangement of the genomic units on the sequence defines functional regions, where a promoter (\textbf{P}, blue cross) controls the expression of enzyme coding units (\textbf{E}, red circles) or transcription factor coding units (\textbf{TF}, purple squares), thereby allowing for operons (here, one E and one TF). When coding units are expressed \textbf{(A.2)}, they contribute to the genetic regulatory network (for transcription factors) and the metabolic network (for enzymes).
+Depending on their attributes, transcription factors bind on binding sites. \textbf{(A.3)} If they bind on the enhancer sequence (binding sites flanking the promoter upstream), the promoter activity is up-regulated. If they bind on the operator sequence (binding sites flanking the promoter downstream), the promoter activity is down-regulated. \textbf{(A.4)} Metabolites can bind on a transcription factor as co-enzymes, and activate or inhibit it, depending on transcription factor attributes.
+Enzymes perform metabolic reactions in the cytoplasm \textbf{(A.5)}, or pump metabolites in or out \textbf{(A.6)}. The score of an organism is computed from its ``essential metabolites''
+(usually the score is the sum of essential metabolite concentrations). Lethal toxicity thresholds are applied to each metabolic concentration and forbid organisms to accumulate resources. \textbf{(B) Description of the population and environment levels.} Organisms are placed on a 2D toroidal grid, and compete for resources and space. When an organism dies, it leaves its grid cell empty and organisms in the Moore neighborhood (if any) compete to divide in available space. The competition is based on scores, a minimal threshold being applied on scores to forbid worst organisms to divide. At division, daughters share cytoplasm content (enzymes and metabolites). At death, metabolites from the cytoplasm are released in the local environment, and diffuse on the grid \textbf{(B.1)}. On the largest scale, the population evolves on the environment by up-taking, transforming and releasing metabolites. Metabolites then diffuse and are degraded. This strong interaction between the population and the environment allows for the evolution of complex ecological situations, depending on environmental properties \textbf{(B.2)}.}}
+\label{general_algorithm}
+\end{figurehere}
+
+\section{License}
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{http://www.gnu.org/licenses/}.
+
+\section{Community}
+{\packageName} was developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the \textsc{EvoEvo} project. The list of contributors is displayed in text-file \texttt{AUTHORS} of {\packageName}  package.
+You shall find more details on \textsc{EvoEvo} community on \href{http://www.evoevo.eu/community/}{http://www.evoevo.eu/community/}.
+
+\section{Download}
+{\packageName} last releases are available at \href{http://www.evoevo.eu/softwares/}{http://www.evoevo.eu/softwares/}, as well as some typical examples.
+
+\section{Contact}
+For any question about the software, do not hesitate to contact us via \href{http://www.evoevo.eu/contact-us/}{http://www.evoevo.eu/contact-us/} or \href{charles.rocabert@gmail.com}{charles.rocabert@gmail.com}.

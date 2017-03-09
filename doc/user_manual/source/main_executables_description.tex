@@ -1,0 +1,140 @@
+\chapter{Main executables description}
+
+%================= CREATE ====================
+\section{\texttt{evo2sim\_create} executable}
+Create a fresh simulation from a parameters file.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_create -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_create [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-f, -{}-file}:] specify the parameters file (default: \texttt{parameters.txt})
+        \item[\texttt{-rs, -{}-random-seed}:] the prng seed is drawn at random (optional)
+\end{description}
+Be aware that creating a simulation in a folder completely erases previous simulation.
+
+%================= BOOTSTRAP =========================
+\section{\texttt{evo2sim\_bootstrap} executable}
+Run a bootstrap to find viable initial conditions.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_bootstrap -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_bootstrap [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-f, -{}-file}:] specify the parameters file (default: \texttt{parameters.txt})
+        \item[\texttt{-min, -{}-minimum-time}:] specify the minimum time the new population must survive (default: 100)
+        \item[\texttt{-pop, -{}-minimum-pop-size}:] specify the minimum size the new population must maintain (default: 500)
+        \item[\texttt{-t, --trials}:] specify the number of trials (default: 1000)
+        \item[\texttt{-g, -{}-graphics}:]  activate graphic display (optional)
+\end{description}
+A simulation is automatically created if good conditions are found.
+The parameters file is also edited to include the corresponding prng seed value.
+Be aware that creating a simulation in a folder completely erases previous simulation.
+
+%================= RUN =========================
+\section{\texttt{evo2sim\_run} executable}
+Run a simulation from backup files.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_run -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_run [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-b, -{}-backup-time}:] set the date of the backup to load (default: 0)
+        \item[\texttt{-t, -{}-simulation-time}:] set the duration of the simulation (default: 10000)
+        \item[\texttt{-g, -{}-graphics}:]  activate graphic display (optional)
+\end{description}
+Statistic files content is automatically managed when a simulation is reloaded from backup to avoid data loss.
+
+%================= GENERATE FIGURES =========================
+\section{\texttt{evo2sim\_generate\_figures} executable}
+Extract statistics and generate viewer figures from backup files.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_generate\_figures -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_generate\_figures [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-b, -{}-backup-time}:] set the date of the backup to load (mandatory)
+\end{description}
+
+%================= RECOVER PARAMETERS =========================
+\section{\texttt{evo2sim\_recover\_parameters} executable}
+Recover the parameters file from backup files.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_recover\_parameters -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_recover\_parameters [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-f, -{}-file}:] specify the name of the parameters file to save (mandatory)
+\end{description}
+    
+%================= UNITARY TESTS =========================
+\section{\texttt{evo2sim\_unitary\_tests} executable}
+Run unitary tests.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_unitary\_tests -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_unitary\_tests [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-f, -{}-file}:] specify the parameters file (default: \texttt{parameters.txt})
+\end{description}
+
+To use the unitary tests, the software must be compiled in DEBUG mode (see installation instructions below).
+
+%================= INTEGRATED TESTS =========================
+\section{\texttt{evo2sim\_integrated\_tests} executable}
+Run integrated tests.
+\paragraph{Usage:}
+\begin{itemize}
+        \item[\$] \texttt{evo2sim\_integrated\_tests -h} or \texttt{-{}-help}
+        \item[or]
+        \item[\$] \texttt{evo2sim\_integrated\_tests [options]}
+\end{itemize}
+\paragraph{Options are:}
+\begin{description}
+        \item[\texttt{-h, -{}-help}:] print this help, then exit (optional)
+        \item[\texttt{-v, -{}-version}:] print the current version, then exit (optional)
+        \item[\texttt{-f, -{}-file}:] specify the parameters file (default: \texttt{parameters.txt})
+        \item[\texttt{-tests, -{}-number-of-tests}:] specify the number of tests with different seeds (default: 1)
+        \item[\texttt{-steps, -{}-number-of-steps}:] specify the number of steps by test (default: 1)
+        \item[\texttt{-rs, -{}-random-seed}:] the prng seed is drawn at random for each test (optional)
+        \item[\texttt{-rp, -{}-random-parameters}:] the parameters are drawn at random for each test (optional)
+\end{description}
+
+To use the unitary tests, the software must be compiled in DEBUG mode (see installation instructions below).
+
+\section{Other executables}
+
+For all the other executables, you can obtain help by running the executable with the \texttt{-h} option (e.g. \texttt{evo2sim\_create -h})
+
+
+

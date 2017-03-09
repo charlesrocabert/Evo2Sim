@@ -1,0 +1,23 @@
+\chapter{Simulation viewer}
+
+{\packageName} comes with an HTML viewer displaying a very complete set of live statistics. Each new simulation owns a dedicated viewer, which is frequently actualized on the fly (by default, every 500 simulation time-steps). This viewer has been developed using \texttt{Bootstrap}, \texttt{DyGraph}, \texttt{CytoscapeJS}, \texttt{ChartJS} and \texttt{JQuery}.
+
+To access the viewer, simply open \texttt{viewer/viewer.html} in an internet browser (Javascript must be enabled). The different tabs are described below.
+
+\section{Population} 
+This page displays the evolution of main population statistics (population size, mean genome size, mean score, ...), as well as the evolution of the trophic network.
+
+\section{Best lineage}
+This page displays the evolution of last best individual statistics. These informations are the most representative of evolutionary dynamics, since they contains all the mutations fixed since the beginning of the simulation.
+
+\section{Best individual}
+This page displays some informations about the last best individual at the moment of the visualization (genome state, genetic regulation network, metabolic network, internal metabolic state, ...).
+
+\section{Environment}
+This page displays the evolution of main environment statistics, as well as its current state.
+
+\section{Phylogeny}
+This page displays various rendering of the current phylogenetic tree, as well as some evolution statistics (number of nodes, common ancestor age, ...).
+
+\section{Parameters}
+This page displays the parameters file used to create the simulation, as well as a short description of parameters usage.

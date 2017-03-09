@@ -1,0 +1,55 @@
+
+/**
+ * \file      Config.h
+ * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * \date      07-10-2015
+ * \copyright Copyright (c) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \license   This project is released under the GNU General Public License
+ * \brief     Definition of CMake configuration parameters
+ */
+
+/****************************************************************************
+ * Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * E-mail: charles.rocabert@inria.fr
+ * Web: http://www.evoevo.eu/
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ ****************************************************************************/
+
+#ifndef __EVOEVO__Config__
+#define __EVOEVO__Config__
+
+
+/*-------------------------------------*/
+/* 1) DEFINE PACKAGE NAME              */
+/*-------------------------------------*/
+
+#define PACKAGE @PACKAGE@
+
+/*-------------------------------------*/
+/* 2) DEFINE VERSION NUMBER            */
+/*-------------------------------------*/
+
+#define VERSION_MAJOR @VERSION_MAJOR@
+#define VERSION_MINOR @VERSION_MINOR@
+#define VERSION_PATCH @VERSION_PATCH@
+
+/*-------------------------------------*/
+/* 3) DEFINE GRAPHICAL OPTION          */
+/*-------------------------------------*/
+
+#define WITH_GRAPHICS_CONTEXT @WITH_GRAPHICS_CONTEXT@
+
+
+#endif /* defined(__EVOEVO__Config__) */

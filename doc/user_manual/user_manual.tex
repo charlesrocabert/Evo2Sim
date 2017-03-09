@@ -1,0 +1,170 @@
+
+\documentclass[10pt]{report}
+
+%-----------------------------------------------%
+% chargement des librairies de base %
+%-----------------------------------------------%
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais, english]{babel}
+\usepackage[babel=true]{csquotes}
+\usepackage{layout}
+\usepackage[left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{url}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{natbib}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+\usepackage[geometry]{ifsym}
+\usepackage{cmap}
+\usepackage{stmaryrd}
+\usepackage{tabularx}
+
+%-----------------------------%
+% sélection du langage %
+%-----------------------------%
+\selectlanguage{english}
+
+%----------------------------------%
+% package name definition %
+%-----------------------------------%
+\newcommand{\packageName}{Evo\up{2}Sim}
+\newcommand{\packageVersion}{1.0.1}
+
+%---------------------------------%
+% gestion des divers liens %
+%---------------------------------%
+\usepackage{hyperref}
+\hypersetup{
+    backref=true,    %permet d'ajouter des liens dans...
+    pagebackref=true,%...les bibliographies
+    hyperindex=true, %ajoute des liens dans les index.
+    colorlinks=true, %colorise les liens
+    breaklinks=true, %permet le retour à la ligne dans les liens trop longs
+    urlcolor=black, %couleur des hyperliens
+    linkcolor=black, %couleur des liens internes
+    citecolor=black, %couleur des ref
+    bookmarks=true, %crée des signets pour Acrobat
+    bookmarksopen=true,
+    pdffitwindow=true,
+    %si les signets Acrobat sont créés,
+    %les afficher complètement.
+    pdfauthor={Charles Rocabert},
+    pdftitle={{\packageName} User Manual},
+    pdfsubject={{\packageName} User Manual},
+    pdfcreator={charles.rocabert@inria.fr},
+    pdfkeywords={}
+    %sous Acrobat.
+}
+
+%---------------------------------------%
+% mise en forme des colonnes %
+%---------------------------------------%
+\setlength{\columnsep}{30pt}
+\numberwithin{equation}{section}
+
+%-----------------------------------------------------%
+% définition de l'environnement tablehere %
+%-----------------------------------------------------%
+\renewcommand{\textfraction}{0}
+\makeatletter
+\newenvironment{tablehere}
+{\def\@captype{table}}
+{}
+
+%------------------------------------------------------%
+% définition de l'environnement figurehere %
+%------------------------------------------------------%
+\newenvironment{figurehere}
+{\def\@captype{figure}}
+{}
+\makeatother
+
+%--------------------------------------%
+% mise en forme du glossaire %
+%--------------------------------------%
+\newcommand*{\glossfirstformat}[1]{\textsf{#1}}
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+\renewcommand{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
+\renewcommand*{\glsnamefont}{\sffamily}
+
+%-----------------------------------%
+% définition header + footer %
+%-----------------------------------%
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[RE,LO]{{\packageName} User Manual ({\packageVersion})}
+%\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{Page \thepage}
+
+
+%----------------------------%
+% début du document %
+%----------------------------%
+\begin{document}
+
+\thispagestyle{empty}
+
+\rule{\linewidth}{2pt}
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.2\linewidth]{./figures/icon.png}
+\end{figure}
+
+\begin{center}
+{\Huge {\bf {\packageName} User Manual}}
+
+for version {\packageVersion} (\today)
+\end{center}
+\rule{\linewidth}{2pt}
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\input{./source/introduction.tex}
+
+\newpage
+
+\input{./source/installation_instructions.tex}
+
+\newpage
+
+\input{./source/typical_usage.tex}
+
+\newpage
+
+\input{./source/simulation_viewer.tex}
+
+\appendix
+
+\newpage
+
+\input{./source/main_executables_description.tex}
+
+\newpage
+
+\input{./source/parameters_description.tex}
+
+\end{document}

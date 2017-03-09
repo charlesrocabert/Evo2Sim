@@ -1,0 +1,158 @@
+
+########################################################
+# PSEUDORANDOM NUMBERS GENERATOR
+########################################################
+
+SEED  20009500
+
+
+########################################################
+# PARALLEL COMPUTING
+########################################################
+
+PARALLEL_COMPUTING  YES (YES, NO)
+
+
+########################################################
+# SIMULATION SCHEMES
+########################################################
+
+ENERGY_COSTS_SCHEME           NO  (YES, NO)
+MEMBRANE_PERMEABILITY_SCHEME  NO  (YES, NO)
+METABOLIC_INHERITANCE_SCHEME  YES (YES, NO)
+ENZYMATIC_INHERITANCE_SCHEME  YES (YES, NO)
+CO_ENZYME_ACTIVITY_SCHEME     YES (YES, NO)
+
+SCORE_SCHEME         SUM (SUM, SUM_MINUS_DEV, COMBINATORIAL)
+SELECTION_THRESHOLD  0
+
+
+########################################################
+# SPACE
+########################################################
+
+WIDTH   32
+HEIGHT  32
+
+
+########################################################
+# OUTPUT
+########################################################
+
+SIMULATION_BACKUP_STEP   1000
+FIGURES_GENERATION_STEP  500
+
+
+########################################################
+# GENOME
+########################################################
+
+LOAD_GENOME_FROM_FILE  NO  (YES, NO)
+
+METABOLITE_TAG_INITIAL_RANGE            1 20
+BINDING_SITE_TAG_INITIAL_RANGE          1 20
+CO_ENZYME_TAG_INITIAL_RANGE             1 20
+TRANSCRIPTION_FACTOR_TAG_INITIAL_RANGE  1 20
+
+TRANSCRIPTION_FACTOR_BINDING_WINDOW  0
+
+INITIAL_NUMBER_OF_NON_CODING_UNITS            10
+INITIAL_NUMBER_OF_ENZYME_UNITS                10
+INITIAL_NUMBER_OF_TRANSCRIPTION_FACTOR_UNITS  10
+INITIAL_NUMBER_OF_BINDING_SITE_UNITS          10
+INITIAL_NUMBER_OF_PROMOTER_UNITS              10
+
+POINT_MUTATION_RATE  0.001
+DUPLICATION_RATE     0.001
+DELETION_RATE        0.001
+TRANSLOCATION_RATE   0.001
+INVERSION_RATE       0.001
+TRANSITION_RATE      0.001
+BREAKPOINT_RATE      0.001
+
+SUBSTRATE_TAG_MUTATION_SIZE             1
+PRODUCT_TAG_MUTATION_SIZE               1
+KCAT_MUTATION_SIZE                      0.1
+KCAT_KM_RATIO_MUTATION_SIZE             0.1
+BINDING_SITE_TAG_MUTATION_SIZE          1
+CO_ENZYME_TAG_MUTATION_SIZE             1
+TRANSCRIPTION_FACTOR_TAG_MUTATION_SIZE  1
+BASAL_EXPRESSION_LEVEL_MUTATION_SIZE    0.1
+
+
+########################################################
+# GENETIC REGULATION NETWORK
+########################################################
+
+GENETIC_REGULATION_NETWORK_TIMESTEP  10
+
+HILL_FUNCTION_THETA       0.5
+HILL_FUNCTION_N           4
+PROTEIN_DEGRADATION_RATE  1
+
+
+########################################################
+# METABOLIC NETWORK
+########################################################
+
+METABOLISM_TIMESTEP  100
+
+ESSENTIAL_METABOLITES_TOXICITY_THRESHOLD      1
+NON_ESSENTIAL_METABOLITES_TOXICITY_THRESHOLD  1
+
+INITIAL_METABOLITES_AMOUNT_IN_CELLS  0.01
+
+MAXIMUM_REACTION_SIZE  100
+
+
+########################################################
+# ENERGY
+########################################################
+
+ENERGY_TRANSCRIPTION_COST  0
+ENERGY_DEGRADATION_COST    0
+ENERGY_ENZYMATIC_COST      0
+ENERGY_PUMPING_COST        0
+
+ENERGY_DISSIPATION_RATE  0
+
+ENERGY_TOXICITY_THRESHOLD  1e+08
+
+INITIAL_ENERGY_AMOUNT_IN_CELLS  0
+
+
+########################################################
+# CELL
+########################################################
+
+MEMBRANE_PERMEABILITY  0
+
+
+########################################################
+# POPULATION
+########################################################
+
+DEATH_PROBABILITY  0.02
+MIGRATION_RATE     0
+HGT_RATE           0
+
+
+########################################################
+# ENVIRONMENT
+########################################################
+
+ENVIRONMENT_INITIALIZATION_CYCLES    1
+ENVIRONMENT_SPECIES_TAG_RANGE        10 10
+ENVIRONMENT_CONCENTRATION_RANGE      10 10
+ENVIRONMENT_NUMBER_OF_SPECIES_RANGE  1 1
+
+ENVIRONMENT_INTERACTION_SCHEME   INTERACTION (NO_INTERACTION/INTERACTION)
+ENVIRONMENT_RENEWAL_SCHEME       CLEAR_MATTER (KEEP_MATTER/CLEAR_MATTER)
+ENVIRONMENT_VARIATION_SCHEME     PERIODIC (RANDOM/PERIODIC/CYCLIC)
+ENVIRONMENT_LOCALIZATION_SCHEME  GLOBAL (GLOBAL/RANDOM/SPOT/CENTER)
+ENVIRONMENT_METABOLIC_SCHEME     UNIQUE (UNIQUE/MULTIPLE/BOUNDARIES)
+
+ENVIRONMENT_INTRODUCTION_RATE      0.003
+ENVIRONMENT_DIFFUSION_COEFFICIENT  0.1
+ENVIRONMENT_DEGRADATION_RATE       0
+

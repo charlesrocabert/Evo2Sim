@@ -1,0 +1,58 @@
+\chapter{Installation instructions}
+
+Download the latest release of {\packageName} at \href{http://www.evoevo.eu/software/}{http://www.evoevo.eu/software/} and save it to a directory of your choice. Open a terminal and use the \texttt{cd} command to navigate to this directory. Then follow the steps below to compile and build the executables.
+
+\section{Supported platforms}
+{\packageName} software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
+
+\subsection{Required dependencies}
+\begin{itemize}
+	\item A \texttt{C++} compiler (GCC, LLVM, ...)
+	\item \texttt{CMake} (command line version)
+	\item \texttt{zlib}
+	\item \texttt{GSL}
+	\item \texttt{CBLAS}
+	\item \texttt{TBB}
+	\item \texttt{R} (packages \texttt{ape} and \texttt{RColorBrewer} are needed)
+\end{itemize}
+
+\subsection{Optional dependencies (for graphical outputs)}
+\begin{itemize}
+	\item \texttt{X11} (or \texttt{XQuartz} on latest OSX version)
+	\item \texttt{SFML 2}
+	\item \texttt{matplotlib} (this python library is needed for the script \texttt{track\_cell.py} (see below)
+\end{itemize}
+
+\subsection{HTML viewer dependencies}
+\begin{itemize}
+	\item Javascript must be activated in your favorite internet browser
+\end{itemize}
+
+Note, however, that {\packageName} can be compiled without graphical outputs, and hence no need for X and SFML libraries (see compilation instructions below for more information). This option is useful if you want to run {\packageName} on a computer cluster, for example.
+
+\section{Software compilation}
+
+\subsection{User mode}
+To compile {\packageName}, run the following instructions on the command line:
+\begin{itemize}
+	\item[\$] \texttt{cd cmake/}
+\end{itemize}
+and
+\begin{itemize}
+	\item[\$] \texttt{bash make.sh}
+\end{itemize}
+
+To gain performances during large experimental protocols, or on computer cluster, you should compile the software without graphical outputs:
+\begin{itemize}
+	\item[\$] \texttt{bash make\_no\_graphics.sh}
+\end{itemize}
+
+\subsection{Debug mode}
+To compile the software in \texttt{DEBUG} mode, use \texttt{make\_debug.sh} script instead of \texttt{make.sh}:
+\begin{itemize}
+	\item[\$] \texttt{bash make\_debug.sh}
+\end{itemize}
+When {\packageName} is compiled in \texttt{DEBUG} mode, a lot of tests are computed on the fly during a simulation (\textit{e.g.} integrity tests on phylogenetic trees, or on the ODE solver \ldots). For this reason, this mode should only be used for test or development phases. Moreover, unitary and integrated tests must be ran in \texttt{DEBUG} mode (see below).
+
+\subsection{Executable files emplacement}
+Binary executable files are in \texttt{build/bin} folder.

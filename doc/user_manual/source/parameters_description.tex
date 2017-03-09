@@ -1,0 +1,649 @@
+\chapter{Parameters description}
+
+All the parameters of the parameters file are described in details below. Each parameters receive at least on value. There is three types of values:
+\begin{itemize}
+	\item {\bf integer}: integer number
+	\item {\bf float}: floating point number
+	\item {\bf string}: characters string
+\end{itemize}
+For each parameter, the type is possibly bounded. In this case, boundaries are indicated.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Pseudorandom numbers generator}
+
+\begin{center}
+{\bf SEED} <seed> (integer > 0)
+\end{center}
+Simply set the seed of the pseudorandom numbers generator (prng). The seed value is important since it allows to exactly replay a simulation if needed. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Parallel computing}
+
+\begin{center}
+{\bf PARALLEL\_COMPUTING} <choice> (YES/NO)
+\end{center}
+This parameter allows to activate, or deactivate, parallel computing at will. Parallel computing is managed by the external library \texttt{TBB}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Simulation schemes}
+
+\subsection{Energy costs scheme}
+\begin{center}
+{\bf ENERGY\_COSTS\_SCHEME} <choice> (YES/NO)
+\end{center}
+Choose the energy scheme. By default, biochemical reactions are energy free in {\packageName}. When energy costs are activated, inner cell's chemical reactions produce or consume energy (an abstract view of energy carriers, like ATP). Transcription, enzymatic reactions and pumps else produce or cost energy to the cell, which must maintain its energy level to survive. Specific parameters are used to precisely set energy costs (see below).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Membrane permeability scheme}
+\begin{center}
+{\bf MEMBRANE\_PERMEABILITY\_SCHEME} <choice> (YES/NO)
+\end{center}
+Choose membrane permeability scheme. If membrane permeability is activated, metabolites diffuse through the cell's membrane at a specific rate (see MEMBRANE\_PERMEABILITY parameter below).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Metabolic inheritance scheme}
+\begin{center}
+{\bf METABOLIC\_INHERITANCE\_SCHEME} <choice> (YES/NO)
+\end{center}
+Choose metabolic inheritance scheme. If this parameter is activated, the two daughter cells share the metabolic content of their parent. Each daughter cell inherits half of metabolic concentrations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Enzymatic inheritance scheme}
+\begin{center}
+{\bf ENZYMATIC\_INHERITANCE\_SCHEME} <choice> (YES/NO)
+\end{center}
+Choose enzymatic inheritance scheme. If this parameter is activated, the two daughter cells share the enzymatic content of their parent. Each daughter cell inherits half of enzymatic concentrations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Co-enzymes scheme}
+\begin{center}
+{\bf CO\_ENZYME\_ACTIVITY} <choice> (YES/NO)
+\end{center}
+Choose co-enzyme scheme. If this parameter is activated, some metabolites act as co-enzymes. Each transcription-factor owns a site where a specific metabolite can bind, activating or inhibiting the transcription factor depending on its properties. Activating this parameter increases the complexity of the genetic regulation network, and more importantly, allows cells to evolve environmental sensing.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Score scheme}
+\begin{center}
+{\bf SCORE\_SCHEME} <choice> (SUM/SUM\_MINUS\_DEV/COMBINATORIAL)
+\end{center}
+Choose the score scheme. The score of a cell is computed from its internal metabolic concentrations:
+\begin{itemize}
+\item SUM scheme: the score is simply the sum of essential metabolite concentrations;
+\item SUM\_MINUS\_DEV scheme: the score is the sum of essential metabolite concentrations, minus the standard deviation of the concentrations. This score adds an homeostatic constraint on cells.
+\item COMBINATORIAL scheme: the score is computed depending on relative essential metabolite concentrations. Basically, essential metabolites are considered to form complex molecules similar to RNA polymerases. Bigger is the polymerase, higher is its contribution to the score. Then, the bigger polymerase including all the essential metabolites is defined by the lowest concentration. Since the lowest metabolite is exhausted for this polymerase, the next one is the contribution of remaining metabolites, and so forth.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Selection threshold}
+\begin{center}
+{\bf SELECTION\_THRESHOLD} <threshold> (float $\in [0, 1]$)
+\end{center}
+Define a score threshold, above which cell's division is forbidden. When neighboring cells compete for a gap in the environment, one cell is elected at random by a roulette wheel draw, based on relative scores. However, a minimum threshold is mandatory to avoid individuals owning a very low score to divide, and drive the population in an artificial dead-end (where everybody is very bad, but nobody dies).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Space}
+
+\subsection{Grid width}
+\begin{center}
+{\bf WIDTH} <width> (integer > 0)
+\end{center}
+Simply define the width of the environmental grid.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Grid height}
+\begin{center}
+{\bf HEIGHT} <height> (integer > 0)
+\end{center}
+Simply define the height of the environmental grid.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Output}
+
+\subsection{Simulation backup step}
+\begin{center}
+{\bf SIMULATION\_BACKUP\_STEP} <step> (integer $\ge 0$)
+\end{center}
+Define the frequency at which backups of the simulation are saved. The resolution is in simulation time-steps. It is possible to exactly replay a simulation from backup files. Be aware that backup files size is large, the backup frequency must be reasonable (\textit{e.g.}, 1,000 time-steps).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Figures generation step}
+\begin{center}
+{\bf FIGURES\_GENERATION\_STEP} <step> (integer $\ge 0$)
+\end{center}
+Define the frequency at which figures are generated for the html viewer. Some scripts used to generate figures may take more time to execute for very long simulations, the backup frequency must be reasonable (\textit{e.g.}, 1,000 time-steps).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Genome}
+
+\subsection{Load the genome from file}
+\begin{center}
+{\bf LOAD\_GENOME\_FROM\_FILE} <choice> (YES/NO)
+\end{center}
+Choose to generate genomes at random (NO, in this case, random generation depends on parameters below), or load a handcrafted genome from a file (YES). In case the handcrafted genome is loaded, it must be encoded in a file named \texttt{initial\_genome.txt}. The structure of this file is specific and must respect the following scheme:
+\begin{enumerate}
+\item To encode non-coding units (NC), insert the following line: \texttt{NC <number of units>}. The specified number of random NC units will be inserted (\texttt{<number of units>} $> 0$);
+\item To encode a promoter unit (P), insert the following line: \texttt{P <basal expression level>}. A promoter unit with a basal expression level $\beta=\texttt{<basal expression level>}$ will be inserted ($\beta \in [0,1]$);
+\item To encode a binding site unit (BS), insert the following line: \texttt{BS <TF tag>}. A binding site unit owning the specified transcription factor tag value will be inserted (\texttt{<TF tag>} $\in \mathbb{Z}$);
+\item To encode a transcription factor coding unit (TF), insert the following line: \texttt{TF <BS tag> <CoE tag> <free activity> <bound activity> <binding window>}. A transcription factor coding unit with specified attributes will be inserted (\texttt{<BS tag>} $\in \mathbb{Z}$, \texttt{<CoE tag>} $\in \mathbb{N}^*$, \texttt{<free activity>} $\in \{true, false\}$, \texttt{<bound activity>} $\in \{true, false\}$, \texttt{<binding window>} $\ge 0$);
+\item To encode an enzyme coding unit (E), insert the following line: \texttt{E <substrate> <product> <$k_{cat}$> <$K_M$>}. An enzyme coding unit with specified attributes will be inserted (\texttt{<substrate>} $> 0$, \texttt{<product>} $> 0$, \texttt{<$k_{cat}$>} and \texttt{<$K_M$>} $\in$ specified boundaries).
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Metabolite tags initial range}
+\begin{center}
+{\bf METABOLITE\_TAG\_INITIAL\_RANGE} <min> <max> (integer > 0; min $\le$ max)
+\end{center}
+Define the initial distribution of metabolite tags encoded in the initial random genome (\textit{i.e.}, in transcription factor and enzyme units). \texttt{min} and \texttt{max} values define the boundaries of a uniform law, used to draw the metabolite tags.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Binding site tags initial range}
+\begin{center}
+{\bf BINDING\_SITE\_TAG\_INITIAL\_RANGE} <min> <max> (float > 0; min $\le$ max)
+\end{center}
+Define the initial distribution of binding site tags encoded in the initial random genome (\textit{i.e.}, in transcription factor units). \texttt{min} and \texttt{max} values define the boundaries of a uniform law, used to draw the binding site tags.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Co-enzyme tags initial range}
+\begin{center}
+{\bf CO\_ENZYME\_TAG\_INITIAL\_RANGE} <min> <max> (float > 0; min $\le$ max)
+\end{center}
+Define the initial distribution of co-enzyme tags encoded in the initial random genome (\textit{i.e.}, in transcription factor units). \texttt{min} and \texttt{max} values define the boundaries of a uniform law, used to draw the co-enzyme tags.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Transcription factor tags initial range}
+\begin{center}
+{\bf TRANSCRIPTION\_FACTOR\_TAG\_INITIAL\_RANGE} <min> <max> (float > 0; min $\le$ max)
+\end{center}
+Define the initial distribution of transcription factor tags encoded in the initial random genome (\textit{i.e.}, in binding site units). \texttt{min} and \texttt{max} values define the boundaries of a uniform law, used to draw the transcription factor tags.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Transcription factors binding window}
+\begin{center}
+{\bf TRANSCRIPTION\_FACTOR\_BINDING\_WINDOW} <window> (integer $\ge$ 0)
+\end{center}
+Define the ``binding window'' of a transcription factor on a binding site. If transcription factors and binding site tags are similar enough, the binding is allowed. More precisely if $\mbox{tag}_{TF} \in [\mbox{tag}_{TF}-\mbox{window}\ ,\ \mbox{tag}_{TF}+\mbox{window}]$, the binding is possible.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial number of non-coding units}
+\begin{center}
+{\bf INITIAL\_NUMBER\_OF\_NON\_CODING\_UNITS} <number> (integer $\ge$ 0)
+\end{center}
+Define the number of random non-coding units in the initial random genome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial number of enzyme coding units}
+\begin{center}
+{\bf INITIAL\_NUMBER\_OF\_ENZYME\_UNITS} <number> (integer $\ge$ 0)
+\end{center}
+Define the number of random enzyme units in the initial random genome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial number of transcription factor coding units}
+\begin{center}
+{\bf INITIAL\_NUMBER\_OF\_TRANSCRIPTION\_FACTOR\_UNITS} <number> (integer $\ge$ 0)
+\end{center}
+Define the number of random transcription factor units in the initial random genome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial number of binding site units}
+\begin{center}
+{\bf INITIAL\_NUMBER\_OF\_BINDING\_SITE\_UNITS} <number> (integer $\ge$ 0)
+\end{center}
+Define the number of random binding site units in the initial random genome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial number of promoter units}
+\begin{center}
+{\bf INITIAL\_NUMBER\_OF\_PROMOTER\_UNITS} <number> (integer $\ge$ 0)
+\end{center}
+Define the number of random promoter units in the initial random genome.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Point mutation rate}
+\begin{center}
+{\bf POINT\_MUTATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the point mutation rate (in attribute\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Duplication rate}
+\begin{center}
+{\bf DUPLICATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the duplication rate (in genomic-unit\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Deletion rate}
+\begin{center}
+{\bf DELETION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the deletion rate (in genomic-unit\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Translocation rate}
+\begin{center}
+{\bf TRANSLOCATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the translocation rate (in genomic-unit\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Inversion rate}
+\begin{center}
+{\bf INVERSION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the inversion rate (in genomic-unit\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Transition rate}
+\begin{center}
+{\bf TRANSITION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the transition rate  (in genomic-unit\textsuperscript{-1}.replication\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Breakpoint rate}
+\begin{center}
+{\bf BREAKPOINT\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the breakpoint rate  (in attribute\textsuperscript{-1}.breakpoint\textsuperscript{-1}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Substrate tag mutation size}
+\begin{center}
+{\bf SUBSTRATE\_TAG\_MUTATION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the size of the uniform distribution used to mutate substrate tags (in enzyme units). The mutation is defined as tag + $\mathcal{U}$(-size, +size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Product tag mutation size}
+\begin{center}
+{\bf PRODUCT\_TAG\_MUTATION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the size of the uniform distribution used to mutate product tags (in enzyme units). The mutation is defined as tag + $\mathcal{U}$(-size, +size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{$k_{cat}$ mutation size}
+\begin{center}
+{\bf KCAT\_MUTATION\_SIZE} <size> (float $\ge 0.0$)
+\end{center}
+Define the standard deviation of the gaussian distribution used to mutate $k_{cat}$ constant (in enzyme units). The mutation is defined as $log_{10}(k_{cat})$ + $\mathcal{N}$(0, size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{$k_{cat}/k_M$ ratio mutation size}
+\begin{center}
+{\bf KCAT\_KM\_RATIO\_MUTATION\_SIZE} <size> (float $\ge 0.0$)
+\end{center}
+Define the standard deviation of the gaussian distribution used to mutate $k_{cat}/k_M$ ratio (in enzyme units). The mutation is defined as $log_{10}(k_{cat}/k_M)$ + $\mathcal{N}$(0, size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Binding site tag mutation size}
+\begin{center}
+{\bf BINDING\_SITE\_TAG\_MUTATION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the size of the uniform distribution used to mutate binding site tags (in transcription factor units). The mutation is defined as tag + $\mathcal{U}$(-size, +size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Co-enzyme tag mutation size}
+\begin{center}
+{\bf CO\_ENZYME\_TAG\_MUTATION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the size of the uniform distribution used to mutate co-enzyme tags (in transcription factor units). The mutation is defined as tag + $\mathcal{U}$(-size, +size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Transcription factor tag mutation size}
+\begin{center}
+{\bf TRANSCRIPTION\_FACTOR\_TAG\_MUTATION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the size of the uniform distribution used to mutate transcription factor tags (in binding site units). The mutation is defined as tag + $\mathcal{U}$(-size, +size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Basal expression level mutation size}
+\begin{center}
+{\bf BASAL\_EXPRESSION\_LEVEL\_MUTATION\_SIZE} <size> (float $\ge 0.0$)
+\end{center}
+Define the standard deviation of the gaussian distribution used to mutate $\beta$ constant (in promoter units). The mutation is defined as $\beta$ + $\mathcal{N}$(0, size).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Genetic regulation network}
+
+\subsection{Genetic regulation network time-steps ratio}
+\begin{center}
+{\bf GENETIC\_REGULATION\_NETWORK\_TIMESTEP} <time-step> (float > 0.0)
+\end{center}
+Define the number of ODE time-steps used to solve the genetic regulation network per simulation time-step.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hill function theta parameter}
+\begin{center}
+{\bf HILL\_FUNCTION\_THETA} <theta> (float $\in [0, 1]$)
+\end{center}
+Define the parameter $\theta$ of the Hill function used to compute the contribution of the regulation on each promoter transcription.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Hill function n parameter}
+\begin{center}
+{\bf HILL\_FUNCTION\_N} <n> (float $\ge 0.0$)
+\end{center}
+Define the parameter $n$ of the Hill function used to compute the contribution of the regulation on each promoter transcription.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Protein degradation rate}
+\begin{center}
+{\bf PROTEIN\_DEGRADATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the protein degradation rate per genetic regulation ODE time-step.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Metabolic network}
+
+\subsection{Metabolism time-steps}
+\begin{center}
+{\bf METABOLISM\_TIMESTEP} <time-step> (float > 0.0)
+\end{center}
+Define the number of ODE time-steps used to solve the metabolic network per simulation time-step.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Essential metabolites toxicity threshold}
+\begin{center}
+{\bf ESSENTIAL\_METABOLITES\_TOXICITY\_THRESHOLD} <threshold> (float > 0.0)
+\end{center}
+Define the maximum cell's toxicity threshold of essential metabolites. If one essential metabolite overreaches this threshold in cell's cytoplasm, the cell dies. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Non-essential metabolites toxicity threshold}
+\begin{center}
+{\bf NON\_ESSENTIAL\_METABOLITES\_TOXICITY\_THRESHOLD} <threshold> (float > 0.0)
+\end{center}
+Define the maximum cell's toxicity threshold of non-essential metabolites. If one non-essential metabolite overreaches this threshold in cell's cytoplasm, the cell dies. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial metabolite amount in cells}
+\begin{center}
+{\bf INITIAL\_METABOLITES\_AMOUNT\_IN\_CELLS} <initial\_amount> (float $\ge 0.0$)
+\end{center}
+Define the initial amount of metabolites found in cells when the simulation is created from scratch.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Maximum reaction size}
+\begin{center}
+{\bf MAXIMUM\_REACTION\_SIZE} <size> (integer $\ge 0$)
+\end{center}
+Define the maximum jump size of a metabolic reaction in the metabolic space. Considering $s$ and $p$ to be resp. the tags of the substrate and the product of a metabolic reaction (catalyzed by an enzyme), the reaction only occurs if $|s-p| \le \mbox{size}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Energy}
+
+\subsection{Energy transcription cost}
+\begin{center}
+{\bf ENERGY\_TRANSCRIPTION\_COST} <cost> (float $\ge 0$)
+\end{center}
+Define the cost of producing proteins (mainly by transcription). When a enzyme or transcription factor unit is transcribed at a certain rate $e$, energy cost is $c = e*cost$. For computation reasons, the energy is not coupled to transcription equations (\textit{i.e.}, the reaction speed of the transcription does not depend on energy concentration). If the cost is set to 0.0, the transcription comes with no energy cost. If the energy becomes negative, the cell dies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Energy degradation cost}
+\begin{center}
+{\bf ENERGY\_DEGRADATION\_COST} <cost> (float $\ge 0$)
+\end{center}
+Define the cost of degrading proteins. When proteins are degraded at rate $d$, energy cost is $c = d*cost$. For computation reasons, the energy is not coupled to degradation equations (\textit{i.e.}, the speed of the degradation does not depend on energy concentration). If the cost is set to 0.0, the degradation comes with no energy cost. If the energy becomes negative, the cell dies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Energy enzymatic cost}
+\begin{center}
+{\bf ENERGY\_ENZYMATIC\_COST} <cost> (float $\ge 0$)
+\end{center}
+Define the cost or the production of energy when performing metabolic reactions. Metabolic reactions are performed by enzymes needing or producing energy carrier molecules. Let's consider $s$ and $p$ the tags of resp. the substrate and the product of a metabolic reaction catalyzed by enzyme $E$. If $s < p$, the reaction consumes energy at rate $c = (p-s)*cost$. If $s > p$, the reaction produces energy at rate $c = (s-p)*cost$. For computation reasons, the energy is not coupled to metabolic reaction equations (\textit{i.e.}, the reaction speed does not depend on energy concentration). If the cost is set to 0.0, metabolic reactions come with no energy cost. If the energy becomes negative, the cell dies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Energy pumping cost}
+\begin{center}
+{\bf ENERGY\_PUMPING\_COST} <cost> (float $\ge 0$)
+\end{center}
+Define the cost of pumping in or out metabolites. When metabolites are pumped in or out at rate $r$ by a pump, energy cost is $c = r*cost$. For computation reasons, the energy is not coupled to pump equations (\textit{i.e.}, the reaction speed does not depend on energy concentration). If the cost is set to 0.0, the pumping activity comes with no energy cost. If the energy becomes negative, the cell dies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Energy dissipation rate}
+\begin{center}
+{\bf ENERGY\_DISSIPATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the rate at which a cell looses its energy stock by dissipation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Energy toxicity threshold}
+\begin{center}
+{\bf ENERGY\_TOXICITY\_THRESHOLD} <threshold> (float $\ge 0$)
+\end{center}
+Define a maximum threshold to cell's energy. If a cell energy stock overreaches this threshold, the cell dies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Initial energy amount in cells}
+\begin{center}
+{\bf INITIAL\_ENERGY\_AMOUNT\_IN\_CELLS} <amount> (float $\ge 0$)
+\end{center}
+Define the initial energy amount available in cells when the simulation is created from scratch. This parameter allow for random initialization of complex cells needing energy production to survive.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Cell}
+
+\subsection{Membrane permeability}
+\begin{center}
+{\bf MEMBRANE\_PERMEABILITY} <permeability> (float $\in [0, 1]$)
+\end{center}
+Define the membrane permeability. Metabolites in cell's cytoplasm or in the local environment diffuse through the cell's membrane depending on their concentrations and the permeability (\textcolor{red}{equation needed}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Population}
+
+\subsection{Death probability}
+\begin{center}
+{\bf DEATH\_PROBABILITY} <probability> (float $\in [0, 1]$)
+\end{center}
+Define the probability to die at random per simulation time-step. This probability is the same for every cell, and is constant during cell life. This rate is applied in addition to other death events linked to toxicity thresholds.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Migration rate}
+\begin{center}
+{\bf MIGRATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+If the migration rate is not null, pairs of random cells exchange their location at a defined rate per simulation time-step. Depending on the strength of the random mixing, cell's behavior evolve differently (\textit{e.g.}, to evolve cooperation).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{HGT rate}
+\begin{center}
+{\bf HGT\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the probability for a genome to receive alien genetic sequences at replication. Genetic sequences are generated at random, and do not come from the simulated population.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Environment}
+
+\subsection{Environment initialization cycles}
+\begin{center}
+{\bf ENVIRONMENT\_INITIALIZATION\_CYCLES} <cycles> (integer $\ge 0$)
+\end{center}
+Define the number of initialization loops applied to a newly created environment. Initialization loops are based on environment parameters defined below. For example, If a concentration $c = 0.1$ of metabolite $10$ is introduced in the environment at every simulation time-step, and if 5 initialization cycles are requested, the initial concentration will be $0.1 \times 5$. This parameter is useful to allow the environment to reach dynamic equilibrium before introducing new cells.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment species tags range}
+\begin{center}
+{\bf ENVIRONMENT\_SPECIES\_TAG\_RANGE} <min> <max> (integer > 0; min $\le$ max)
+\end{center}
+Define the boundaries of the uniform law used to draw a new metabolite introduced in the environment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment concentrations range}
+\begin{center}
+{\bf ENVIRONMENT\_CONCENTRATION\_RANGE} <min> <max> (float > 0.0; min $\le$ max)
+\end{center}
+Define the boundaries of the uniform law used to draw the concentration of each new metabolite introduced in the environment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment number of species range}
+\begin{center}
+{\bf ENVIRONMENT\_NUMBER\_OF\_SPECIES\_RANGE} <min> <max> (integer > 0.0; min $\le$ max)
+\end{center}
+Define the boundaries of the uniform law used to draw the number of metabolites introduced in the environment.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment interaction scheme}
+\begin{center}
+{\bf ENVIRONMENT\_INTERACTION\_SCHEME} <choice> (NO\_INTERACTION/INTERACTION)
+\end{center}
+Define the interaction scheme between the population and the environment.
+\begin{itemize}
+\item NO\_INTERACTION: environment concentrations are not modified by cells. Cells grow on ressources with constant concentrations.
+\item INTERACTION: cells modify their environment by uptaking or releasing food.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment renewal scheme}
+\begin{center}
+{\bf ENVIRONMENT\_RENEWAL\_SCHEME} <choice> (KEEP\_MATTER/CLEAR\_MATTER)
+\end{center}
+Define the renewal scheme of the environment at each new variation.
+\begin{itemize}
+\item CLEAR\_MATTER: the environment is rinsed at each variation.
+\item KEEP\_MATTER: the environment is NOT rinsed at each variation.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment variation scheme}
+\begin{center}
+{\bf ENVIRONMENT\_VARIATION\_SCHEME} <choice> (RANDOM/PERIODIC/CYCLIC)
+\end{center}
+Define the variation scheme of the environment.
+\begin{itemize}
+\item PERIODIC: variation periodically occurs with frequency INTRODUCTION\_RATE
+\item RANDOM: variation occurs with probability INTRODUCTION\_RATE
+\item CYCLIC: variation occurs at each time-step, but is pondered by a sinus function of period 1/INTRODUCTION\_RATE
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment localization scheme}
+\begin{center}
+{\bf ENVIRONMENT\_LOCALIZATION\_SCHEME} <choice> (GLOBAL/RANDOM/SPOT/CENTER)
+\end{center}
+Define the localization scheme of the environment.
+\begin{itemize}
+\item GLOBAL: the variation affects the whole environment at once (the same concentration(s) of the same new metabolite(s) is introduced everywhere).
+\item RANDOM: the variation affects the whole environment, but new concentrations and new metabolites are drawn for each location.
+\item SPOT: the variation affects only one random spot
+\item CENTER: the variation affects the center of the environment.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment metabolic scheme}
+\begin{center}
+{\bf ENVIRONMENT\_VARIATION\_SCHEME} <choice> (UNIQUE/MULTIPLE/BOUNDARIES)
+\end{center}
+Define the metabolic scheme of the environment.
+\begin{itemize}
+\item UNIQUE: only one metabolite is introduced at each new variation.
+\item MULTIPLE: multiple metabolites introduction is possible.
+\item BOUNDARIES: restricted multiple scheme: only boundaries of the environment species range are chosen.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment introduction rate}
+\begin{center}
+{\bf ENVIRONMENT\_INTRODUCTION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the rate at which environmental variations occur (depends on the variation scheme).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment diffusion coefficient}
+\begin{center}
+{\bf ENVIRONMENT\_DIFFUSION\_COEFFICIENT} <coefficient> (float $\in [0, 1]$)
+\end{center}
+Define the diffusion coefficient in the environment grid. Diffusion is based on a simple algorithm diffusing every metabolites at the same rate in the Moore neighborhood. No ODEs are used here. For this reason, the algorithm becomes unstable for coefficient > 0.1. Thus, if coefficient > 1, diffusion is infinite (well-mixed environment).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Environment degradation rate}
+\begin{center}
+{\bf ENVIRONMENT\_DEGRADATION\_RATE} <rate> (float $\in [0, 1]$)
+\end{center}
+Define the rate at which metabolites are degraded. All metabolites degrade at the same rate. Degradation products are implicit, meaning that degraded metabolites simply disappear from the environment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
