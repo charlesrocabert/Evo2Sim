@@ -110,6 +110,8 @@ Parameters::Parameters( void )
   _transcription_factor_tag_mutation_size = 0;
   _basal_expression_level_mutation_size   = 0.0;
   
+  _mutation_of_mutation_rates = 0.0;
+  
   /*------------------------------------------------------------------ genetic regulation network */
   
   _genetic_regulation_network_timestep = 0.0;
@@ -263,6 +265,8 @@ Parameters::Parameters( size_t backup_time )
   gzread( backup_file, &_co_enzyme_tag_mutation_size,            sizeof(_co_enzyme_tag_mutation_size) );
   gzread( backup_file, &_transcription_factor_tag_mutation_size, sizeof(_transcription_factor_tag_mutation_size) );
   gzread( backup_file, &_basal_expression_level_mutation_size,   sizeof(_basal_expression_level_mutation_size) );
+  
+  gzread( backup_file, &_mutation_of_mutation_rates, sizeof(_mutation_of_mutation_rates) );
   
   /*------------------------------------------------------------------ genetic regulation network */
   
@@ -423,6 +427,8 @@ Parameters::Parameters( const Parameters& parameters )
   _co_enzyme_tag_mutation_size            = parameters._co_enzyme_tag_mutation_size;
   _transcription_factor_tag_mutation_size = parameters._transcription_factor_tag_mutation_size;
   _basal_expression_level_mutation_size   = parameters._basal_expression_level_mutation_size;
+  
+  _mutation_of_mutation_rates = parameters._mutation_of_mutation_rates;
   
   /*------------------------------------------------------------------ genetic regulation network */
   
@@ -950,6 +956,13 @@ void Parameters::load_parameters_from_file( std::string filename )
           flux >> param_name >> _basal_expression_level_mutation_size;
           assert(_basal_expression_level_mutation_size >= 0.0);
         }
+        else if ( strcmp(words[0].c_str(), "MUTATION_OF_MUTATION_RATES") == 0 )
+        {
+          std::stringstream flux;
+          flux.str(line.c_str());
+          flux >> param_name >> _mutation_of_mutation_rates;
+          assert(_mutation_of_mutation_rates >= 0.0);
+        }
         
         /*------------------------------------------------------------------ genetic regulation network */
         
@@ -1370,6 +1383,8 @@ void Parameters::save( size_t backup_time )
   gzwrite( backup_file, &_transcription_factor_tag_mutation_size, sizeof(_transcription_factor_tag_mutation_size) );
   gzwrite( backup_file, &_basal_expression_level_mutation_size,   sizeof(_basal_expression_level_mutation_size) );
   
+  gzwrite( backup_file, &_mutation_of_mutation_rates, sizeof(_mutation_of_mutation_rates) );
+  
   /*------------------------------------------------------------------ genetic regulation network */
   
   gzwrite( backup_file, &_genetic_regulation_network_timestep, sizeof(_genetic_regulation_network_timestep) );
@@ -1620,6 +1635,8 @@ void Parameters::write( std::string filename )
   file << "CO_ENZYME_TAG_MUTATION_SIZE             " << _co_enzyme_tag_mutation_size << "\n";
   file << "TRANSCRIPTION_FACTOR_TAG_MUTATION_SIZE  " << _transcription_factor_tag_mutation_size << "\n";
   file << "BASAL_EXPRESSION_LEVEL_MUTATION_SIZE    " << _basal_expression_level_mutation_size << "\n";
+  file << "\n";
+  file << "MUTATION_OF_MUTATION_RATES  " << _mutation_of_mutation_rates << "\n";
   file << "\n";
   file << "\n";
   file << "########################################################\n";

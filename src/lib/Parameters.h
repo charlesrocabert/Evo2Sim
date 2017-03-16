@@ -127,6 +127,8 @@ public:
   inline double get_transcription_factor_tag_mutation_size( void ) const;
   inline double get_basal_expression_level_mutation_size( void ) const;
   
+  inline double get_mutation_of_mutation_rates( void ) const;
+  
   /*------------------------------------------------------------------ genetic regulation network */
   
   inline double get_genetic_regulation_network_timestep( void ) const;
@@ -248,6 +250,8 @@ public:
   inline void set_co_enzyme_tag_mutation_size( double size );
   inline void set_transcription_factor_tag_mutation_size( double size );
   inline void set_basal_expression_level_mutation_size( double size );
+  
+  inline void set_mutation_of_mutation_rates( double rate );
   
   /*------------------------------------------------------------------ genetic regulation network */
   
@@ -397,6 +401,8 @@ protected:
   double         _co_enzyme_tag_mutation_size;            /*!< Co-enzyme tag mutation size            */
   double         _transcription_factor_tag_mutation_size; /*!< Transcription factor tag mutation size */
   double         _basal_expression_level_mutation_size;   /*!< Basal expression level mutation size   */
+  
+  double         _mutation_of_mutation_rates;             /*!< Mutation of mutation rates             */
   
   /*------------------------------------------------------------------ genetic regulation network */
   
@@ -900,6 +906,17 @@ inline double Parameters::get_transcription_factor_tag_mutation_size( void ) con
 inline double Parameters::get_basal_expression_level_mutation_size( void ) const
 {
   return _basal_expression_level_mutation_size;
+}
+
+/**
+ * \brief    Get mutation of mutation rates
+ * \details  --
+ * \param    void
+ * \return   \e double
+ */
+inline double Parameters::get_mutation_of_mutation_rates( void ) const
+{
+  return _mutation_of_mutation_rates;
 }
 
 /*------------------------------------------------------------------ genetic regulation network */
@@ -1669,6 +1686,18 @@ inline void Parameters::set_basal_expression_level_mutation_size( double size )
 {
   assert(size >= 0.0);
   _basal_expression_level_mutation_size = size;
+}
+
+/**
+ * \brief    Set mutation of mutation rates
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void Parameters::set_mutation_of_mutation_rates( double rate )
+{
+  assert(rate >= 0.0);
+  _mutation_of_mutation_rates = rate;
 }
 
 /*------------------------------------------------------------------ genetic regulation network */
