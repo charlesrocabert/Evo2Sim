@@ -1,5 +1,5 @@
 
-# Evo2Sim 1.0.1
+# Evo<sup>2</sup>Sim 1.0.2
 
 Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
 All rights reserved
@@ -16,3 +16,4 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
