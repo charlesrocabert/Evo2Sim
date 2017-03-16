@@ -693,11 +693,11 @@ void Statistics::add_individual( size_t pos )
   _var_breakpoint_rate     += cell.get_breakpoint_rate()*cell.get_breakpoint_rate();
   if (cell.get_trophic_group() == LEVEL_0 || cell.get_trophic_group() == LEVEL_1)
   {
-    _mean_A_mutation_rate += cell.get_point_mutation_rate()*cell.get_point_mutation_rate();
+    _var_A_mutation_rate += cell.get_point_mutation_rate()*cell.get_point_mutation_rate();
   }
   else if (cell.get_trophic_group() == LEVEL_2 || cell.get_trophic_group() == NO_LEVEL)
   {
-    _mean_B_mutation_rate += cell.get_point_mutation_rate()*cell.get_point_mutation_rate();
+    _var_B_mutation_rate += cell.get_point_mutation_rate()*cell.get_point_mutation_rate();
   }
 }
 
@@ -792,8 +792,14 @@ void Statistics::compute_mean_and_var( void )
     _mean_inversion_rate      /= pop_size;
     _mean_transition_rate     /= pop_size;
     _mean_breakpoint_rate     /= pop_size;
-    _mean_A_mutation_rate     /= A_size;
-    _mean_B_mutation_rate     /= B_size;
+    if (A_size > 0.0)
+    {
+      _mean_A_mutation_rate /= A_size;
+    }
+    if (B_size > 0.0)
+    {
+      _mean_B_mutation_rate /= B_size;
+    }
     
     /*------------------------------------------------------------------ VARIANCE statistical variables */
     
@@ -868,8 +874,14 @@ void Statistics::compute_mean_and_var( void )
     _var_inversion_rate      /= pop_size;
     _var_transition_rate     /= pop_size;
     _var_breakpoint_rate     /= pop_size;
-    _var_A_mutation_rate     /= A_size;
-    _var_B_mutation_rate     /= B_size;
+    if (A_size > 0.0)
+    {
+      _var_A_mutation_rate /= A_size;
+    }
+    if (B_size > 0.0)
+    {
+      _var_B_mutation_rate /= B_size;
+    }
     
     /* PHENOTYPE */
     _var_generations                -= _mean_generations*_mean_generations;
