@@ -168,6 +168,15 @@ public:
   double _mean_inherited_nb_inflow_pumps;  /*!< Number of inflowing pumps in inherited proteins                */
   double _mean_inherited_nb_outflow_pumps; /*!< Number of outflowing pumps in inherited proteins               */
   
+  /* MUTATION RATES */
+  double _mean_point_mutation_rate; /*!< Point mutation rate */
+  double _mean_duplication_rate;    /*!< Duplication rate    */
+  double _mean_deletion_rate;       /*!< Deletion rate       */
+  double _mean_translocation_rate;  /*!< Translocation rate  */
+  double _mean_inversion_rate;      /*!< Inversion rate      */
+  double _mean_transition_rate;     /*!< Transition rate     */
+  double _mean_breakpoint_rate;     /*!< Breakpoint rate     */
+  
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   /* PHENOTYPE */
@@ -230,6 +239,15 @@ public:
   double _var_inherited_nb_inflow_pumps;  /*!< Number of inflowing pumps in inherited proteins                */
   double _var_inherited_nb_outflow_pumps; /*!< Number of outflowing pumps in inherited proteins               */
   
+  /* MUTATION RATES */
+  double _var_point_mutation_rate; /*!< Point mutation rate */
+  double _var_duplication_rate;    /*!< Duplication rate    */
+  double _var_deletion_rate;       /*!< Deletion rate       */
+  double _var_translocation_rate;  /*!< Translocation rate  */
+  double _var_inversion_rate;      /*!< Inversion rate      */
+  double _var_transition_rate;     /*!< Transition rate     */
+  double _var_breakpoint_rate;     /*!< Breakpoint rate     */
+  
 protected:
   
   /*----------------------------
@@ -240,9 +258,11 @@ protected:
   void write_phenotype_mean_file_header( void );
   void write_genome_structure_mean_file_header( void );
   void write_inherited_proteins_mean_file_header( void );
+  void write_mutation_rates_mean_file_header( void );
   void write_phenotype_var_file_header( void );
   void write_genome_structure_var_file_header( void );
   void write_inherited_proteins_var_file_header( void );
+  void write_mutation_rates_var_file_header( void );
   void write_trophic_network_profile_file_header( void );
   void write_global_concentrations_file_header( void );
   void write_tree_structure_file_header( void );
@@ -250,9 +270,11 @@ protected:
   void write_phenotype_mean_file_stats( void );
   void write_genome_structure_mean_file_stats( void );
   void write_inherited_proteins_mean_file_stats( void );
+  void write_mutation_rates_mean_file_stats( void );
   void write_phenotype_var_file_stats( void );
   void write_genome_structure_var_file_stats( void );
   void write_inherited_proteins_var_file_stats( void );
+  void write_mutation_rates_var_file_stats( void );
   void write_environment_metabolic_amounts_stats( void );
   void write_trophic_network_profile_stats( void );
   void write_global_concentrations_stats( void );
@@ -276,10 +298,12 @@ protected:
   std::ofstream _phenotype_mean_file;          /*!< Phenotype mean file          */
   std::ofstream _genome_structure_mean_file;   /*!< Genome structure mean file   */
   std::ofstream _inherited_proteins_mean_file; /*!< Inherited proteins mean file */
+  std::ofstream _mutation_rates_mean_file;     /*!< Mutation rates mean file     */
   
   std::ofstream _phenotype_var_file;          /*!< Phenotype variance file          */
   std::ofstream _genome_structure_var_file;   /*!< Genome structure variance file   */
   std::ofstream _inherited_proteins_var_file; /*!< Inherited proteins variance file */
+  std::ofstream _mutation_rates_var_file;     /*!< Mutation rates variance file     */
   
   std::ofstream _environment_metabolic_amounts_file; /*!< Environment metabolic amounts file */
   std::ofstream _trophic_network_profile_file;       /*!< Trophic network profile file       */

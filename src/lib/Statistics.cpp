@@ -99,9 +99,11 @@ void Statistics::clean_files( void )
   clean_file("./statistics/phenotype_mean.txt", _phenotype_mean_file);
   clean_file("./statistics/genome_structure_mean.txt", _genome_structure_mean_file);
   clean_file("./statistics/inherited_proteins_mean.txt", _inherited_proteins_mean_file);
+  clean_file("./statistics/mutation_rates_mean.txt", _mutation_rates_mean_file);
   clean_file("./statistics/phenotype_var.txt", _phenotype_var_file);
   clean_file("./statistics/genome_structure_var.txt", _genome_structure_var_file);
   clean_file("./statistics/inherited_proteins_var.txt", _inherited_proteins_var_file);
+  clean_file("./statistics/mutation_rates_var.txt", _mutation_rates_var_file);
   clean_file("./statistics/environment_metabolic_amounts.txt", _environment_metabolic_amounts_file);
   clean_file("./statistics/trophic_network_profile.txt", _trophic_network_profile_file);
   clean_file("./statistics/global_concentrations.txt", _global_concentrations_file);
@@ -128,7 +130,9 @@ void Statistics::open_files( void )
     _genome_structure_mean_file.open("./statistics/genome_structure_mean.txt", std::ios::out | std::ios::trunc);
     chmod("./statistics/genome_structure_mean.txt", 0777);
     _inherited_proteins_mean_file.open("./statistics/inherited_proteins_mean.txt", std::ios::out | std::ios::trunc);
-    chmod("./statistics/_inherited_proteins_mean.txt", 0777);
+    chmod("./statistics/inherited_proteins_mean.txt", 0777);
+    _mutation_rates_mean_file.open("./statistics/mutation_rates_mean.txt", std::ios::out | std::ios::trunc);
+    chmod("./statistics/mutation_rates_mean.txt", 0777);
     
     /*------------------------------------------------------------------ VARIANCE statistical variables */
     
@@ -137,7 +141,9 @@ void Statistics::open_files( void )
     _genome_structure_var_file.open("./statistics/genome_structure_var.txt", std::ios::out | std::ios::trunc);
     chmod("./statistics/genome_structure_var.txt", 0777);
     _inherited_proteins_var_file.open("./statistics/inherited_proteins_var.txt", std::ios::out | std::ios::trunc);
-    chmod("./statistics/_inherited_proteins_var.txt", 0777);
+    chmod("./statistics/inherited_proteins_var.txt", 0777);
+    _mutation_rates_var_file.open("./statistics/mutation_rates_var.txt", std::ios::out | std::ios::trunc);
+    chmod("./statistics/mutation_rates_var.txt", 0777);
     
     /*------------------------------------------------------------------ ENVIRONMENT statistical variables */
     
@@ -170,7 +176,9 @@ void Statistics::open_files( void )
     _genome_structure_mean_file.open("./statistics/genome_structure_mean.txt", std::ios::out | std::ios::app);
     chmod("./statistics/genome_structure_mean.txt", 0777);
     _inherited_proteins_mean_file.open("./statistics/inherited_proteins_mean.txt", std::ios::out | std::ios::app);
-    chmod("./statistics/_inherited_proteins_mean.txt", 0777);
+    chmod("./statistics/inherited_proteins_mean.txt", 0777);
+    _mutation_rates_mean_file.open("./statistics/mutation_rates_mean.txt", std::ios::out | std::ios::app);
+    chmod("./statistics/mutation_rates_mean.txt", 0777);
     
     /*------------------------------------------------------------------ VARIANCE statistical variables */
     
@@ -180,6 +188,8 @@ void Statistics::open_files( void )
     chmod("./statistics/genome_structure_var.txt", 0777);
     _inherited_proteins_var_file.open("./statistics/inherited_proteins_var.txt", std::ios::out | std::ios::app);
     chmod("./statistics/_inherited_proteins_var.txt", 0777);
+    _mutation_rates_var_file.open("./statistics/mutation_rates_var.txt", std::ios::out | std::ios::app);
+    chmod("./statistics/mutation_rates_var.txt", 0777);
     
     /*------------------------------------------------------------------ ENVIRONMENT statistical variables */
     
@@ -216,12 +226,14 @@ void Statistics::write_headers( void )
   write_phenotype_mean_file_header();
   write_genome_structure_mean_file_header();
   write_inherited_proteins_mean_file_header();
+  write_mutation_rates_mean_file_header();
   
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   write_phenotype_var_file_header();
   write_genome_structure_var_file_header();
   write_inherited_proteins_var_file_header();
+  write_mutation_rates_var_file_header();
   
   /*------------------------------------------------------------------ TROPHIC NETWORK statistical variables */
   
@@ -254,12 +266,14 @@ void Statistics::write_stats( void )
   write_phenotype_mean_file_stats();
   write_genome_structure_mean_file_stats();
   write_inherited_proteins_mean_file_stats();
+  write_mutation_rates_mean_file_stats();
   
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   write_phenotype_var_file_stats();
   write_genome_structure_var_file_stats();
   write_inherited_proteins_var_file_stats();
+  write_mutation_rates_var_file_stats();
   
   /*------------------------------------------------------------------ ENVIRONMENT statistical variables */
   
@@ -291,12 +305,14 @@ void Statistics::flush_files( void )
   _phenotype_mean_file.flush();
   _genome_structure_mean_file.flush();
   _inherited_proteins_mean_file.flush();
+  _mutation_rates_mean_file.flush();
   
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   _phenotype_var_file.flush();
   _genome_structure_var_file.flush();
   _inherited_proteins_var_file.flush();
+  _mutation_rates_var_file.flush();
   
   /*------------------------------------------------------------------ ENVIRONMENT statistical variables */
   
@@ -328,12 +344,14 @@ void Statistics::close_files( void )
   _phenotype_mean_file.close();
   _genome_structure_mean_file.close();
   _inherited_proteins_mean_file.close();
+  _mutation_rates_mean_file.close();
   
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   _phenotype_var_file.close();
   _genome_structure_var_file.close();
   _inherited_proteins_var_file.close();
+  _mutation_rates_var_file.close();
   
   /*------------------------------------------------------------------ ENVIRONMENT statistical variables */
   
@@ -422,6 +440,15 @@ void Statistics::init_variables( void )
   _mean_inherited_nb_inflow_pumps  = 0.0;
   _mean_inherited_nb_outflow_pumps = 0.0;
   
+  /* MUTATION RATES */
+  _mean_point_mutation_rate = 0.0;
+  _mean_duplication_rate    = 0.0;
+  _mean_deletion_rate       = 0.0;
+  _mean_translocation_rate  = 0.0;
+  _mean_inversion_rate      = 0.0;
+  _mean_transition_rate     = 0.0;
+  _mean_breakpoint_rate     = 0.0;
+  
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   /* PHENOTYPE */
@@ -483,6 +510,15 @@ void Statistics::init_variables( void )
   _var_inherited_nb_inner_enzymes = 0.0;
   _var_inherited_nb_inflow_pumps  = 0.0;
   _var_inherited_nb_outflow_pumps = 0.0;
+  
+  /* MUTATION RATES */
+  _var_point_mutation_rate = 0.0;
+  _var_duplication_rate    = 0.0;
+  _var_deletion_rate       = 0.0;
+  _var_translocation_rate  = 0.0;
+  _var_inversion_rate      = 0.0;
+  _var_transition_rate     = 0.0;
+  _var_breakpoint_rate     = 0.0;
 }
 
 /**
@@ -561,6 +597,15 @@ void Statistics::add_individual( size_t pos )
     _mean_inherited_nb_outflow_pumps += cell.get_inherited_proteins()->get_nb_outflow_pumps();
   }
   
+  /* MUTATION RATES */
+  _mean_point_mutation_rate += cell.get_point_mutation_rate();
+  _mean_duplication_rate    += cell.get_duplication_rate();
+  _mean_deletion_rate       += cell.get_deletion_rate();
+  _mean_translocation_rate  += cell.get_translocation_rate();
+  _mean_inversion_rate      += cell.get_inversion_rate();
+  _mean_transition_rate     += cell.get_transition_rate();
+  _mean_breakpoint_rate     += cell.get_breakpoint_rate();
+  
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
   /* PHENOTYPE */
@@ -625,6 +670,15 @@ void Statistics::add_individual( size_t pos )
     _var_inherited_nb_inflow_pumps  += cell.get_inherited_proteins()->get_nb_inflow_pumps()*cell.get_inherited_proteins()->get_nb_inflow_pumps();
     _var_inherited_nb_outflow_pumps += cell.get_inherited_proteins()->get_nb_outflow_pumps()*cell.get_inherited_proteins()->get_nb_outflow_pumps();
   }
+  
+  /* MUTATION RATES */
+  _var_point_mutation_rate += cell.get_point_mutation_rate()*cell.get_point_mutation_rate();
+  _var_duplication_rate    += cell.get_duplication_rate()*cell.get_duplication_rate();
+  _var_deletion_rate       += cell.get_deletion_rate()*cell.get_deletion_rate();
+  _var_translocation_rate  += cell.get_translocation_rate()*cell.get_translocation_rate();
+  _var_inversion_rate      += cell.get_inversion_rate()*cell.get_inversion_rate();
+  _var_transition_rate     += cell.get_transition_rate()*cell.get_transition_rate();
+  _var_breakpoint_rate     += cell.get_breakpoint_rate()*cell.get_breakpoint_rate();
 }
 
 /**
@@ -708,6 +762,15 @@ void Statistics::compute_mean_and_var( void )
       _mean_inherited_nb_outflow_pumps /= pop_size;
     }
     
+    /* MUTATION RATES */
+    _mean_point_mutation_rate /= pop_size;
+    _mean_duplication_rate    /= pop_size;
+    _mean_deletion_rate       /= pop_size;
+    _mean_translocation_rate  /= pop_size;
+    _mean_inversion_rate      /= pop_size;
+    _mean_transition_rate     /= pop_size;
+    _mean_breakpoint_rate     /= pop_size;
+    
     /*------------------------------------------------------------------ VARIANCE statistical variables */
     
     /* PHENOTYPE */
@@ -773,6 +836,15 @@ void Statistics::compute_mean_and_var( void )
       _var_inherited_nb_outflow_pumps /= pop_size;
     }
     
+    /* MUTATION RATES */
+    _var_point_mutation_rate /= pop_size;
+    _var_duplication_rate    /= pop_size;
+    _var_deletion_rate       /= pop_size;
+    _var_translocation_rate  /= pop_size;
+    _var_inversion_rate      /= pop_size;
+    _var_transition_rate     /= pop_size;
+    _var_breakpoint_rate     /= pop_size;
+    
     /* PHENOTYPE */
     _var_generations                -= _mean_generations*_mean_generations;
     _var_inherited_TF_amount        -= _mean_inherited_TF_amount*_mean_inherited_TF_amount;
@@ -832,6 +904,15 @@ void Statistics::compute_mean_and_var( void )
     _var_inherited_nb_inner_enzymes -= _mean_inherited_nb_inner_enzymes*_mean_inherited_nb_inner_enzymes;
     _var_inherited_nb_inflow_pumps  -= _mean_inherited_nb_inflow_pumps*_mean_inherited_nb_inflow_pumps;
     _var_inherited_nb_outflow_pumps -= _mean_inherited_nb_outflow_pumps*_mean_inherited_nb_outflow_pumps;
+    
+    /* MUTATION RATES */
+    _var_point_mutation_rate -= _mean_point_mutation_rate*_mean_point_mutation_rate;
+    _var_duplication_rate    -= _mean_duplication_rate*_mean_duplication_rate;
+    _var_deletion_rate       -= _mean_deletion_rate*_mean_deletion_rate;
+    _var_translocation_rate  -= _mean_translocation_rate*_mean_translocation_rate;
+    _var_inversion_rate      -= _mean_inversion_rate*_mean_inversion_rate;
+    _var_transition_rate     -= _mean_transition_rate*_mean_transition_rate;
+    _var_breakpoint_rate     -= _mean_breakpoint_rate*_mean_breakpoint_rate;
   }
 }
 
@@ -1309,6 +1390,24 @@ void Statistics::write_inherited_proteins_mean_file_header( void )
 }
 
 /**
+ * \brief    Write mutation rates mean header
+ * \details  --
+ * \param    void
+ * \return   \e void
+ */
+void Statistics::write_mutation_rates_mean_file_header( void )
+{
+  _mutation_rates_mean_file << "t" << " " <<
+  "point_mutation_rate" << " " <<
+  "duplication_rate" << " " <<
+  "deletion_rate" << " " <<
+  "translocation_rate" << " " <<
+  "inversion_rate" << " " <<
+  "transition_rate" << " " <<
+  "breakpoint_rate" << "\n";
+}
+
+/**
  * \brief    Write phenotype variance header
  * \details  --
  * \param    void
@@ -1393,6 +1492,24 @@ void Statistics::write_inherited_proteins_var_file_header( void )
   "nb_inner_enzymes" << " " <<
   "nb_inflow_pumps" << " " <<
   "nb_outflow_pumps" << "\n";
+}
+
+/**
+ * \brief    Write mutation rates variance header
+ * \details  --
+ * \param    void
+ * \return   \e void
+ */
+void Statistics::write_mutation_rates_var_file_header( void )
+{
+  _mutation_rates_var_file << "t" << " " <<
+  "point_mutation_rate" << " " <<
+  "duplication_rate" << " " <<
+  "deletion_rate" << " " <<
+  "translocation_rate" << " " <<
+  "inversion_rate" << " " <<
+  "transition_rate" << " " <<
+  "breakpoint_rate" << "\n";
 }
 
 /**
@@ -1545,6 +1662,24 @@ void Statistics::write_inherited_proteins_mean_file_stats( void )
 }
 
 /**
+ * \brief    Write mutation rates mean statistics
+ * \details  --
+ * \param    void
+ * \return   \e void
+ */
+void Statistics::write_mutation_rates_mean_file_stats( void )
+{
+  _mutation_rates_mean_file << _population->get_time() << " " <<
+  _mean_point_mutation_rate << " " <<
+  _mean_duplication_rate << " " <<
+  _mean_deletion_rate << " " <<
+  _mean_translocation_rate << " " <<
+  _mean_inversion_rate << " " <<
+  _mean_transition_rate << " " <<
+  _mean_breakpoint_rate << "\n";
+}
+
+/**
  * \brief    Write phenotype variance statistics
  * \details  --
  * \param    void
@@ -1629,6 +1764,24 @@ void Statistics::write_inherited_proteins_var_file_stats( void )
   _var_inherited_nb_inner_enzymes << " " <<
   _var_inherited_nb_inflow_pumps << " " <<
   _var_inherited_nb_outflow_pumps << "\n";
+}
+
+/**
+ * \brief    Write mutation rates variance statistics
+ * \details  --
+ * \param    void
+ * \return   \e void
+ */
+void Statistics::write_mutation_rates_var_file_stats( void )
+{
+  _mutation_rates_var_file << _population->get_time() << " " <<
+  _var_point_mutation_rate << " " <<
+  _var_duplication_rate << " " <<
+  _var_deletion_rate << " " <<
+  _var_translocation_rate << " " <<
+  _var_inversion_rate << " " <<
+  _var_transition_rate << " " <<
+  _var_breakpoint_rate << "\n";
 }
 
 /**
