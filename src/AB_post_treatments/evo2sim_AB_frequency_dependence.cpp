@@ -222,7 +222,8 @@ void printUsage( void )
 #ifdef NDEBUG
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
-  std::cout << " Evo2Sim is a multi-scale, individual-based computational model dedicated  \n";
+  std::cout << "                                                                           \n";
+  std::cout << " Multi-scale and individual-based computational model dedicated            \n";
   std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
   std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
@@ -269,7 +270,8 @@ void printHeader( void )
 #ifdef NDEBUG
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
-  std::cout << " Evo2Sim is a multi-scale, individual-based computational model dedicated  \n";
+  std::cout << "                                                                           \n";
+  std::cout << " Multi-scale and individual-based computational model dedicated            \n";
   std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
   std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
