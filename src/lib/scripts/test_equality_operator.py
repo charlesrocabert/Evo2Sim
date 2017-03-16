@@ -3,9 +3,8 @@
 # coding: utf-8
 
 #***************************************************************************
-# Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon
-# E-mail: charles.rocabert@gmail.com
-# Web: http://www.evoevo.eu/
+# Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+# Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

@@ -3,15 +3,14 @@
  * \file      evo2sim_AB_recover_metabolic_heatmaps.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      06-05-2016
- * \copyright Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Recover the metabolic heatmaps from AB populations
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon
- * E-mail: charles.rocabert@gmail.com
- * Web: http://www.evoevo.eu/
+ * Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -302,11 +301,11 @@ void printUsage( void )
 #ifdef NDEBUG
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
-  std::cout << " This software is dedicated to EvoEvo WP2 models development               \n";
+  std::cout << " Evo2Sim is a multi-scale, individual-based computational model dedicated  \n";
+  std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
-  std::cout << " E-mail: charles.rocabert@gmail.com                                        \n";
-  std::cout << " Web: http://www.evoevo.eu/                                                \n";
+  std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";
   std::cout << " This is free software, and you are welcome to redistribute it under       \n";
@@ -347,11 +346,11 @@ void printHeader( void )
 #ifdef NDEBUG
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
-  std::cout << " This software is dedicated to EvoEvo WP2 models development               \n";
+  std::cout << " Evo2Sim is a multi-scale, individual-based computational model dedicated  \n";
+  std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
-  std::cout << " E-mail: charles.rocabert@gmail.com                                        \n";
-  std::cout << " Web: http://www.evoevo.eu/                                                \n";
+  std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";
   std::cout << " This is free software, and you are welcome to redistribute it under       \n";

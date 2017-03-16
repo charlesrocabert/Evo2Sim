@@ -1,7 +1,7 @@
 
 # Evo2Sim 1.0.1
 
-Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
+Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
 All rights reserved
 
 This program is free software: you can redistribute it and/or modify

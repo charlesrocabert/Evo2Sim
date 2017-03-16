@@ -3,15 +3,14 @@
  * \file      Statistics.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      08-12-2014
- * \copyright Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Statistics class definition
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon
- * E-mail: charles.rocabert@gmail.com
- * Web: http://www.evoevo.eu/
+ * Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
