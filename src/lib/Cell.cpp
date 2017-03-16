@@ -1038,17 +1038,15 @@ void Cell::mutate( void )
   /*----------------------------------------------*/
   /* 6) mutate the mutation rates                 */
   /*----------------------------------------------*/
-  for (size_t i = 0; i < 7; i++)
+  /* 0 -> 6 */
+  _mutation_rates[0] += _prng->gaussian(0.0, _parameters->get_mutation_of_mutation_rates());
+  if (_mutation_rates[0] < 0.0)
   {
-    _mutation_rates[i] += _prng->gaussian(0.0, _parameters->get_mutation_of_mutation_rates());
-    if (_mutation_rates[i] < 0.0)
-    {
-      _mutation_rates[i] = 0.0;
-    }
-    if (_mutation_rates[i] > 1.0)
-    {
-      _mutation_rates[i] = 1.0;
-    }
+    _mutation_rates[0] = 0.0;
+  }
+  if (_mutation_rates[0] > 1.0)
+  {
+    _mutation_rates[0] = 1.0;
   }
 }
 

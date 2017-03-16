@@ -176,6 +176,8 @@ public:
   double _mean_inversion_rate;      /*!< Inversion rate      */
   double _mean_transition_rate;     /*!< Transition rate     */
   double _mean_breakpoint_rate;     /*!< Breakpoint rate     */
+  double _mean_A_mutation_rate;     /*!< A mutation rate     */
+  double _mean_B_mutation_rate;     /*!< B mutation rate     */
   
   /*------------------------------------------------------------------ VARIANCE statistical variables */
   
@@ -247,6 +249,8 @@ public:
   double _var_inversion_rate;      /*!< Inversion rate      */
   double _var_transition_rate;     /*!< Transition rate     */
   double _var_breakpoint_rate;     /*!< Breakpoint rate     */
+  double _var_A_mutation_rate;     /*!< A mutation rate     */
+  double _var_B_mutation_rate;     /*!< B mutation rate     */
   
 protected:
   
