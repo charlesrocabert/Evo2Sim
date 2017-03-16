@@ -962,6 +962,7 @@ void Parameters::load_parameters_from_file( std::string filename )
           flux.str(line.c_str());
           flux >> param_name >> _mutation_of_mutation_rates;
           assert(_mutation_of_mutation_rates >= 0.0);
+          assert(_mutation_of_mutation_rates <= 1.0);
         }
         
         /*------------------------------------------------------------------ genetic regulation network */

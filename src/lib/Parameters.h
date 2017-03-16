@@ -1696,6 +1696,7 @@ inline void Parameters::set_basal_expression_level_mutation_size( double size )
  */
 inline void Parameters::set_mutation_of_mutation_rates( double rate )
 {
+  assert(rate <= 1.0);
   assert(rate >= 0.0);
   _mutation_of_mutation_rates = rate;
 }

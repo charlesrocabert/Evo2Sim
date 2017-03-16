@@ -1034,6 +1034,22 @@ void Cell::mutate( void )
     _replication_report->set_inherited_nb_inflow_pumps(_inherited_proteins->get_nb_inflow_pumps());
     _replication_report->set_inherited_nb_outflow_pumps(_inherited_proteins->get_nb_outflow_pumps());
   }
+  
+  /*----------------------------------------------*/
+  /* 6) mutate the mutation rates                 */
+  /*----------------------------------------------*/
+  for (size_t i = 0; i < 7; i++)
+  {
+    _mutation_rates[i] += _prng->gaussian(0.0, _parameters->get_mutation_of_mutation_rates());
+    if (_mutation_rates[i] < 0.0)
+    {
+      _mutation_rates[i] = 0.0;
+    }
+    if (_mutation_rates[i] > 1.0)
+    {
+      _mutation_rates[i] = 1.0;
+    }
+  }
 }
 
 /**
