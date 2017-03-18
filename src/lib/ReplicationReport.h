@@ -238,6 +238,16 @@ public:
   inline double get_mean_translocation_size( void ) const;
   inline double get_mean_inversion_size( void ) const;
   
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  inline double get_point_mutation_rate( void ) const;
+  inline double get_duplication_rate( void ) const;
+  inline double get_deletion_rate( void ) const;
+  inline double get_translocation_rate( void ) const;
+  inline double get_inversion_rate( void ) const;
+  inline double get_transition_rate( void ) const;
+  inline double get_breakpoint_rate( void ) const;
+  
   /*----------------------------
    * SETTERS
    *----------------------------*/
@@ -329,6 +339,16 @@ public:
   inline void set_trophic_group( unsigned long long int group );
   inline void set_trophic_level( trophic_level level );
   
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  inline void set_point_mutation_rate( double rate );
+  inline void set_duplication_rate( double rate );
+  inline void set_deletion_rate( double rate );
+  inline void set_translocation_rate( double rate );
+  inline void set_inversion_rate( double rate );
+  inline void set_transition_rate( double rate );
+  inline void set_breakpoint_rate( double rate );
+  
   /*----------------------------
    * PUBLIC METHODS
    *----------------------------*/
@@ -342,12 +362,14 @@ public:
   void write_inherited_proteins_header( std::ofstream& filestream );
   void write_phenotype_header( std::ofstream& filestream );
   void write_fixed_mutations_header( std::ofstream& filestream );
+  void write_mutation_rates_header( std::ofstream& filestream );
   void write_replication_report_header( std::ofstream& filestream );
   
   void write_genome_structure_data( std::ofstream& filestream );
   void write_inherited_proteins_data( std::ofstream& filestream );
   void write_phenotype_data( std::ofstream& filestream );
   void write_fixed_mutations_data( std::ofstream& filestream );
+  void write_mutation_rates_data( std::ofstream& filestream );
   void write_replication_report_data( std::ofstream& filestream );
   
   /*----------------------------
@@ -537,6 +559,16 @@ protected:
   double _mean_deletion_size;      /*!< Mean size of deletions      */
   double _mean_translocation_size; /*!< Mean size of translocations */
   double _mean_inversion_size;     /*!< Mean size of inversions     */
+  
+  /*------------------------------------------------------------------ Mutation rates (7) */
+  
+  double _point_mutation_rate; /*!< Point mutation rate */
+  double _duplication_rate;    /*!< Duplication rate    */
+  double _deletion_rate;       /*!< Deletion rate       */
+  double _translocation_rate;  /*!< Translocation rate  */
+  double _inversion_rate;      /*!< Inversion rate      */
+  double _transition_rate;     /*!< Transition rate     */
+  double _breakpoint_rate;     /*!< Breakpoint rate     */
   
 };
 
@@ -2025,6 +2057,85 @@ inline double ReplicationReport::get_mean_inversion_size( void ) const
   return _mean_inversion_size;
 }
 
+/*------------------------------------------------------------------ Mutation rates */
+
+/**
+ * \brief    Get the point mutation rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_point_mutation_rate( void ) const
+{
+  return _point_mutation_rate;
+}
+
+/**
+ * \brief    Get the duplication rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_duplication_rate( void ) const
+{
+  return _duplication_rate;
+}
+
+/**
+ * \brief    Get the deletion rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_deletion_rate( void ) const
+{
+  return _deletion_rate;
+}
+
+/**
+ * \brief    Get the translocation rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_translocation_rate( void ) const
+{
+  return _translocation_rate;
+}
+
+/**
+ * \brief    Get the inversion rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_inversion_rate( void ) const
+{
+  return _inversion_rate;
+}
+
+/**
+ * \brief    Get the transition rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_transition_rate( void ) const
+{
+  return _transition_rate;
+}
+
+/**
+ * \brief    Get the breakpoint rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double ReplicationReport::get_breakpoint_rate( void ) const
+{
+  return _breakpoint_rate;
+}
+
 /*----------------------------
  * SETTERS
  *----------------------------*/
@@ -2833,6 +2944,99 @@ inline void ReplicationReport::set_trophic_group( unsigned long long int trophic
 inline void ReplicationReport::set_trophic_level( trophic_level level )
 {
   _trophic_level = level;
+}
+
+/*------------------------------------------------------------------ Mutation rates */
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_point_mutation_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _point_mutation_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_duplication_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _duplication_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_deletion_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _deletion_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_translocation_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _translocation_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_inversion_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _inversion_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_transition_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _transition_rate = rate;
+}
+
+/**
+ * \brief    Set the point mutation rate
+ * \details  --
+ * \param    double rate
+ * \return   \e void
+ */
+inline void ReplicationReport::set_breakpoint_rate( double rate )
+{
+  assert(rate >= 0.0);
+  assert(rate <= 1.0);
+  _breakpoint_rate = rate;
 }
 
 

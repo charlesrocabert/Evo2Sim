@@ -124,6 +124,15 @@ TrophicGroup::TrophicGroup( unsigned long long int identifier, size_t time, doub
   _mean_inherited_nb_inflow_pumps  = 0.0;
   _mean_inherited_nb_outflow_pumps = 0.0;
   
+  /* MUTATION RATES */
+  _mean_point_mutation_rate = 0.0;
+  _mean_duplication_rate    = 0.0;
+  _mean_deletion_rate       = 0.0;
+  _mean_translocation_rate  = 0.0;
+  _mean_inversion_rate      = 0.0;
+  _mean_transition_rate     = 0.0;
+  _mean_breakpoint_rate     = 0.0;
+  
   /*------------------------------------------------------------------ trophic group color */
   
   _red_color   = red;
@@ -266,6 +275,15 @@ TrophicGroup::TrophicGroup( gzFile backup_file )
   gzread( backup_file, &_mean_inherited_nb_inflow_pumps,  sizeof(_mean_inherited_nb_inflow_pumps) );
   gzread( backup_file, &_mean_inherited_nb_outflow_pumps, sizeof(_mean_inherited_nb_outflow_pumps) );
   
+  /* MUTATION RATES */
+  gzread( backup_file, &_mean_point_mutation_rate, sizeof(_mean_point_mutation_rate) );
+  gzread( backup_file, &_mean_duplication_rate,    sizeof(_mean_duplication_rate) );
+  gzread( backup_file, &_mean_deletion_rate,       sizeof(_mean_deletion_rate) );
+  gzread( backup_file, &_mean_translocation_rate,  sizeof(_mean_translocation_rate) );
+  gzread( backup_file, &_mean_inversion_rate,      sizeof(_mean_inversion_rate) );
+  gzread( backup_file, &_mean_transition_rate,     sizeof(_mean_transition_rate) );
+  gzread( backup_file, &_mean_breakpoint_rate,     sizeof(_mean_breakpoint_rate) );
+         
   /*------------------------------------------------------------------ trophic group color */
   
   gzread( backup_file, &_red_color,   sizeof(_red_color) );
@@ -367,6 +385,15 @@ TrophicGroup::TrophicGroup( const TrophicGroup& trophic_group )
   _mean_inherited_nb_inner_enzymes = trophic_group._mean_inherited_nb_inner_enzymes;
   _mean_inherited_nb_inflow_pumps  = trophic_group._mean_inherited_nb_inflow_pumps;
   _mean_inherited_nb_outflow_pumps = trophic_group._mean_inherited_nb_outflow_pumps;
+  
+  /* MUTATION RATES */
+  _mean_point_mutation_rate = trophic_group._mean_point_mutation_rate;
+  _mean_duplication_rate    = trophic_group._mean_duplication_rate;
+  _mean_deletion_rate       = trophic_group._mean_deletion_rate;
+  _mean_translocation_rate  = trophic_group._mean_translocation_rate;
+  _mean_inversion_rate      = trophic_group._mean_inversion_rate;
+  _mean_transition_rate     = trophic_group._mean_transition_rate;
+  _mean_breakpoint_rate     = trophic_group._mean_breakpoint_rate;
   
   /*------------------------------------------------------------------ trophic group color */
   
@@ -515,6 +542,15 @@ void TrophicGroup::save( gzFile backup_file )
   gzwrite( backup_file, &_mean_inherited_nb_inflow_pumps,  sizeof(_mean_inherited_nb_inflow_pumps) );
   gzwrite( backup_file, &_mean_inherited_nb_outflow_pumps, sizeof(_mean_inherited_nb_outflow_pumps) );
   
+  /* MUTATION RATES */
+  gzwrite( backup_file, &_mean_point_mutation_rate, sizeof(_mean_point_mutation_rate) );
+  gzwrite( backup_file, &_mean_duplication_rate,    sizeof(_mean_duplication_rate) );
+  gzwrite( backup_file, &_mean_deletion_rate,       sizeof(_mean_deletion_rate) );
+  gzwrite( backup_file, &_mean_translocation_rate,  sizeof(_mean_translocation_rate) );
+  gzwrite( backup_file, &_mean_inversion_rate,      sizeof(_mean_inversion_rate) );
+  gzwrite( backup_file, &_mean_transition_rate,     sizeof(_mean_transition_rate) );
+  gzwrite( backup_file, &_mean_breakpoint_rate,     sizeof(_mean_breakpoint_rate) );
+  
   /*------------------------------------------------------------------ trophic group color */
   
   gzwrite( backup_file, &_red_color,   sizeof(_red_color) );
@@ -599,6 +635,15 @@ void TrophicGroup::add_alive_cell( Parameters* parameters, Cell* cell )
     _mean_inherited_nb_inflow_pumps  += cell->get_inherited_proteins()->get_nb_inflow_pumps();
     _mean_inherited_nb_outflow_pumps += cell->get_inherited_proteins()->get_nb_outflow_pumps();
   }
+  
+  /* MUTATION RATES */
+  _mean_point_mutation_rate += cell->get_point_mutation_rate();
+  _mean_duplication_rate    += cell->get_duplication_rate();
+  _mean_deletion_rate       += cell->get_deletion_rate();
+  _mean_translocation_rate  += cell->get_translocation_rate();
+  _mean_inversion_rate      += cell->get_inversion_rate();
+  _mean_transition_rate     += cell->get_transition_rate();
+  _mean_breakpoint_rate     += cell->get_breakpoint_rate();
 }
 
 /**
@@ -670,6 +715,15 @@ void TrophicGroup::compute_mean( void )
     _mean_inherited_nb_inner_enzymes /= _number_of_cells;
     _mean_inherited_nb_inflow_pumps  /= _number_of_cells;
     _mean_inherited_nb_outflow_pumps /= _number_of_cells;
+    
+    /* MUTATION RATES */
+    _mean_point_mutation_rate /= _number_of_cells;
+    _mean_duplication_rate    /= _number_of_cells;
+    _mean_deletion_rate       /= _number_of_cells;
+    _mean_translocation_rate  /= _number_of_cells;
+    _mean_inversion_rate      /= _number_of_cells;
+    _mean_transition_rate     /= _number_of_cells;
+    _mean_breakpoint_rate     /= _number_of_cells;
   }
 }
 
@@ -748,6 +802,15 @@ void TrophicGroup::clear( void )
   _mean_inherited_nb_inner_enzymes = 0.0;
   _mean_inherited_nb_inflow_pumps  = 0.0;
   _mean_inherited_nb_outflow_pumps = 0.0;
+  
+  /* MUTATION RATES */
+  _mean_point_mutation_rate = 0.0;
+  _mean_duplication_rate    = 0.0;
+  _mean_deletion_rate       = 0.0;
+  _mean_translocation_rate  = 0.0;
+  _mean_inversion_rate      = 0.0;
+  _mean_transition_rate     = 0.0;
+  _mean_breakpoint_rate     = 0.0;
 }
 
 /**

@@ -136,6 +136,15 @@ public:
   inline double get_mean_inherited_nb_inflow_pumps( void ) const;
   inline double get_mean_inherited_nb_outflow_pumps( void ) const;
   
+  /* MUTATION RATES */
+  inline double get_mean_point_mutation_rate( void ) const;
+  inline double get_mean_duplication_rate( void ) const;
+  inline double get_mean_deletion_rate( void ) const;
+  inline double get_mean_translocation_rate( void ) const;
+  inline double get_mean_inversion_rate( void ) const;
+  inline double get_mean_transition_rate( void ) const;
+  inline double get_mean_breakpoint_rate( void ) const;
+  
   /*------------------------------------------------------------------ trophic group color */
   
   inline double get_red_color( void ) const;
@@ -263,6 +272,15 @@ protected:
   double _mean_inherited_nb_inner_enzymes; /*!< Number of inner enzymes in inherited proteins                  */
   double _mean_inherited_nb_inflow_pumps;  /*!< Number of inflowing pumps in inherited proteins                */
   double _mean_inherited_nb_outflow_pumps; /*!< Number of outflowing pumps in inherited proteins               */
+  
+  /* MUTATION RATES */
+  double _mean_point_mutation_rate; /*!< Point mutation rate */
+  double _mean_duplication_rate;    /*!< Duplication rate    */
+  double _mean_deletion_rate;       /*!< Deletion rate       */
+  double _mean_translocation_rate;  /*!< Translocation rate  */
+  double _mean_inversion_rate;      /*!< Inversion rate      */
+  double _mean_transition_rate;     /*!< Transition rate     */
+  double _mean_breakpoint_rate;     /*!< Breakpoint rate     */
   
   /*------------------------------------------------------------------ trophic group color */
   
@@ -950,6 +968,83 @@ inline double TrophicGroup::get_mean_inherited_nb_inflow_pumps( void ) const
 inline double TrophicGroup::get_mean_inherited_nb_outflow_pumps( void ) const
 {
   return _mean_inherited_nb_outflow_pumps;
+}
+
+/**
+ * \brief    Get the mean point mutation rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_point_mutation_rate( void ) const
+{
+  return _mean_point_mutation_rate;
+}
+
+/**
+ * \brief    Get the mean duplication rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_duplication_rate( void ) const
+{
+  return _mean_duplication_rate;
+}
+
+/**
+ * \brief    Get the mean deletion rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_deletion_rate( void ) const
+{
+  return _mean_deletion_rate;
+}
+
+/**
+ * \brief    Get the mean translocation rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_translocation_rate( void ) const
+{
+  return _mean_translocation_rate;
+}
+
+/**
+ * \brief    Get the mean inversion rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_inversion_rate( void ) const
+{
+  return _mean_inversion_rate;
+}
+
+/**
+ * \brief    Get the mean transition rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_transition_rate( void ) const
+{
+  return _mean_transition_rate;
+}
+
+/**
+ * \brief    Get the mean breakpoint rate
+ * \details  --
+ * \param    double
+ * \return   \e void
+ */
+inline double TrophicGroup::get_mean_breakpoint_rate( void ) const
+{
+  return _mean_breakpoint_rate;
 }
 
 /*------------------------------------------------------------------ trophic group color */

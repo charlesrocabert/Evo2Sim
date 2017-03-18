@@ -215,6 +215,15 @@ ReplicationReport::ReplicationReport( void )
   _mean_translocation_size = 0.0;
   _mean_inversion_size     = 0.0;
   
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  _point_mutation_rate = 0.0;
+  _duplication_rate    = 0.0;
+  _deletion_rate       = 0.0;
+  _translocation_rate  = 0.0;
+  _inversion_rate      = 0.0;
+  _transition_rate     = 0.0;
+  _breakpoint_rate     = 0.0;
 }
 
 /**
@@ -405,6 +414,15 @@ ReplicationReport::ReplicationReport( gzFile backup_file )
   gzread( backup_file, &_mean_translocation_size, sizeof(_mean_translocation_size) );
   gzread( backup_file, &_mean_inversion_size,     sizeof(_mean_inversion_size) );
   
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  gzread( backup_file, &_point_mutation_rate, sizeof(_point_mutation_rate) );
+  gzread( backup_file, &_duplication_rate,    sizeof(_duplication_rate) );
+  gzread( backup_file, &_deletion_rate,       sizeof(_deletion_rate) );
+  gzread( backup_file, &_translocation_rate,  sizeof(_translocation_rate) );
+  gzread( backup_file, &_inversion_rate,      sizeof(_inversion_rate) );
+  gzread( backup_file, &_transition_rate,     sizeof(_transition_rate) );
+  gzread( backup_file, &_breakpoint_rate,     sizeof(_breakpoint_rate) );
 }
 
 /**
@@ -592,6 +610,16 @@ ReplicationReport::ReplicationReport( const ReplicationReport& report )
   _mean_deletion_size      = report._mean_deletion_size;
   _mean_translocation_size = report._mean_translocation_size;
   _mean_inversion_size     = report._mean_inversion_size;
+  
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  _point_mutation_rate = report._point_mutation_rate;
+  _duplication_rate    = report._duplication_rate;
+  _deletion_rate       = report._deletion_rate;
+  _translocation_rate  = report._translocation_rate;
+  _inversion_rate      = report._inversion_rate;
+  _transition_rate     = report._transition_rate;
+  _breakpoint_rate     = report._breakpoint_rate;
   
 }
 
@@ -1096,6 +1124,16 @@ void ReplicationReport::save( gzFile backup_file )
   gzwrite( backup_file, &_mean_deletion_size,      sizeof(_mean_deletion_size) );
   gzwrite( backup_file, &_mean_translocation_size, sizeof(_mean_translocation_size) );
   gzwrite( backup_file, &_mean_inversion_size,     sizeof(_mean_inversion_size) );
+  
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  gzwrite( backup_file, &_point_mutation_rate, sizeof(_point_mutation_rate) );
+  gzwrite( backup_file, &_duplication_rate,    sizeof(_duplication_rate) );
+  gzwrite( backup_file, &_deletion_rate,       sizeof(_deletion_rate) );
+  gzwrite( backup_file, &_translocation_rate,  sizeof(_translocation_rate) );
+  gzwrite( backup_file, &_inversion_rate,      sizeof(_inversion_rate) );
+  gzwrite( backup_file, &_transition_rate,     sizeof(_transition_rate) );
+  gzwrite( backup_file, &_breakpoint_rate,     sizeof(_breakpoint_rate) );
 }
 
 /**
@@ -1284,6 +1322,16 @@ void ReplicationReport::clear( void )
   _mean_deletion_size      = 0.0;
   _mean_translocation_size = 0.0;
   _mean_inversion_size     = 0.0;
+  
+  /*------------------------------------------------------------------ Mutation rates */
+  
+  _point_mutation_rate = 0.0;
+  _duplication_rate    = 0.0;
+  _deletion_rate       = 0.0;
+  _translocation_rate  = 0.0;
+  _inversion_rate      = 0.0;
+  _transition_rate     = 0.0;
+  _breakpoint_rate     = 0.0;
 }
 
 /**
@@ -1479,6 +1527,24 @@ void ReplicationReport::write_fixed_mutations_header( std::ofstream& filestream 
 }
 
 /**
+ * \brief    Write mutation rates header
+ * \details  --
+ * \param    std::ofstream& filestream
+ * \return   \e void
+ */
+void ReplicationReport::write_mutation_rates_header( std::ofstream& filestream )
+{
+  filestream << _generation << " " <<
+  "point_mutation_rate" << " " <<
+  "duplication_rate" << " " <<
+  "deletion_rate" << " " <<
+  "translocation_rate" << " " <<
+  "inversion_rate" << " " <<
+  "transition_rate" << " " <<
+  "breakpoint_rate" << "\n";
+}
+
+/**
  * \brief    Write the replication report header
  * \details  --
  * \param    std::ofstream& filestream
@@ -1617,7 +1683,14 @@ void ReplicationReport::write_replication_report_header( std::ofstream& filestre
   "duplication_size" << " " <<
   "deletion_size" << " " <<
   "translocation_size" << " " <<
-  "inversion_size" << "\n";
+  "inversion_size" << " " <<
+  "point_mutation_rate" << " " <<
+  "duplication_rate" << " " <<
+  "deletion_rate" << " " <<
+  "translocation_rate" << " " <<
+  "inversion_rate" << " " <<
+  "transition_rate" << " " <<
+  "breakpoint_rate" << "\n";
 }
 
 /**
@@ -1796,6 +1869,24 @@ void ReplicationReport::write_fixed_mutations_data( std::ofstream& filestream )
 }
 
 /**
+ * \brief    Write mutation rates data
+ * \details  --
+ * \param    std::ofstream& filestream
+ * \return   \e void
+ */
+void ReplicationReport::write_mutation_rates_data( std::ofstream& filestream )
+{
+  filestream << _generation << " " <<
+  _point_mutation_rate << " " <<
+  _duplication_rate << " " <<
+  _deletion_rate << " " <<
+  _translocation_rate << " " <<
+  _inversion_rate << " " <<
+  _transition_rate << " " <<
+  _breakpoint_rate << "\n";
+}
+
+/**
  * \brief    Write the replication report data
  * \details  --
  * \param    std::ofstream& filestream
@@ -1934,7 +2025,14 @@ void ReplicationReport::write_replication_report_data( std::ofstream& filestream
   _mean_duplication_size << " " <<
   _mean_deletion_size << " " <<
   _mean_translocation_size << " " <<
-  _mean_inversion_size << "\n";
+  _mean_inversion_size << " " <<
+  _point_mutation_rate << " " <<
+  _duplication_rate << " " <<
+  _deletion_rate << " " <<
+  _translocation_rate << " " <<
+  _inversion_rate << " " <<
+  _transition_rate << " " <<
+  _breakpoint_rate << "\n";
 }
 
 /*----------------------------
