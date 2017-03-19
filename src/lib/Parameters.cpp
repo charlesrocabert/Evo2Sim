@@ -1475,6 +1475,24 @@ void Parameters::write( std::string filename )
 {
   std::ofstream file(filename.c_str(), std::ios::out | std::ios::trunc);
   file << "\n";
+  file << "#***************************************************************************\n";
+  file << "# Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon\n";
+  file << "# Web: https://github.com/charlesrocabert/Evo2Sim\n";
+  file << "#\n";
+  file << "# This program is free software: you can redistribute it and/or modify\n";
+  file << "# it under the terms of the GNU General Public License as published by\n";
+  file << "# the Free Software Foundation, either version 3 of the License, or\n";
+  file << "# (at your option) any later version.\n";
+  file << "#\n";
+  file << "# This program is distributed in the hope that it will be useful,\n";
+  file << "# but WITHOUT ANY WARRANTY; without even the implied warranty of\n";
+  file << "# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n";
+  file << "# GNU General Public License for more details.\n";
+  file << "#\n";
+  file << "# You should have received a copy of the GNU General Public License\n";
+  file << "# along with this program.  If not, see <http://www.gnu.org/licenses/>.\n";
+  file << "#***************************************************************************\n";
+  file << "\n";
   file << "########################################################\n";
   file << "# PSEUDORANDOM NUMBERS GENERATOR\n";
   file << "########################################################\n";
