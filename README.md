@@ -34,7 +34,7 @@ Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ub
 * GSL
 * CBLAS
 * TBB
-* R (packages ape and RColorBrewer are needed)
+* R (packages ape and RColorBrewer are required)
 
 ### 3. Optional dependencies (for graphical outputs)
 * X11 (or XQuartz on latest OSX version)
