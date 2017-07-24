@@ -6,6 +6,10 @@ Evo<sup>2</sup>Sim is a multi-scale model of <em>In Silico</em> Experimental Evo
 Digital organisms with an evolvable genome structure, encoding evolvable genetic regulation and metabolic networks are evolved for tens of thousands of generations in environments mimicking the dynamics of real controlled environments, including chemostat or batch culture.
 Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evoevo.eu/), funded by the European Commission (FP7-ICT-610427).
 
+## Publications
+
+&bull; Rocabert, C., Knibbe, C., Consuegra, J., Schneider, D., & Beslon, G. (2017). <em>Beware batch culture: Seasonality and niche construction predicted to favor bacterial adaptive diversification</em>. PLoS computational biology, 13(3), e1005459. (https://doi.org/10.1371/journal.pcbi.1005459)
+
 ## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
