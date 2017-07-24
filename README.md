@@ -66,7 +66,7 @@ To compile the software in DEBUG mode, use <code>make_debug.sh</code> script ins
 
     bash make_debug.sh
 
-When Evo<sup>2</sup>Sim is compiled in DEBUG mode, a lot of tests are computed on the fly during a simulation (<em>e.g.</em> integrity tests on phylogenetic trees, or on the ODE solver . . . ). For this reason, this mode should only be used for test or development phases. Moreover, unitary and integrated tests must be ran in DEBUG mode (see below).
+When Evo<sup>2</sup>Sim is compiled in DEBUG mode, many tests are computed on the fly during a simulation (<em>e.g.</em> integrity tests on phylogenetic trees, or on the ODE solver . . . ). For this reason, this mode should only be used for test or development phases. Moreover, unitary and integrated tests must be ran in DEBUG mode (see below).
 
 #### Executable files emplacement
 Binary executable files are in <code>build/bin</code> folder.
