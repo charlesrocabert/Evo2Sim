@@ -37,7 +37,7 @@ Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ub
 * R (packages ape and RColorBrewer are required)
 
 ### 3. Optional dependencies (for graphical outputs)
-* X11 (or XQuartz on latest OSX version)
+* X11 (or XQuartz on latest OSX versions)
 * SFML 2
 * matplotlib (this python library is needed for the script track_cell.py, see below)
 
