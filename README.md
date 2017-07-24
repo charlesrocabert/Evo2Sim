@@ -16,7 +16,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## Community
 
-Evo<sup>2</sup>Sim is developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the EvoEvo project. The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community on http://www.evoevo.eu/community/.
+Evo<sup>2</sup>Sim was first developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
 
 ## Installation instructions
 
