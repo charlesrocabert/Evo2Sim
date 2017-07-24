@@ -9,6 +9,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 ## Publications
 
 &bull; Rocabert, C., Knibbe, C., Consuegra, J., Schneider, D., & Beslon, G. (2017). <em>Beware batch culture: Seasonality and niche construction predicted to favor bacterial adaptive diversification</em>. PLoS computational biology, 13(3), e1005459. (https://doi.org/10.1371/journal.pcbi.1005459)
+<br />
 &bull; Rocabert, C., Knibbe, C., & Beslon, G. (2015, July). <em>Towards a Integrated Evolutionary Model to Study Evolution of Evolution</em>. In EvoEvo Workshop (Satellite workshop of ECAL 2015). (https://hal.inria.fr/hal-01252796/)
 
 ## License
