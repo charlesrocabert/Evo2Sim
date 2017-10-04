@@ -1,51 +1,14 @@
 
-\documentclass[10pt]{report}
+\documentclass[a4paper,12pt,onecolumn]{template}
 
-%-----------------------------------------------%
-% chargement des librairies de base %
-%-----------------------------------------------%
-\usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[francais, english]{babel}
-\usepackage[babel=true]{csquotes}
-\usepackage{layout}
-\usepackage[left=2.5cm, top=2.5cm, right=2.5cm, bottom=2.5cm]{geometry}
-\renewcommand{\baselinestretch}{1.5}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{url}
-\usepackage{color}
-\usepackage{colortbl}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{multicol}
-\usepackage{fancybox}
-\usepackage{fancyhdr}
+%%%%%%%%%%%%%%%%%%%%%%%%% EXTRA PACKAGES %
+
+\usepackage{bookmark}
+\usepackage{lineno}
 \usepackage{caption}
-\usepackage{natbib}
-\usepackage{algorithm}
-\usepackage{algorithmic}
-\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
-\usepackage[geometry]{ifsym}
-\usepackage{cmap}
-\usepackage{stmaryrd}
-\usepackage{tabularx}
-
-%-----------------------------%
-% sélection du langage %
-%-----------------------------%
-\selectlanguage{english}
-
-%----------------------------------%
-% package name definition %
-%-----------------------------------%
-\newcommand{\packageName}{Evo\up{2}Sim}
-\newcommand{\packageVersion}{1.0.1}
-
-%---------------------------------%
-% gestion des divers liens %
-%---------------------------------%
+\usepackage[babel=true]{csquotes}
 \usepackage{hyperref}
+\usepackage{pdfpages}
 \hypersetup{
     backref=true,    %permet d'ajouter des liens dans...
     pagebackref=true,%...les bibliographies
@@ -61,62 +24,34 @@
     %si les signets Acrobat sont créés,
     %les afficher complètement.
     pdfauthor={Charles Rocabert},
-    pdftitle={{\packageName} User Manual},
-    pdfsubject={{\packageName} User Manual},
-    pdfcreator={charles.rocabert@inria.fr},
+    pdftitle={},
+    pdfsubject={},
+    pdfcreator={charles.rocabert@gmail.com},
     pdfkeywords={}
     %sous Acrobat.
 }
 
-%---------------------------------------%
-% mise en forme des colonnes %
-%---------------------------------------%
-\setlength{\columnsep}{30pt}
-\numberwithin{equation}{section}
-
-%-----------------------------------------------------%
-% définition de l'environnement tablehere %
-%-----------------------------------------------------%
+% Define environnement tablehere
 \renewcommand{\textfraction}{0}
 \makeatletter
 \newenvironment{tablehere}
 {\def\@captype{table}}
 {}
 
-%------------------------------------------------------%
-% définition de l'environnement figurehere %
-%------------------------------------------------------%
+% Define environnement figurehere
 \newenvironment{figurehere}
 {\def\@captype{figure}}
 {}
 \makeatother
 
-%--------------------------------------%
-% mise en forme du glossaire %
-%--------------------------------------%
-\newcommand*{\glossfirstformat}[1]{\textsf{#1}}
+% Define some variables
+\newcommand{\packageName}{\textsc{Evo\textsuperscript{2}Sim}}
+\newcommand{\packageVersion}{1.0.1}
 
-\usepackage[acronym]{glossaries}
-\makeglossaries
-
-\renewcommand{\glsdisplayfirst}[4]{\glossfirstformat{#1#4}}
-\renewcommand*{\glsnamefont}{\sffamily}
-
-%-----------------------------------%
-% définition header + footer %
-%-----------------------------------%
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE,RO]{\leftmark}
-\fancyhead[RE,LO]{{\packageName} User Manual ({\packageVersion})}
-%\fancyfoot[CE,CO]{\leftmark}
-\fancyfoot[LE,RO]{Page \thepage}
-
-
-%----------------------------%
-% début du document %
-%----------------------------%
 \begin{document}
+\selectlanguage{english}
+
+%%%%%% TITLE PAGE %%%%%%
 
 \thispagestyle{empty}
 
@@ -137,33 +72,25 @@ for version {\packageVersion} (\today)
 \thispagestyle{empty}
 \mbox{}
 
-\newpage
+\clearemptydoublepage
 
 \tableofcontents
 
-\newpage
+\clearemptydoublepage
+
+%%%%%%%%%%%%%%%%%%%
 
 \input{./source/introduction.tex}
 
-\newpage
-
 \input{./source/installation_instructions.tex}
 
-\newpage
-
 \input{./source/typical_usage.tex}
-
-\newpage
 
 \input{./source/simulation_viewer.tex}
 
 \appendix
 
-\newpage
-
 \input{./source/main_executables_description.tex}
-
-\newpage
 
 \input{./source/parameters_description.tex}
 

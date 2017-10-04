@@ -1,133 +1,133 @@
 \select@language {english}
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{7}{chapter.1}
-\contentsline {section}{\numberline {1.1}Introducing Evo\up {2}Sim}{7}{section.1.1}
-\contentsline {section}{\numberline {1.2}License}{9}{section.1.2}
-\contentsline {section}{\numberline {1.3}Community}{9}{section.1.3}
-\contentsline {section}{\numberline {1.4}Download}{9}{section.1.4}
-\contentsline {section}{\numberline {1.5}Contact}{9}{section.1.5}
-\contentsline {chapter}{\numberline {2}Installation instructions}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Supported platforms}{10}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Required dependencies}{10}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Optional dependencies (for graphical outputs)}{10}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}HTML viewer dependencies}{11}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Software compilation}{11}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}User mode}{11}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Debug mode}{11}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Executable files emplacement}{11}{subsection.2.2.3}
-\contentsline {chapter}{\numberline {3}Typical usage}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Creating a simulation}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Generating viable initial conditions with a bootstrap}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Running a simulation}{13}{section.3.3}
-\contentsline {chapter}{\numberline {4}Simulation viewer}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}Population}{14}{section.4.1}
-\contentsline {section}{\numberline {4.2}Best lineage}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}Best individual}{14}{section.4.3}
-\contentsline {section}{\numberline {4.4}Environment}{14}{section.4.4}
-\contentsline {section}{\numberline {4.5}Phylogeny}{15}{section.4.5}
-\contentsline {section}{\numberline {4.6}Parameters}{15}{section.4.6}
-\contentsline {chapter}{\numberline {A}Main executables description}{16}{appendix.A}
-\contentsline {section}{\numberline {A.1}\texttt {evo2sim\_create} executable}{16}{section.A.1}
-\contentsline {paragraph}{Usage:}{16}{section*.3}
-\contentsline {paragraph}{Options are:}{16}{section*.4}
-\contentsline {section}{\numberline {A.2}\texttt {evo2sim\_bootstrap} executable}{16}{section.A.2}
-\contentsline {paragraph}{Usage:}{17}{section*.5}
-\contentsline {paragraph}{Options are:}{17}{section*.6}
-\contentsline {section}{\numberline {A.3}\texttt {evo2sim\_run} executable}{17}{section.A.3}
-\contentsline {paragraph}{Usage:}{17}{section*.7}
-\contentsline {paragraph}{Options are:}{17}{section*.8}
-\contentsline {section}{\numberline {A.4}\texttt {evo2sim\_generate\_figures} executable}{18}{section.A.4}
-\contentsline {paragraph}{Usage:}{18}{section*.9}
-\contentsline {paragraph}{Options are:}{18}{section*.10}
-\contentsline {section}{\numberline {A.5}\texttt {evo2sim\_recover\_parameters} executable}{18}{section.A.5}
-\contentsline {paragraph}{Usage:}{18}{section*.11}
-\contentsline {paragraph}{Options are:}{18}{section*.12}
-\contentsline {section}{\numberline {A.6}\texttt {evo2sim\_unitary\_tests} executable}{19}{section.A.6}
-\contentsline {paragraph}{Usage:}{19}{section*.13}
-\contentsline {paragraph}{Options are:}{19}{section*.14}
-\contentsline {section}{\numberline {A.7}\texttt {evo2sim\_integrated\_tests} executable}{19}{section.A.7}
-\contentsline {paragraph}{Usage:}{19}{section*.15}
-\contentsline {paragraph}{Options are:}{19}{section*.16}
-\contentsline {section}{\numberline {A.8}Other executables}{20}{section.A.8}
-\contentsline {chapter}{\numberline {B}Parameters description}{21}{appendix.B}
-\contentsline {section}{\numberline {B.1}Pseudorandom numbers generator}{21}{section.B.1}
-\contentsline {section}{\numberline {B.2}Parallel computing}{21}{section.B.2}
-\contentsline {section}{\numberline {B.3}Simulation schemes}{21}{section.B.3}
-\contentsline {subsection}{\numberline {B.3.1}Energy costs scheme}{21}{subsection.B.3.1}
-\contentsline {subsection}{\numberline {B.3.2}Membrane permeability scheme}{22}{subsection.B.3.2}
-\contentsline {subsection}{\numberline {B.3.3}Metabolic inheritance scheme}{22}{subsection.B.3.3}
-\contentsline {subsection}{\numberline {B.3.4}Enzymatic inheritance scheme}{22}{subsection.B.3.4}
-\contentsline {subsection}{\numberline {B.3.5}Co-enzymes scheme}{22}{subsection.B.3.5}
-\contentsline {subsection}{\numberline {B.3.6}Score scheme}{22}{subsection.B.3.6}
-\contentsline {subsection}{\numberline {B.3.7}Selection threshold}{23}{subsection.B.3.7}
-\contentsline {section}{\numberline {B.4}Space}{23}{section.B.4}
-\contentsline {subsection}{\numberline {B.4.1}Grid width}{23}{subsection.B.4.1}
-\contentsline {subsection}{\numberline {B.4.2}Grid height}{23}{subsection.B.4.2}
-\contentsline {section}{\numberline {B.5}Output}{23}{section.B.5}
-\contentsline {subsection}{\numberline {B.5.1}Simulation backup step}{23}{subsection.B.5.1}
-\contentsline {subsection}{\numberline {B.5.2}Figures generation step}{24}{subsection.B.5.2}
-\contentsline {section}{\numberline {B.6}Genome}{24}{section.B.6}
-\contentsline {subsection}{\numberline {B.6.1}Load the genome from file}{24}{subsection.B.6.1}
-\contentsline {subsection}{\numberline {B.6.2}Metabolite tags initial range}{24}{subsection.B.6.2}
-\contentsline {subsection}{\numberline {B.6.3}Binding site tags initial range}{25}{subsection.B.6.3}
-\contentsline {subsection}{\numberline {B.6.4}Co-enzyme tags initial range}{25}{subsection.B.6.4}
-\contentsline {subsection}{\numberline {B.6.5}Transcription factor tags initial range}{25}{subsection.B.6.5}
-\contentsline {subsection}{\numberline {B.6.6}Transcription factors binding window}{25}{subsection.B.6.6}
-\contentsline {subsection}{\numberline {B.6.7}Initial number of non-coding units}{25}{subsection.B.6.7}
-\contentsline {subsection}{\numberline {B.6.8}Initial number of enzyme coding units}{25}{subsection.B.6.8}
-\contentsline {subsection}{\numberline {B.6.9}Initial number of transcription factor coding units}{26}{subsection.B.6.9}
-\contentsline {subsection}{\numberline {B.6.10}Initial number of binding site units}{26}{subsection.B.6.10}
-\contentsline {subsection}{\numberline {B.6.11}Initial number of promoter units}{26}{subsection.B.6.11}
-\contentsline {subsection}{\numberline {B.6.12}Point mutation rate}{26}{subsection.B.6.12}
-\contentsline {subsection}{\numberline {B.6.13}Duplication rate}{26}{subsection.B.6.13}
-\contentsline {subsection}{\numberline {B.6.14}Deletion rate}{26}{subsection.B.6.14}
-\contentsline {subsection}{\numberline {B.6.15}Translocation rate}{26}{subsection.B.6.15}
-\contentsline {subsection}{\numberline {B.6.16}Inversion rate}{26}{subsection.B.6.16}
-\contentsline {subsection}{\numberline {B.6.17}Transition rate}{27}{subsection.B.6.17}
-\contentsline {subsection}{\numberline {B.6.18}Breakpoint rate}{27}{subsection.B.6.18}
-\contentsline {subsection}{\numberline {B.6.19}Substrate tag mutation size}{27}{subsection.B.6.19}
-\contentsline {subsection}{\numberline {B.6.20}Product tag mutation size}{27}{subsection.B.6.20}
-\contentsline {subsection}{\numberline {B.6.21}$k_{cat}$ mutation size}{27}{subsection.B.6.21}
-\contentsline {subsection}{\numberline {B.6.22}$k_{cat}/k_M$ ratio mutation size}{27}{subsection.B.6.22}
-\contentsline {subsection}{\numberline {B.6.23}Binding site tag mutation size}{27}{subsection.B.6.23}
-\contentsline {subsection}{\numberline {B.6.24}Co-enzyme tag mutation size}{28}{subsection.B.6.24}
-\contentsline {subsection}{\numberline {B.6.25}Transcription factor tag mutation size}{28}{subsection.B.6.25}
-\contentsline {subsection}{\numberline {B.6.26}Basal expression level mutation size}{28}{subsection.B.6.26}
-\contentsline {section}{\numberline {B.7}Genetic regulation network}{28}{section.B.7}
-\contentsline {subsection}{\numberline {B.7.1}Genetic regulation network time-steps ratio}{28}{subsection.B.7.1}
-\contentsline {subsection}{\numberline {B.7.2}Hill function theta parameter}{28}{subsection.B.7.2}
-\contentsline {subsection}{\numberline {B.7.3}Hill function n parameter}{28}{subsection.B.7.3}
-\contentsline {subsection}{\numberline {B.7.4}Protein degradation rate}{29}{subsection.B.7.4}
-\contentsline {section}{\numberline {B.8}Metabolic network}{29}{section.B.8}
-\contentsline {subsection}{\numberline {B.8.1}Metabolism time-steps}{29}{subsection.B.8.1}
-\contentsline {subsection}{\numberline {B.8.2}Essential metabolites toxicity threshold}{29}{subsection.B.8.2}
-\contentsline {subsection}{\numberline {B.8.3}Non-essential metabolites toxicity threshold}{29}{subsection.B.8.3}
-\contentsline {subsection}{\numberline {B.8.4}Initial metabolite amount in cells}{29}{subsection.B.8.4}
-\contentsline {subsection}{\numberline {B.8.5}Maximum reaction size}{29}{subsection.B.8.5}
-\contentsline {section}{\numberline {B.9}Energy}{30}{section.B.9}
-\contentsline {subsection}{\numberline {B.9.1}Energy transcription cost}{30}{subsection.B.9.1}
-\contentsline {subsection}{\numberline {B.9.2}Energy degradation cost}{30}{subsection.B.9.2}
-\contentsline {subsection}{\numberline {B.9.3}Energy enzymatic cost}{30}{subsection.B.9.3}
-\contentsline {subsection}{\numberline {B.9.4}Energy pumping cost}{30}{subsection.B.9.4}
-\contentsline {subsection}{\numberline {B.9.5}Energy dissipation rate}{31}{subsection.B.9.5}
-\contentsline {subsection}{\numberline {B.9.6}Energy toxicity threshold}{31}{subsection.B.9.6}
-\contentsline {subsection}{\numberline {B.9.7}Initial energy amount in cells}{31}{subsection.B.9.7}
-\contentsline {section}{\numberline {B.10}Cell}{31}{section.B.10}
-\contentsline {subsection}{\numberline {B.10.1}Membrane permeability}{31}{subsection.B.10.1}
-\contentsline {section}{\numberline {B.11}Population}{31}{section.B.11}
-\contentsline {subsection}{\numberline {B.11.1}Death probability}{31}{subsection.B.11.1}
-\contentsline {subsection}{\numberline {B.11.2}Migration rate}{31}{subsection.B.11.2}
-\contentsline {subsection}{\numberline {B.11.3}HGT rate}{32}{subsection.B.11.3}
-\contentsline {section}{\numberline {B.12}Environment}{32}{section.B.12}
-\contentsline {subsection}{\numberline {B.12.1}Environment initialization cycles}{32}{subsection.B.12.1}
-\contentsline {subsection}{\numberline {B.12.2}Environment species tags range}{32}{subsection.B.12.2}
-\contentsline {subsection}{\numberline {B.12.3}Environment concentrations range}{32}{subsection.B.12.3}
-\contentsline {subsection}{\numberline {B.12.4}Environment number of species range}{32}{subsection.B.12.4}
-\contentsline {subsection}{\numberline {B.12.5}Environment interaction scheme}{33}{subsection.B.12.5}
-\contentsline {subsection}{\numberline {B.12.6}Environment renewal scheme}{33}{subsection.B.12.6}
-\contentsline {subsection}{\numberline {B.12.7}Environment variation scheme}{33}{subsection.B.12.7}
-\contentsline {subsection}{\numberline {B.12.8}Environment localization scheme}{33}{subsection.B.12.8}
-\contentsline {subsection}{\numberline {B.12.9}Environment metabolic scheme}{34}{subsection.B.12.9}
-\contentsline {subsection}{\numberline {B.12.10}Environment introduction rate}{34}{subsection.B.12.10}
-\contentsline {subsection}{\numberline {B.12.11}Environment diffusion coefficient}{34}{subsection.B.12.11}
-\contentsline {subsection}{\numberline {B.12.12}Environment degradation rate}{34}{subsection.B.12.12}
+\contentsline {chapter}{\numberline {I}Introduction}{7}{chapter.1}
+\contentsline {section}{\numberline {I.1}Introducing \textsc {Evo\textsuperscript {2}Sim}}{7}{section.1.1}
+\contentsline {section}{\numberline {I.2}License}{7}{section.1.2}
+\contentsline {section}{\numberline {I.3}Community}{8}{section.1.3}
+\contentsline {section}{\numberline {I.4}Download}{8}{section.1.4}
+\contentsline {section}{\numberline {I.5}Contact}{8}{section.1.5}
+\contentsline {chapter}{\numberline {II}Installation instructions}{11}{chapter.2}
+\contentsline {section}{\numberline {II.1}Supported platforms}{11}{section.2.1}
+\contentsline {subsection}{\numberline {II.1.1}Required dependencies}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {II.1.2}Optional dependencies (for graphical outputs)}{11}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {II.1.3}HTML viewer dependencies}{12}{subsection.2.1.3}
+\contentsline {section}{\numberline {II.2}Software compilation}{12}{section.2.2}
+\contentsline {subsection}{\numberline {II.2.1}User mode}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {II.2.2}Debug mode}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {II.2.3}Executable files emplacement}{13}{subsection.2.2.3}
+\contentsline {chapter}{\numberline {III}Typical usage}{15}{chapter.3}
+\contentsline {section}{\numberline {III.1}Creating a simulation}{15}{section.3.1}
+\contentsline {section}{\numberline {III.2}Generating viable initial conditions with a bootstrap}{16}{section.3.2}
+\contentsline {section}{\numberline {III.3}Running a simulation}{16}{section.3.3}
+\contentsline {chapter}{\numberline {IV}Simulation viewer}{17}{chapter.4}
+\contentsline {section}{\numberline {IV.1}Population}{17}{section.4.1}
+\contentsline {section}{\numberline {IV.2}Best lineage}{17}{section.4.2}
+\contentsline {section}{\numberline {IV.3}Best individual}{17}{section.4.3}
+\contentsline {section}{\numberline {IV.4}Environment}{18}{section.4.4}
+\contentsline {section}{\numberline {IV.5}Phylogeny}{18}{section.4.5}
+\contentsline {section}{\numberline {IV.6}Parameters}{18}{section.4.6}
+\contentsline {chapter}{\numberline {A}Main executables description}{19}{appendix.A}
+\contentsline {section}{\numberline {A.1}\texttt {evo2sim\_create} executable}{19}{section.A.1}
+\contentsline {paragraph}{Usage:}{19}{section*.3}
+\contentsline {paragraph}{Options are:}{19}{section*.4}
+\contentsline {section}{\numberline {A.2}\texttt {evo2sim\_bootstrap} executable}{20}{section.A.2}
+\contentsline {paragraph}{Usage:}{20}{section*.5}
+\contentsline {paragraph}{Options are:}{20}{section*.6}
+\contentsline {section}{\numberline {A.3}\texttt {evo2sim\_run} executable}{20}{section.A.3}
+\contentsline {paragraph}{Usage:}{21}{section*.7}
+\contentsline {paragraph}{Options are:}{21}{section*.8}
+\contentsline {section}{\numberline {A.4}\texttt {evo2sim\_generate\_figures} executable}{21}{section.A.4}
+\contentsline {paragraph}{Usage:}{21}{section*.9}
+\contentsline {paragraph}{Options are:}{21}{section*.10}
+\contentsline {section}{\numberline {A.5}\texttt {evo2sim\_recover\_parameters} executable}{22}{section.A.5}
+\contentsline {paragraph}{Usage:}{22}{section*.11}
+\contentsline {paragraph}{Options are:}{22}{section*.12}
+\contentsline {section}{\numberline {A.6}\texttt {evo2sim\_unitary\_tests} executable}{22}{section.A.6}
+\contentsline {paragraph}{Usage:}{22}{section*.13}
+\contentsline {paragraph}{Options are:}{22}{section*.14}
+\contentsline {section}{\numberline {A.7}\texttt {evo2sim\_integrated\_tests} executable}{23}{section.A.7}
+\contentsline {paragraph}{Usage:}{23}{section*.15}
+\contentsline {paragraph}{Options are:}{23}{section*.16}
+\contentsline {section}{\numberline {A.8}Other executables}{23}{section.A.8}
+\contentsline {chapter}{\numberline {B}Parameters description}{25}{appendix.B}
+\contentsline {section}{\numberline {B.1}Pseudorandom numbers generator}{25}{section.B.1}
+\contentsline {section}{\numberline {B.2}Parallel computing}{25}{section.B.2}
+\contentsline {section}{\numberline {B.3}Simulation schemes}{26}{section.B.3}
+\contentsline {subsection}{\numberline {B.3.1}Energy costs scheme}{26}{subsection.B.3.1}
+\contentsline {subsection}{\numberline {B.3.2}Membrane permeability scheme}{26}{subsection.B.3.2}
+\contentsline {subsection}{\numberline {B.3.3}Metabolic inheritance scheme}{26}{subsection.B.3.3}
+\contentsline {subsection}{\numberline {B.3.4}Enzymatic inheritance scheme}{26}{subsection.B.3.4}
+\contentsline {subsection}{\numberline {B.3.5}Co-enzymes scheme}{27}{subsection.B.3.5}
+\contentsline {subsection}{\numberline {B.3.6}Score scheme}{27}{subsection.B.3.6}
+\contentsline {subsection}{\numberline {B.3.7}Selection threshold}{27}{subsection.B.3.7}
+\contentsline {section}{\numberline {B.4}Space}{28}{section.B.4}
+\contentsline {subsection}{\numberline {B.4.1}Grid width}{28}{subsection.B.4.1}
+\contentsline {subsection}{\numberline {B.4.2}Grid height}{28}{subsection.B.4.2}
+\contentsline {section}{\numberline {B.5}Output}{28}{section.B.5}
+\contentsline {subsection}{\numberline {B.5.1}Simulation backup step}{28}{subsection.B.5.1}
+\contentsline {subsection}{\numberline {B.5.2}Figures generation step}{28}{subsection.B.5.2}
+\contentsline {section}{\numberline {B.6}Genome}{29}{section.B.6}
+\contentsline {subsection}{\numberline {B.6.1}Load the genome from file}{29}{subsection.B.6.1}
+\contentsline {subsection}{\numberline {B.6.2}Metabolite tags initial range}{29}{subsection.B.6.2}
+\contentsline {subsection}{\numberline {B.6.3}Binding site tags initial range}{30}{subsection.B.6.3}
+\contentsline {subsection}{\numberline {B.6.4}Co-enzyme tags initial range}{30}{subsection.B.6.4}
+\contentsline {subsection}{\numberline {B.6.5}Transcription factor tags initial range}{30}{subsection.B.6.5}
+\contentsline {subsection}{\numberline {B.6.6}Transcription factors binding window}{30}{subsection.B.6.6}
+\contentsline {subsection}{\numberline {B.6.7}Initial number of non-coding units}{31}{subsection.B.6.7}
+\contentsline {subsection}{\numberline {B.6.8}Initial number of enzyme coding units}{31}{subsection.B.6.8}
+\contentsline {subsection}{\numberline {B.6.9}Initial number of transcription factor coding units}{31}{subsection.B.6.9}
+\contentsline {subsection}{\numberline {B.6.10}Initial number of binding site units}{31}{subsection.B.6.10}
+\contentsline {subsection}{\numberline {B.6.11}Initial number of promoter units}{31}{subsection.B.6.11}
+\contentsline {subsection}{\numberline {B.6.12}Point mutation rate}{32}{subsection.B.6.12}
+\contentsline {subsection}{\numberline {B.6.13}Duplication rate}{32}{subsection.B.6.13}
+\contentsline {subsection}{\numberline {B.6.14}Deletion rate}{32}{subsection.B.6.14}
+\contentsline {subsection}{\numberline {B.6.15}Translocation rate}{32}{subsection.B.6.15}
+\contentsline {subsection}{\numberline {B.6.16}Inversion rate}{32}{subsection.B.6.16}
+\contentsline {subsection}{\numberline {B.6.17}Transition rate}{33}{subsection.B.6.17}
+\contentsline {subsection}{\numberline {B.6.18}Breakpoint rate}{33}{subsection.B.6.18}
+\contentsline {subsection}{\numberline {B.6.19}Substrate tag mutation size}{33}{subsection.B.6.19}
+\contentsline {subsection}{\numberline {B.6.20}Product tag mutation size}{33}{subsection.B.6.20}
+\contentsline {subsection}{\numberline {B.6.21}$k_{cat}$ mutation size}{33}{subsection.B.6.21}
+\contentsline {subsection}{\numberline {B.6.22}$k_{cat}/k_M$ ratio mutation size}{34}{subsection.B.6.22}
+\contentsline {subsection}{\numberline {B.6.23}Binding site tag mutation size}{34}{subsection.B.6.23}
+\contentsline {subsection}{\numberline {B.6.24}Co-enzyme tag mutation size}{34}{subsection.B.6.24}
+\contentsline {subsection}{\numberline {B.6.25}Transcription factor tag mutation size}{34}{subsection.B.6.25}
+\contentsline {subsection}{\numberline {B.6.26}Basal expression level mutation size}{34}{subsection.B.6.26}
+\contentsline {section}{\numberline {B.7}Genetic regulation network}{35}{section.B.7}
+\contentsline {subsection}{\numberline {B.7.1}Genetic regulation network time-steps ratio}{35}{subsection.B.7.1}
+\contentsline {subsection}{\numberline {B.7.2}Hill function theta parameter}{35}{subsection.B.7.2}
+\contentsline {subsection}{\numberline {B.7.3}Hill function n parameter}{35}{subsection.B.7.3}
+\contentsline {subsection}{\numberline {B.7.4}Protein degradation rate}{35}{subsection.B.7.4}
+\contentsline {section}{\numberline {B.8}Metabolic network}{36}{section.B.8}
+\contentsline {subsection}{\numberline {B.8.1}Metabolism time-steps}{36}{subsection.B.8.1}
+\contentsline {subsection}{\numberline {B.8.2}Essential metabolites toxicity threshold}{36}{subsection.B.8.2}
+\contentsline {subsection}{\numberline {B.8.3}Non-essential metabolites toxicity threshold}{36}{subsection.B.8.3}
+\contentsline {subsection}{\numberline {B.8.4}Initial metabolite amount in cells}{36}{subsection.B.8.4}
+\contentsline {subsection}{\numberline {B.8.5}Maximum reaction size}{37}{subsection.B.8.5}
+\contentsline {section}{\numberline {B.9}Energy}{37}{section.B.9}
+\contentsline {subsection}{\numberline {B.9.1}Energy transcription cost}{37}{subsection.B.9.1}
+\contentsline {subsection}{\numberline {B.9.2}Energy degradation cost}{37}{subsection.B.9.2}
+\contentsline {subsection}{\numberline {B.9.3}Energy enzymatic cost}{37}{subsection.B.9.3}
+\contentsline {subsection}{\numberline {B.9.4}Energy pumping cost}{38}{subsection.B.9.4}
+\contentsline {subsection}{\numberline {B.9.5}Energy dissipation rate}{38}{subsection.B.9.5}
+\contentsline {subsection}{\numberline {B.9.6}Energy toxicity threshold}{38}{subsection.B.9.6}
+\contentsline {subsection}{\numberline {B.9.7}Initial energy amount in cells}{38}{subsection.B.9.7}
+\contentsline {section}{\numberline {B.10}Cell}{39}{section.B.10}
+\contentsline {subsection}{\numberline {B.10.1}Membrane permeability}{39}{subsection.B.10.1}
+\contentsline {section}{\numberline {B.11}Population}{39}{section.B.11}
+\contentsline {subsection}{\numberline {B.11.1}Death probability}{39}{subsection.B.11.1}
+\contentsline {subsection}{\numberline {B.11.2}Migration rate}{39}{subsection.B.11.2}
+\contentsline {subsection}{\numberline {B.11.3}HGT rate}{39}{subsection.B.11.3}
+\contentsline {section}{\numberline {B.12}Environment}{40}{section.B.12}
+\contentsline {subsection}{\numberline {B.12.1}Environment initialization cycles}{40}{subsection.B.12.1}
+\contentsline {subsection}{\numberline {B.12.2}Environment species tags range}{40}{subsection.B.12.2}
+\contentsline {subsection}{\numberline {B.12.3}Environment concentrations range}{40}{subsection.B.12.3}
+\contentsline {subsection}{\numberline {B.12.4}Environment number of species range}{40}{subsection.B.12.4}
+\contentsline {subsection}{\numberline {B.12.5}Environment interaction scheme}{41}{subsection.B.12.5}
+\contentsline {subsection}{\numberline {B.12.6}Environment renewal scheme}{41}{subsection.B.12.6}
+\contentsline {subsection}{\numberline {B.12.7}Environment variation scheme}{41}{subsection.B.12.7}
+\contentsline {subsection}{\numberline {B.12.8}Environment localization scheme}{42}{subsection.B.12.8}
+\contentsline {subsection}{\numberline {B.12.9}Environment metabolic scheme}{42}{subsection.B.12.9}
+\contentsline {subsection}{\numberline {B.12.10}Environment introduction rate}{42}{subsection.B.12.10}
+\contentsline {subsection}{\numberline {B.12.11}Environment diffusion coefficient}{43}{subsection.B.12.11}
+\contentsline {subsection}{\numberline {B.12.12}Environment degradation rate}{43}{subsection.B.12.12}
