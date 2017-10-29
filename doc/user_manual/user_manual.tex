@@ -1,34 +1,39 @@
 
-\documentclass[a4paper,12pt,onecolumn]{template}
-
-%%%%%%%%%%%%%%%%%%%%%%%%% EXTRA PACKAGES %
-
+\documentclass[english, a4paper, 12pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{graphics, graphicx}
+\usepackage{wrapfig}
+\usepackage{natbib}
+\usepackage{algorithm2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
 \usepackage{bookmark}
 \usepackage{lineno}
-\usepackage{caption}
-\usepackage[babel=true]{csquotes}
 \usepackage{hyperref}
 \usepackage{pdfpages}
+
 \hypersetup{
-    backref=true,    %permet d'ajouter des liens dans...
-    pagebackref=true,%...les bibliographies
-    hyperindex=true, %ajoute des liens dans les index.
-    colorlinks=true, %colorise les liens
-    breaklinks=true, %permet le retour à la ligne dans les liens trop longs
-    urlcolor=black, %couleur des hyperliens
-    linkcolor=black, %couleur des liens internes
-    citecolor=black, %couleur des ref
-    bookmarks=true, %crée des signets pour Acrobat
+    backref=true,
+    pagebackref=true,
+    hyperindex=true,
+    colorlinks=true,
+    breaklinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black,
+    bookmarks=true,
     bookmarksopen=true,
     pdffitwindow=true,
-    %si les signets Acrobat sont créés,
-    %les afficher complètement.
     pdfauthor={Charles Rocabert},
     pdftitle={},
     pdfsubject={},
     pdfcreator={charles.rocabert@gmail.com},
     pdfkeywords={}
-    %sous Acrobat.
 }
 
 % Define environnement tablehere
@@ -49,7 +54,7 @@
 \newcommand{\packageVersion}{1.0.1}
 
 \begin{document}
-\selectlanguage{english}
+%\selectlanguage{english}
 
 %%%%%% TITLE PAGE %%%%%%
 
@@ -69,14 +74,10 @@ for version {\packageVersion} (\today)
 \rule{\linewidth}{2pt}
 
 \newpage
-\thispagestyle{empty}
-\mbox{}
-
-\clearemptydoublepage
 
 \tableofcontents
 
-\clearemptydoublepage
+\newpage
 
 %%%%%%%%%%%%%%%%%%%
 
