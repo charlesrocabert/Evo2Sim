@@ -14,6 +14,11 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 <br />
 &bull; Rocabert, C., Knibbe, C., & Beslon, G. (2015, Jul.). Towards an Integrated Evolutionary Model to Study Evolution of Evolution. <em>Proceedings of the EvoEvo Workshop, Satellite workshop of ECAL 2015</em> (York, UK). (https://hal.inria.fr/hal-01252796/)
 
+## Copyright
+
+Copyright &copy; 2014-2018 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
+All rights reserved
+
 ## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
