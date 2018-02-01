@@ -8,7 +8,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 
 ## Publications
 
-&bull; Rocabert, C., Knibbe, C., Consuegra, J., Schneider, D., & Beslon, G. (2017, Sept.). <em>Environmental seasonality drives digital populations towards stable cross-feeding</zm>. European Conference on Artificial Life (ECAL). Proceedings of the 14th European Conference on Artificial Life (Villeurbanne, France). (https://hal.archives-ouvertes.fr/hal-01569093/)
+&bull; Rocabert, C., Knibbe, C., Consuegra, J., Schneider, D., & Beslon, G. (2017, Sept.). <em>Environmental seasonality drives digital populations towards stable cross-feeding</em>. European Conference on Artificial Life (ECAL). Proceedings of the 14th European Conference on Artificial Life (Villeurbanne, France). (https://hal.archives-ouvertes.fr/hal-01569093/)
 <br />
 &bull; Rocabert, C., Knibbe, C., Consuegra, J., Schneider, D., & Beslon, G. (2017). <em>Beware batch culture: Seasonality and niche construction predicted to favor bacterial adaptive diversification</em>. PLoS computational biology, 13(3), e1005459. (https://doi.org/10.1371/journal.pcbi.1005459)
 <br />
