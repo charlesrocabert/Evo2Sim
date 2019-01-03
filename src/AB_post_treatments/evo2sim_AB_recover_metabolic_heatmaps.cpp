@@ -3,13 +3,13 @@
  * \file      evo2sim_AB_recover_metabolic_heatmaps.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      06-05-2016
- * \copyright Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Recover the metabolic heatmaps from AB populations
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -305,7 +305,7 @@ void printUsage( void )
   std::cout << " Multi-scale and individual-based computational model dedicated            \n";
   std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
   std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";
@@ -351,7 +351,7 @@ void printHeader( void )
   std::cout << " Multi-scale and individual-based computational model dedicated            \n";
   std::cout << " to in silico experimental evolution.                                      \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
   std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";

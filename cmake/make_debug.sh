@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #****************************************************************************
-# Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify

@@ -3,7 +3,7 @@
 # coding: utf-8
 
 #***************************************************************************
-# Copyright (C) 2014-2017 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
@@ -146,9 +146,8 @@ def generate_inherited_proteins_js( PATH ):
   # B.1) Write header           #
   #-----------------------------#
   f.write("/****************************************************************************\n")
-  f.write(" * Copyright (C) 2014-2016 Charles Rocabert, Carole Knibbe, Guillaume Beslon\n")
-  f.write(" * E-mail: charles.rocabert@gmail.com\n")
-  f.write(" * Web: http://www.evoevo.eu/\n")
+  f.write(" * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon\n")
+  f.write(" * Web: https://github.com/charlesrocabert/Evo2Sim")
   f.write(" *\n")
   f.write(" * This program is free software: you can redistribute it and/or modify\n")
   f.write(" * it under the terms of the GNU General Public License as published by\n")
