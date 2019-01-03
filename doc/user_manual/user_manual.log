@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.1)  29 OCT 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.1)  3 JAN 2019 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -577,12 +577,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `superscript' on input line 3.
 
-
-Overfull \hbox (1.61842pt too wide) in paragraph at lines 8--9
-[]\T1/cmr/m/sc/12 Evo$[]$Sim \T1/cmr/m/n/12 was de-vel-oped un-der \T1/cmr/m/sc
-/12 Evo-Evo \T1/cmr/m/n/12 ([][]http://www.evoevo.eu/[][]), a FP7-ICT project
- []
-
 [5
 
 ] [6] <figures/general_algorithm.pdf, id=289, 668.4975pt x 439.6425pt>
@@ -750,7 +744,7 @@ nts/type1/public/cm-super/sfxc1200.pfb></usr/local/texlive/2014/texmf-dist/font
 s/type1/public/cm-super/sfxc1728.pfb></usr/local/texlive/2014/texmf-dist/fonts/
 type1/public/cm-super/sfxc2074.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
 pe1/public/cm-super/sfxc2488.pfb>
-Output written on user_manual.pdf (31 pages, 750872 bytes).
+Output written on user_manual.pdf (31 pages, 750888 bytes).
 PDF statistics:
  994 PDF objects out of 1000 (max. 8388607)
  898 compressed objects within 9 object streams
