@@ -21,7 +21,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 
 ## Copyright
 
-Copyright &copy; 2014-2018 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
+Copyright &copy; 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
 All rights reserved
 
 ## License
