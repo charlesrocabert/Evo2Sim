@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Parameters__
-#define __EVOEVO__Parameters__
+#ifndef __Evo2Sim__Parameters__
+#define __Evo2Sim__Parameters__
 
 #include <iostream>
 #include <cstring>
@@ -2003,4 +2003,4 @@ inline void Parameters::set_environment_prng( Prng* prng )
 }
 
 
-#endif /* defined(__EVOEVO__Parameters__) */
+#endif /* defined(__Evo2Sim__Parameters__) */

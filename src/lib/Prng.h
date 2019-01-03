@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Prng__
-#define __EVOEVO__Prng__
+#ifndef __Evo2Sim__Prng__
+#define __Evo2Sim__Prng__
 
 #include <iostream>
 #include <sstream>
@@ -121,4 +121,4 @@ inline void Prng::set_seed( unsigned long int seed )
 }
 
 
-#endif /* defined(__EVOEVO__Prng__) */
+#endif /* defined(__Evo2Sim__Prng__) */

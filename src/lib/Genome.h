@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Genome__
-#define __EVOEVO__Genome__
+#ifndef __Evo2Sim__Genome__
+#define __Evo2Sim__Genome__
 
 #include <iostream>
 #include <zlib.h>
@@ -430,4 +430,4 @@ inline void Genome::clear( void )
 }
 
 
-#endif /* defined(__EVOEVO__Genome__) */
+#endif /* defined(__Evo2Sim__Genome__) */

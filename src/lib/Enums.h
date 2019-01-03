@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Enums__
-#define __EVOEVO__Enums__
+#ifndef __Evo2Sim__Enums__
+#define __Evo2Sim__Enums__
 
 
 /******************************************************************************************/
@@ -310,4 +310,4 @@ enum grn_node_type
 /******************************************************************************************/
 
 
-#endif /* defined(__EVOEVO__Enums__) */
+#endif /* defined(__Evo2Sim__Enums__) */

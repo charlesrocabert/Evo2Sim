@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Statistics__
-#define __EVOEVO__Statistics__
+#ifndef __Evo2Sim__Statistics__
+#define __Evo2Sim__Statistics__
 
 #include <iostream>
 #include <fstream>
@@ -297,4 +297,4 @@ protected:
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__Statistics__) */
+#endif /* defined(__Evo2Sim__Statistics__) */

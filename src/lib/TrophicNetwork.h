@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__TrophicNetwork__
-#define __EVOEVO__TrophicNetwork__
+#ifndef __Evo2Sim__TrophicNetwork__
+#define __Evo2Sim__TrophicNetwork__
 
 #include <iostream>
 #include <unordered_map>
@@ -367,4 +367,4 @@ inline unsigned long long int TrophicNetwork::get_new_id( void )
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__TrophicNetwork__) */
+#endif /* defined(__Evo2Sim__TrophicNetwork__) */

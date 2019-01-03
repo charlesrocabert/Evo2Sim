@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Cell__
-#define __EVOEVO__Cell__
+#ifndef __Evo2Sim__Cell__
+#define __Evo2Sim__Cell__
 
 #include <iostream>
 #include <vector>
@@ -1817,4 +1817,4 @@ inline void Cell::set_blue_color( double blue )
   _blue_color = blue;
 }
 
-#endif /* defined(__EVOEVO__Cell__) */
+#endif /* defined(__Evo2Sim__Cell__) */

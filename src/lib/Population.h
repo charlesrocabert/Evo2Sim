@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Population__
-#define __EVOEVO__Population__
+#ifndef __Evo2Sim__Population__
+#define __Evo2Sim__Population__
 
 #include <iostream>
 #include <zlib.h>
@@ -415,4 +415,4 @@ inline void Population::set_best( unsigned long long int identifier, size_t i )
 }
 
 
-#endif /* defined(__EVOEVO__Population__) */
+#endif /* defined(__Evo2Sim__Population__) */

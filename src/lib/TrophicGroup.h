@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__TrophicGroup__
-#define __EVOEVO__TrophicGroup__
+#ifndef __Evo2Sim__TrophicGroup__
+#define __Evo2Sim__TrophicGroup__
 
 #include <iostream>
 #include <unordered_map>
@@ -1112,4 +1112,4 @@ inline void TrophicGroup::add_active_release_link( unsigned long long int group_
 }
 
 
-#endif /* defined(__EVOEVO__TrophicGroup__) */
+#endif /* defined(__Evo2Sim__TrophicGroup__) */

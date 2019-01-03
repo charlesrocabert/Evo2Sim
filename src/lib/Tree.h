@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Tree__
-#define __EVOEVO__Tree__
+#ifndef __Evo2Sim__Tree__
+#define __Evo2Sim__Tree__
 
 #include <iostream>
 #include <vector>
@@ -338,4 +338,4 @@ inline unsigned long long int Tree::get_node_id_by_alive_cell_id( unsigned long 
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__Tree__) */
+#endif /* defined(__Evo2Sim__Tree__) */

@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__ODE__
-#define __EVOEVO__ODE__
+#ifndef __Evo2Sim__ODE__
+#define __Evo2Sim__ODE__
 
 #include <iostream>
 #include <cmath>
@@ -184,4 +184,4 @@ inline double* ODE::get_X( void )
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__ODE__) */
+#endif /* defined(__Evo2Sim__ODE__) */

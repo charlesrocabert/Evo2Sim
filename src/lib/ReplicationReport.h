@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__ReplicationReport__
-#define __EVOEVO__ReplicationReport__
+#ifndef __Evo2Sim__ReplicationReport__
+#define __Evo2Sim__ReplicationReport__
 
 #include <iostream>
 #include <fstream>
@@ -2836,4 +2836,4 @@ inline void ReplicationReport::set_trophic_level( trophic_level level )
 }
 
 
-#endif /* defined(__EVOEVO__ReplicationReport__) */
+#endif /* defined(__Evo2Sim__ReplicationReport__) */

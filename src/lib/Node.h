@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Node__
-#define __EVOEVO__Node__
+#ifndef __Evo2Sim__Node__
+#define __Evo2Sim__Node__
 
 #include <iostream>
 #include <vector>
@@ -437,4 +437,4 @@ inline void Node::set_dead( size_t death_time )
 }
 
 
-#endif /* defined(__EVOEVO__Node__) */
+#endif /* defined(__Evo2Sim__Node__) */

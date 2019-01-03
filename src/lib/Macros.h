@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Macros__
-#define __EVOEVO__Macros__
+#ifndef __Evo2Sim__Macros__
+#define __Evo2Sim__Macros__
 
 
 /*-------------------------------------*/
@@ -110,4 +110,4 @@
 #define SPAN           5  /*!< Span of the render window            */
 
 
-#endif /* defined(__EVOEVO__Macros__) */
+#endif /* defined(__Evo2Sim__Macros__) */

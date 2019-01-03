@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Environment__
-#define __EVOEVO__Environment__
+#ifndef __Evo2Sim__Environment__
+#define __Evo2Sim__Environment__
 
 #include <iostream>
 #include <zlib.h>
@@ -429,4 +429,4 @@ inline void Environment::set_outflowing_amount( double outflowing_amount )
 }
 
 
-#endif /* defined(__EVOEVO__Environment__) */
+#endif /* defined(__Evo2Sim__Environment__) */
