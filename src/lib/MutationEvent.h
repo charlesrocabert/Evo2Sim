@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__MutationEvent__
-#define __EVOEVO__MutationEvent__
+#ifndef __Evo2Sim__MutationEvent__
+#define __Evo2Sim__MutationEvent__
 
 #include <iostream>
 #include <zlib.h>
@@ -267,4 +267,4 @@ inline MutationVector* MutationEvent::get_mutation_vector( void )
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__MutationEvent__) */
+#endif /* defined(__Evo2Sim__MutationEvent__) */

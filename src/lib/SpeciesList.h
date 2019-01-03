@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__SpeciesList__
-#define __EVOEVO__SpeciesList__
+#ifndef __Evo2Sim__SpeciesList__
+#define __Evo2Sim__SpeciesList__
 
 #include <iostream>
 #include <zlib.h>
@@ -303,4 +303,4 @@ inline void SpeciesList::decrease_size( size_t size )
 }
 
 
-#endif /* defined(__EVOEVO__SpeciesList__) */
+#endif /* defined(__Evo2Sim__SpeciesList__) */

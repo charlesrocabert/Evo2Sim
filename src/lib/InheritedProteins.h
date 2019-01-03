@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__InheritedProteins__
-#define __EVOEVO__InheritedProteins__
+#ifndef __Evo2Sim__InheritedProteins__
+#define __Evo2Sim__InheritedProteins__
 
 #include <iostream>
 #include <zlib.h>
@@ -335,4 +335,4 @@ inline void InheritedProteins::clear( void )
 }
 
 
-#endif /* defined(__EVOEVO__InheritedProteins__) */
+#endif /* defined(__Evo2Sim__InheritedProteins__) */

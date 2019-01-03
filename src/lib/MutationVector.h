@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__MutationVector__
-#define __EVOEVO__MutationVector__
+#ifndef __Evo2Sim__MutationVector__
+#define __Evo2Sim__MutationVector__
 
 #include <iostream>
 #include <zlib.h>
@@ -114,4 +114,4 @@ inline genetic_unit* MutationVector::get_dX( void ) const
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__MutationVector__) */
+#endif /* defined(__Evo2Sim__MutationVector__) */

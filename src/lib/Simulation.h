@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Simulation__
-#define __EVOEVO__Simulation__
+#ifndef __Evo2Sim__Simulation__
+#define __Evo2Sim__Simulation__
 
 #include <iostream>
 #include <sstream>
@@ -289,4 +289,4 @@ inline size_t Simulation::get_height( void ) const
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__Simulation__) */
+#endif /* defined(__Evo2Sim__Simulation__) */

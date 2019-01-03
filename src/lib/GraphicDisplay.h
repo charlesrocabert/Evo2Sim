@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__GraphicDisplay__
-#define __EVOEVO__GraphicDisplay__
+#ifndef __Evo2Sim__GraphicDisplay__
+#define __Evo2Sim__GraphicDisplay__
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
@@ -123,4 +123,4 @@ protected:
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__GraphicDisplay__) */
+#endif /* defined(__Evo2Sim__GraphicDisplay__) */

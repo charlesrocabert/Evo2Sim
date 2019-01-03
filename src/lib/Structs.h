@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__Structs__
-#define __EVOEVO__Structs__
+#ifndef __Evo2Sim__Structs__
+#define __Evo2Sim__Structs__
 
 #include <iostream>
 #include <vector>
@@ -235,4 +235,4 @@ typedef struct
 /******************************************************************************************/
 
 
-#endif /* defined(__EVOEVO__Structs__) */
+#endif /* defined(__Evo2Sim__Structs__) */

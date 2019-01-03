@@ -26,8 +26,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  ****************************************************************************/
 
-#ifndef __EVOEVO__IntegratedTests__
-#define __EVOEVO__IntegratedTests__
+#ifndef __Evo2Sim__IntegratedTests__
+#define __Evo2Sim__IntegratedTests__
 
 #include <iostream>
 #include <cstring>
@@ -140,4 +140,4 @@ protected:
  *----------------------------*/
 
 
-#endif /* defined(__EVOEVO__IntegratedTests__) */
+#endif /* defined(__Evo2Sim__IntegratedTests__) */
