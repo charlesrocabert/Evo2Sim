@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		B67C016C21DECBF60066EA95 /* AUTHORS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = AUTHORS.md; path = ../../../AUTHORS.md; sourceTree = "<group>"; };
+		B67C017021DECBF60066EA95 /* make.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make.sh; sourceTree = "<group>"; };
+		B67C017121DECBF60066EA95 /* make_clean.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make_clean.sh; sourceTree = "<group>"; };
+		B67C017221DECBF60066EA95 /* make_debug.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make_debug.sh; sourceTree = "<group>"; };
+		B67C017321DECBF60066EA95 /* make_no_graphics.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = make_no_graphics.sh; sourceTree = "<group>"; };
+		B67C017521DECBF60066EA95 /* Config.h.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Config.h.in; sourceTree = "<group>"; };
+		B67C017621DECBF60066EA95 /* FindGSL.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindGSL.cmake; sourceTree = "<group>"; };
+		B67C017721DECBF60066EA95 /* FindSFML.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindSFML.cmake; sourceTree = "<group>"; };
+		B67C017821DECBF60066EA95 /* FindTBB.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = FindTBB.cmake; sourceTree = "<group>"; };
+		B67C017921DECBF60066EA95 /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = CMakeLists.txt; path = ../../../CMakeLists.txt; sourceTree = "<group>"; };
+		B67C017D21DECBF60066EA95 /* algorithm2e.sty */ = {isa = PBXFileReference; lastKnownFileType = text; path = algorithm2e.sty; sourceTree = "<group>"; };
+		B67C017E21DECBF60066EA95 /* apalike.bst */ = {isa = PBXFileReference; lastKnownFileType = text; path = apalike.bst; sourceTree = "<group>"; };
+		B67C017F21DECBF60066EA95 /* battail.sty */ = {isa = PBXFileReference; lastKnownFileType = text; path = battail.sty; sourceTree = "<group>"; };
+		B67C018121DECBF60066EA95 /* general_algorithm.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = general_algorithm.pdf; sourceTree = "<group>"; };
+		B67C018221DECBF60066EA95 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B67C018421DECBF60066EA95 /* installation_instructions.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = installation_instructions.tex; sourceTree = "<group>"; };
+		B67C018521DECBF60066EA95 /* introduction.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = introduction.tex; sourceTree = "<group>"; };
+		B67C018621DECBF60066EA95 /* main_executables_description.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = main_executables_description.tex; sourceTree = "<group>"; };
+		B67C018721DECBF60066EA95 /* parameters_description.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = parameters_description.tex; sourceTree = "<group>"; };
+		B67C018821DECBF60066EA95 /* simulation_viewer.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = simulation_viewer.tex; sourceTree = "<group>"; };
+		B67C018921DECBF60066EA95 /* typical_usage.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = typical_usage.tex; sourceTree = "<group>"; };
+		B67C018A21DECBF60066EA95 /* template.cls */ = {isa = PBXFileReference; lastKnownFileType = text; path = template.cls; sourceTree = "<group>"; };
+		B67C018B21DECBF60066EA95 /* user_manual.aux */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.aux; sourceTree = "<group>"; };
+		B67C018C21DECBF60066EA95 /* user_manual.bbl */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.bbl; sourceTree = "<group>"; };
+		B67C018D21DECBF60066EA95 /* user_manual.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.log; sourceTree = "<group>"; };
+		B67C018E21DECBF60066EA95 /* user_manual.nlo */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.nlo; sourceTree = "<group>"; };
+		B67C018F21DECBF60066EA95 /* user_manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = user_manual.pdf; sourceTree = "<group>"; };
+		B67C019021DECBF60066EA95 /* user_manual.synctex.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = user_manual.synctex.gz; sourceTree = "<group>"; };
+		B67C019121DECBF60066EA95 /* user_manual.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.tex; sourceTree = "<group>"; };
+		B67C019221DECBF60066EA95 /* user_manual.toc */ = {isa = PBXFileReference; lastKnownFileType = text; path = user_manual.toc; sourceTree = "<group>"; };
+		B67C019421DECBF60066EA95 /* parameters.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = parameters.txt; sourceTree = "<group>"; };
+		B67C019521DECBF60066EA95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../../../LICENSE; sourceTree = "<group>"; };
+		B67C019721DECBF60066EA95 /* logo_evo2sim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_evo2sim.png; sourceTree = "<group>"; };
+		B67C019821DECBF60066EA95 /* logo_evo2sim_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_evo2sim_small.png; sourceTree = "<group>"; };
+		B67C019921DECBF60066EA95 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../../README.md; sourceTree = "<group>"; };
+		B67C019C21DECBF60066EA95 /* evo2sim_AB_black_queen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_black_queen.cpp; sourceTree = "<group>"; };
+		B67C019D21DECBF60066EA95 /* evo2sim_AB_frequency_dependence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_frequency_dependence.cpp; sourceTree = "<group>"; };
+		B67C019E21DECBF60066EA95 /* evo2sim_AB_last_individuals.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_last_individuals.cpp; sourceTree = "<group>"; };
+		B67C019F21DECBF60066EA95 /* evo2sim_AB_phylogenetic_diversity.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_phylogenetic_diversity.cpp; sourceTree = "<group>"; };
+		B67C01A021DECBF60066EA95 /* evo2sim_AB_recover_metabolic_heatmaps.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_recover_metabolic_heatmaps.cpp; sourceTree = "<group>"; };
+		B67C01A121DECBF60066EA95 /* evo2sim_AB_recover_statistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_recover_statistics.cpp; sourceTree = "<group>"; };
+		B67C01A221DECBF60066EA95 /* evo2sim_AB_recover_trophic_statistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_recover_trophic_statistics.cpp; sourceTree = "<group>"; };
+		B67C01A321DECBF60066EA95 /* evo2sim_AB_run_competition_experiment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_run_competition_experiment.cpp; sourceTree = "<group>"; };
+		B67C01A421DECBF60066EA95 /* evo2sim_AB_trophic_groups_history.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_AB_trophic_groups_history.cpp; sourceTree = "<group>"; };
+		B67C01A521DECBF60066EA95 /* evo2sim_bootstrap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_bootstrap.cpp; sourceTree = "<group>"; };
+		B67C01A621DECBF60066EA95 /* evo2sim_create.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_create.cpp; sourceTree = "<group>"; };
+		B67C01A721DECBF60066EA95 /* evo2sim_generate_figures.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_generate_figures.cpp; sourceTree = "<group>"; };
+		B67C01A821DECBF60066EA95 /* evo2sim_integrated_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_integrated_tests.cpp; sourceTree = "<group>"; };
+		B67C01A921DECBF60066EA95 /* evo2sim_recover_parameters.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_recover_parameters.cpp; sourceTree = "<group>"; };
+		B67C01AA21DECBF60066EA95 /* evo2sim_run.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_run.cpp; sourceTree = "<group>"; };
+		B67C01AB21DECBF60066EA95 /* evo2sim_unitary_tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = evo2sim_unitary_tests.cpp; sourceTree = "<group>"; };
+		B67C01AD21DECBF60066EA95 /* Cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cell.cpp; sourceTree = "<group>"; };
+		B67C01AE21DECBF60066EA95 /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		B67C01AF21DECBF60066EA95 /* Enums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		B67C01B021DECBF60066EA95 /* Environment.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.cpp; sourceTree = "<group>"; };
+		B67C01B121DECBF60066EA95 /* Environment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		B67C01B321DECBF60066EA95 /* andale_mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = andale_mono.ttf; sourceTree = "<group>"; };
+		B67C01B421DECBF60066EA95 /* Genome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Genome.cpp; sourceTree = "<group>"; };
+		B67C01B521DECBF60066EA95 /* Genome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Genome.h; sourceTree = "<group>"; };
+		B67C01B621DECBF60066EA95 /* GraphicDisplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicDisplay.cpp; sourceTree = "<group>"; };
+		B67C01B721DECBF60066EA95 /* GraphicDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphicDisplay.h; sourceTree = "<group>"; };
+		B67C01B821DECBF60066EA95 /* InheritedProteins.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InheritedProteins.cpp; sourceTree = "<group>"; };
+		B67C01B921DECBF60066EA95 /* InheritedProteins.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InheritedProteins.h; sourceTree = "<group>"; };
+		B67C01BA21DECBF60066EA95 /* IntegratedTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IntegratedTests.cpp; sourceTree = "<group>"; };
+		B67C01BB21DECBF60066EA95 /* IntegratedTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntegratedTests.h; sourceTree = "<group>"; };
+		B67C01BC21DECBF60066EA95 /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		B67C01BD21DECBF60066EA95 /* MutationEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutationEvent.cpp; sourceTree = "<group>"; };
+		B67C01BE21DECBF60066EA95 /* MutationEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutationEvent.h; sourceTree = "<group>"; };
+		B67C01BF21DECBF60066EA95 /* MutationVector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MutationVector.cpp; sourceTree = "<group>"; };
+		B67C01C021DECBF60066EA95 /* MutationVector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutationVector.h; sourceTree = "<group>"; };
+		B67C01C121DECBF60066EA95 /* Node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		B67C01C221DECBF60066EA95 /* Node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		B67C01C321DECBF60066EA95 /* ODE.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ODE.cpp; sourceTree = "<group>"; };
+		B67C01C421DECBF60066EA95 /* ODE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ODE.h; sourceTree = "<group>"; };
+		B67C01C521DECBF60066EA95 /* Parameters.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Parameters.cpp; sourceTree = "<group>"; };
+		B67C01C621DECBF60066EA95 /* Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		B67C01C721DECBF60066EA95 /* Population.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Population.cpp; sourceTree = "<group>"; };
+		B67C01C821DECBF60066EA95 /* Population.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Population.h; sourceTree = "<group>"; };
+		B67C01C921DECBF60066EA95 /* Prng.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Prng.cpp; sourceTree = "<group>"; };
+		B67C01CA21DECBF60066EA95 /* Prng.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prng.h; sourceTree = "<group>"; };
+		B67C01CB21DECBF60066EA95 /* ReplicationReport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ReplicationReport.cpp; sourceTree = "<group>"; };
+		B67C01CC21DECBF60066EA95 /* ReplicationReport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplicationReport.h; sourceTree = "<group>"; };
+		B67C01CE21DECBF60066EA95 /* change_version.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = change_version.py; sourceTree = "<group>"; };
+		B67C01CF21DECBF60066EA95 /* environment_map.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = environment_map.py; sourceTree = "<group>"; };
+		B67C01D021DECBF60066EA95 /* environment_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = environment_to_js.py; sourceTree = "<group>"; };
+		B67C01D121DECBF60066EA95 /* genome_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = genome_to_js.py; sourceTree = "<group>"; };
+		B67C01D221DECBF60066EA95 /* inherited_proteins_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = inherited_proteins_to_js.py; sourceTree = "<group>"; };
+		B67C01D321DECBF60066EA95 /* networks_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = networks_to_js.py; sourceTree = "<group>"; };
+		B67C01D421DECBF60066EA95 /* plot_best_genome_structure.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = plot_best_genome_structure.R; sourceTree = "<group>"; };
+		B67C01D521DECBF60066EA95 /* plot_best_phenotype.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = plot_best_phenotype.R; sourceTree = "<group>"; };
+		B67C01D621DECBF60066EA95 /* plot_phylogenetic_tree.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = plot_phylogenetic_tree.R; sourceTree = "<group>"; };
+		B67C01D721DECBF60066EA95 /* plot_phylogenetic_tree_with_trophic_group.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = plot_phylogenetic_tree_with_trophic_group.R; sourceTree = "<group>"; };
+		B67C01D821DECBF60066EA95 /* plot_phylogenetic_tree_with_trophic_level.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = plot_phylogenetic_tree_with_trophic_level.R; sourceTree = "<group>"; };
+		B67C01D921DECBF60066EA95 /* statistics_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = statistics_to_js.py; sourceTree = "<group>"; };
+		B67C01DA21DECBF60066EA95 /* test_equality_operator.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test_equality_operator.py; sourceTree = "<group>"; };
+		B67C01DB21DECBF60066EA95 /* track_cell.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = track_cell.py; sourceTree = "<group>"; };
+		B67C01DC21DECBF60066EA95 /* trophic_groups_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = trophic_groups_to_js.py; sourceTree = "<group>"; };
+		B67C01DD21DECBF60066EA95 /* trophic_network_to_js.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = trophic_network_to_js.py; sourceTree = "<group>"; };
+		B67C01E121DECBF60066EA95 /* bootstrap-theme.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "bootstrap-theme.css"; sourceTree = "<group>"; };
+		B67C01E221DECBF60066EA95 /* bootstrap-theme.css.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = "bootstrap-theme.css.map"; sourceTree = "<group>"; };
+		B67C01E321DECBF60066EA95 /* bootstrap-theme.min.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "bootstrap-theme.min.css"; sourceTree = "<group>"; };
+		B67C01E421DECBF60066EA95 /* bootstrap.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = bootstrap.css; sourceTree = "<group>"; };
+		B67C01E521DECBF60066EA95 /* bootstrap.css.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = bootstrap.css.map; sourceTree = "<group>"; };
+		B67C01E621DECBF60066EA95 /* bootstrap.min.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = bootstrap.min.css; sourceTree = "<group>"; };
+		B67C01E821DECBF60066EA95 /* glyphicons-halflings-regular.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.eot"; sourceTree = "<group>"; };
+		B67C01E921DECBF60066EA95 /* glyphicons-halflings-regular.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "glyphicons-halflings-regular.svg"; sourceTree = "<group>"; };
+		B67C01EA21DECBF60066EA95 /* glyphicons-halflings-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.ttf"; sourceTree = "<group>"; };
+		B67C01EB21DECBF60066EA95 /* glyphicons-halflings-regular.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "glyphicons-halflings-regular.woff"; sourceTree = "<group>"; };
+		B67C01ED21DECBF60066EA95 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B67C01EE21DECBF60066EA95 /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small.png; sourceTree = "<group>"; };
+		B67C01F021DECBF60066EA95 /* bootstrap.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = bootstrap.min.js; sourceTree = "<group>"; };
+		B67C01F121DECBF60066EA95 /* chart.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = chart.min.js; sourceTree = "<group>"; };
+		B67C01F221DECBF60066EA95 /* cytoscape.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = cytoscape.min.js; sourceTree = "<group>"; };
+		B67C01F321DECBF60066EA95 /* dygraph-combined-dev.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "dygraph-combined-dev.js"; sourceTree = "<group>"; };
+		B67C01F421DECBF60066EA95 /* jquery.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
+		B67C01F521DECBF60066EA95 /* synchronizer.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = synchronizer.js; sourceTree = "<group>"; };
+		B67C01F721DECBF60066EA95 /* best_lineage.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = best_lineage.html; sourceTree = "<group>"; };
+		B67C01F821DECBF60066EA95 /* contact.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = contact.html; sourceTree = "<group>"; };
+		B67C01F921DECBF60066EA95 /* environment_evolution.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = environment_evolution.html; sourceTree = "<group>"; };
+		B67C01FA21DECBF60066EA95 /* help.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		B67C01FB21DECBF60066EA95 /* last_best_individual.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = last_best_individual.html; sourceTree = "<group>"; };
+		B67C01FC21DECBF60066EA95 /* license.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = license.html; sourceTree = "<group>"; };
+		B67C01FD21DECBF60066EA95 /* parameters.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = parameters.html; sourceTree = "<group>"; };
+		B67C01FE21DECBF60066EA95 /* phylogeny.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = phylogeny.html; sourceTree = "<group>"; };
+		B67C01FF21DECBF60066EA95 /* population_evolution.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = population_evolution.html; sourceTree = "<group>"; };
+		B67C020021DECBF60066EA95 /* viewer.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = viewer.html; sourceTree = "<group>"; };
+		B67C020121DECBF60066EA95 /* Simulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Simulation.cpp; sourceTree = "<group>"; };
+		B67C020221DECBF60066EA95 /* Simulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Simulation.h; sourceTree = "<group>"; };
+		B67C020321DECBF60066EA95 /* SpeciesList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpeciesList.cpp; sourceTree = "<group>"; };
+		B67C020421DECBF60066EA95 /* SpeciesList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeciesList.h; sourceTree = "<group>"; };
+		B67C020521DECBF60066EA95 /* Statistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Statistics.cpp; sourceTree = "<group>"; };
+		B67C020621DECBF60066EA95 /* Statistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Statistics.h; sourceTree = "<group>"; };
+		B67C020721DECBF60066EA95 /* Structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Structs.h; sourceTree = "<group>"; };
+		B67C020821DECBF60066EA95 /* Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
+		B67C020921DECBF60066EA95 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		B67C020A21DECBF60066EA95 /* TrophicGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TrophicGroup.cpp; sourceTree = "<group>"; };
+		B67C020B21DECBF60066EA95 /* TrophicGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrophicGroup.h; sourceTree = "<group>"; };
+		B67C020C21DECBF60066EA95 /* TrophicNetwork.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TrophicNetwork.cpp; sourceTree = "<group>"; };
+		B67C020D21DECBF60066EA95 /* TrophicNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrophicNetwork.h; sourceTree = "<group>"; };
+		B67C020E21DECBF60066EA95 /* UnitaryTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UnitaryTests.cpp; sourceTree = "<group>"; };
+		B67C020F21DECBF60066EA95 /* UnitaryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitaryTests.h; sourceTree = "<group>"; };
+		B67C021321DECBF60066EA95 /* Evo2Sim.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Evo2Sim.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		B67C015921DECBD70066EA95 = {
+			isa = PBXGroup;
+			children = (
+				B67C016421DECBD70066EA95 /* Evo2Sim */,
+				B67C016321DECBD70066EA95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B67C016321DECBD70066EA95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B67C016421DECBD70066EA95 /* Evo2Sim */ = {
+			isa = PBXGroup;
+			children = (
+				B67C019921DECBF60066EA95 /* README.md */,
+				B67C019521DECBF60066EA95 /* LICENSE */,
+				B67C016C21DECBF60066EA95 /* AUTHORS.md */,
+				B67C017921DECBF60066EA95 /* CMakeLists.txt */,
+				B67C016F21DECBF60066EA95 /* cmake */,
+				B67C016D21DECBF60066EA95 /* build */,
+				B67C017A21DECBF60066EA95 /* doc */,
+				B67C019621DECBF60066EA95 /* logo */,
+				B67C019321DECBF60066EA95 /* example */,
+				B67C019A21DECBF60066EA95 /* src */,
+				B67C021021DECBF60066EA95 /* xcode */,
+			);
+			path = Evo2Sim;
+			sourceTree = "<group>";
+		};
+		B67C016D21DECBF60066EA95 /* build */ = {
+			isa = PBXGroup;
+			children = (
+				B67C016E21DECBF60066EA95 /* bin */,
+			);
+			name = build;
+			path = ../../../build;
+			sourceTree = "<group>";
+		};
+		B67C016E21DECBF60066EA95 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		B67C016F21DECBF60066EA95 /* cmake */ = {
+			isa = PBXGroup;
+			children = (
+				B67C017021DECBF60066EA95 /* make.sh */,
+				B67C017121DECBF60066EA95 /* make_clean.sh */,
+				B67C017221DECBF60066EA95 /* make_debug.sh */,
+				B67C017321DECBF60066EA95 /* make_no_graphics.sh */,
+				B67C017421DECBF60066EA95 /* modules */,
+			);
+			name = cmake;
+			path = ../../../cmake;
+			sourceTree = "<group>";
+		};
+		B67C017421DECBF60066EA95 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				B67C017521DECBF60066EA95 /* Config.h.in */,
+				B67C017621DECBF60066EA95 /* FindGSL.cmake */,
+				B67C017721DECBF60066EA95 /* FindSFML.cmake */,
+				B67C017821DECBF60066EA95 /* FindTBB.cmake */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		B67C017A21DECBF60066EA95 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				B67C017B21DECBF60066EA95 /* doxygen */,
+				B67C017C21DECBF60066EA95 /* user_manual */,
+			);
+			name = doc;
+			path = ../../../doc;
+			sourceTree = "<group>";
+		};
+		B67C017B21DECBF60066EA95 /* doxygen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = doxygen;
+			sourceTree = "<group>";
+		};
+		B67C017C21DECBF60066EA95 /* user_manual */ = {
+			isa = PBXGroup;
+			children = (
+				B67C017D21DECBF60066EA95 /* algorithm2e.sty */,
+				B67C017E21DECBF60066EA95 /* apalike.bst */,
+				B67C017F21DECBF60066EA95 /* battail.sty */,
+				B67C018021DECBF60066EA95 /* figures */,
+				B67C018321DECBF60066EA95 /* source */,
+				B67C018A21DECBF60066EA95 /* template.cls */,
+				B67C018B21DECBF60066EA95 /* user_manual.aux */,
+				B67C018C21DECBF60066EA95 /* user_manual.bbl */,
+				B67C018D21DECBF60066EA95 /* user_manual.log */,
+				B67C018E21DECBF60066EA95 /* user_manual.nlo */,
+				B67C018F21DECBF60066EA95 /* user_manual.pdf */,
+				B67C019021DECBF60066EA95 /* user_manual.synctex.gz */,
+				B67C019121DECBF60066EA95 /* user_manual.tex */,
+				B67C019221DECBF60066EA95 /* user_manual.toc */,
+			);
+			path = user_manual;
+			sourceTree = "<group>";
+		};
+		B67C018021DECBF60066EA95 /* figures */ = {
+			isa = PBXGroup;
+			children = (
+				B67C018121DECBF60066EA95 /* general_algorithm.pdf */,
+				B67C018221DECBF60066EA95 /* icon.png */,
+			);
+			path = figures;
+			sourceTree = "<group>";
+		};
+		B67C018321DECBF60066EA95 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				B67C018421DECBF60066EA95 /* installation_instructions.tex */,
+				B67C018521DECBF60066EA95 /* introduction.tex */,
+				B67C018621DECBF60066EA95 /* main_executables_description.tex */,
+				B67C018721DECBF60066EA95 /* parameters_description.tex */,
+				B67C018821DECBF60066EA95 /* simulation_viewer.tex */,
+				B67C018921DECBF60066EA95 /* typical_usage.tex */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		B67C019321DECBF60066EA95 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				B67C019421DECBF60066EA95 /* parameters.txt */,
+			);
+			name = example;
+			path = ../../../example;
+			sourceTree = "<group>";
+		};
+		B67C019621DECBF60066EA95 /* logo */ = {
+			isa = PBXGroup;
+			children = (
+				B67C019721DECBF60066EA95 /* logo_evo2sim.png */,
+				B67C019821DECBF60066EA95 /* logo_evo2sim_small.png */,
+			);
+			name = logo;
+			path = ../../../logo;
+			sourceTree = "<group>";
+		};
+		B67C019A21DECBF60066EA95 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B67C019B21DECBF60066EA95 /* AB_post_treatments */,
+				B67C01A521DECBF60066EA95 /* evo2sim_bootstrap.cpp */,
+				B67C01A621DECBF60066EA95 /* evo2sim_create.cpp */,
+				B67C01A721DECBF60066EA95 /* evo2sim_generate_figures.cpp */,
+				B67C01A821DECBF60066EA95 /* evo2sim_integrated_tests.cpp */,
+				B67C01A921DECBF60066EA95 /* evo2sim_recover_parameters.cpp */,
+				B67C01AA21DECBF60066EA95 /* evo2sim_run.cpp */,
+				B67C01AB21DECBF60066EA95 /* evo2sim_unitary_tests.cpp */,
+				B67C01AC21DECBF60066EA95 /* lib */,
+			);
+			name = src;
+			path = ../../../src;
+			sourceTree = "<group>";
+		};
+		B67C019B21DECBF60066EA95 /* AB_post_treatments */ = {
+			isa = PBXGroup;
+			children = (
+				B67C019C21DECBF60066EA95 /* evo2sim_AB_black_queen.cpp */,
+				B67C019D21DECBF60066EA95 /* evo2sim_AB_frequency_dependence.cpp */,
+				B67C019E21DECBF60066EA95 /* evo2sim_AB_last_individuals.cpp */,
+				B67C019F21DECBF60066EA95 /* evo2sim_AB_phylogenetic_diversity.cpp */,
+				B67C01A021DECBF60066EA95 /* evo2sim_AB_recover_metabolic_heatmaps.cpp */,
+				B67C01A121DECBF60066EA95 /* evo2sim_AB_recover_statistics.cpp */,
+				B67C01A221DECBF60066EA95 /* evo2sim_AB_recover_trophic_statistics.cpp */,
+				B67C01A321DECBF60066EA95 /* evo2sim_AB_run_competition_experiment.cpp */,
+				B67C01A421DECBF60066EA95 /* evo2sim_AB_trophic_groups_history.cpp */,
+			);
+			path = AB_post_treatments;
+			sourceTree = "<group>";
+		};
+		B67C01AC21DECBF60066EA95 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01AD21DECBF60066EA95 /* Cell.cpp */,
+				B67C01AE21DECBF60066EA95 /* Cell.h */,
+				B67C01AF21DECBF60066EA95 /* Enums.h */,
+				B67C01B021DECBF60066EA95 /* Environment.cpp */,
+				B67C01B121DECBF60066EA95 /* Environment.h */,
+				B67C01B221DECBF60066EA95 /* fonts */,
+				B67C01B421DECBF60066EA95 /* Genome.cpp */,
+				B67C01B521DECBF60066EA95 /* Genome.h */,
+				B67C01B621DECBF60066EA95 /* GraphicDisplay.cpp */,
+				B67C01B721DECBF60066EA95 /* GraphicDisplay.h */,
+				B67C01B821DECBF60066EA95 /* InheritedProteins.cpp */,
+				B67C01B921DECBF60066EA95 /* InheritedProteins.h */,
+				B67C01BA21DECBF60066EA95 /* IntegratedTests.cpp */,
+				B67C01BB21DECBF60066EA95 /* IntegratedTests.h */,
+				B67C01BC21DECBF60066EA95 /* Macros.h */,
+				B67C01BD21DECBF60066EA95 /* MutationEvent.cpp */,
+				B67C01BE21DECBF60066EA95 /* MutationEvent.h */,
+				B67C01BF21DECBF60066EA95 /* MutationVector.cpp */,
+				B67C01C021DECBF60066EA95 /* MutationVector.h */,
+				B67C01C121DECBF60066EA95 /* Node.cpp */,
+				B67C01C221DECBF60066EA95 /* Node.h */,
+				B67C01C321DECBF60066EA95 /* ODE.cpp */,
+				B67C01C421DECBF60066EA95 /* ODE.h */,
+				B67C01C521DECBF60066EA95 /* Parameters.cpp */,
+				B67C01C621DECBF60066EA95 /* Parameters.h */,
+				B67C01C721DECBF60066EA95 /* Population.cpp */,
+				B67C01C821DECBF60066EA95 /* Population.h */,
+				B67C01C921DECBF60066EA95 /* Prng.cpp */,
+				B67C01CA21DECBF60066EA95 /* Prng.h */,
+				B67C01CB21DECBF60066EA95 /* ReplicationReport.cpp */,
+				B67C01CC21DECBF60066EA95 /* ReplicationReport.h */,
+				B67C01CD21DECBF60066EA95 /* scripts */,
+				B67C020121DECBF60066EA95 /* Simulation.cpp */,
+				B67C020221DECBF60066EA95 /* Simulation.h */,
+				B67C020321DECBF60066EA95 /* SpeciesList.cpp */,
+				B67C020421DECBF60066EA95 /* SpeciesList.h */,
+				B67C020521DECBF60066EA95 /* Statistics.cpp */,
+				B67C020621DECBF60066EA95 /* Statistics.h */,
+				B67C020721DECBF60066EA95 /* Structs.h */,
+				B67C020821DECBF60066EA95 /* Tree.cpp */,
+				B67C020921DECBF60066EA95 /* Tree.h */,
+				B67C020A21DECBF60066EA95 /* TrophicGroup.cpp */,
+				B67C020B21DECBF60066EA95 /* TrophicGroup.h */,
+				B67C020C21DECBF60066EA95 /* TrophicNetwork.cpp */,
+				B67C020D21DECBF60066EA95 /* TrophicNetwork.h */,
+				B67C020E21DECBF60066EA95 /* UnitaryTests.cpp */,
+				B67C020F21DECBF60066EA95 /* UnitaryTests.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		B67C01B221DECBF60066EA95 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01B321DECBF60066EA95 /* andale_mono.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		B67C01CD21DECBF60066EA95 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01CE21DECBF60066EA95 /* change_version.py */,
+				B67C01CF21DECBF60066EA95 /* environment_map.py */,
+				B67C01D021DECBF60066EA95 /* environment_to_js.py */,
+				B67C01D121DECBF60066EA95 /* genome_to_js.py */,
+				B67C01D221DECBF60066EA95 /* inherited_proteins_to_js.py */,
+				B67C01D321DECBF60066EA95 /* networks_to_js.py */,
+				B67C01D421DECBF60066EA95 /* plot_best_genome_structure.R */,
+				B67C01D521DECBF60066EA95 /* plot_best_phenotype.R */,
+				B67C01D621DECBF60066EA95 /* plot_phylogenetic_tree.R */,
+				B67C01D721DECBF60066EA95 /* plot_phylogenetic_tree_with_trophic_group.R */,
+				B67C01D821DECBF60066EA95 /* plot_phylogenetic_tree_with_trophic_level.R */,
+				B67C01D921DECBF60066EA95 /* statistics_to_js.py */,
+				B67C01DA21DECBF60066EA95 /* test_equality_operator.py */,
+				B67C01DB21DECBF60066EA95 /* track_cell.py */,
+				B67C01DC21DECBF60066EA95 /* trophic_groups_to_js.py */,
+				B67C01DD21DECBF60066EA95 /* trophic_network_to_js.py */,
+				B67C01DE21DECBF60066EA95 /* viewer */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
+		B67C01DE21DECBF60066EA95 /* viewer */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01DF21DECBF60066EA95 /* src */,
+				B67C020021DECBF60066EA95 /* viewer.html */,
+			);
+			path = viewer;
+			sourceTree = "<group>";
+		};
+		B67C01DF21DECBF60066EA95 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01E021DECBF60066EA95 /* css */,
+				B67C01E721DECBF60066EA95 /* fonts */,
+				B67C01EC21DECBF60066EA95 /* icons */,
+				B67C01EF21DECBF60066EA95 /* js */,
+				B67C01F621DECBF60066EA95 /* pages */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		B67C01E021DECBF60066EA95 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01E121DECBF60066EA95 /* bootstrap-theme.css */,
+				B67C01E221DECBF60066EA95 /* bootstrap-theme.css.map */,
+				B67C01E321DECBF60066EA95 /* bootstrap-theme.min.css */,
+				B67C01E421DECBF60066EA95 /* bootstrap.css */,
+				B67C01E521DECBF60066EA95 /* bootstrap.css.map */,
+				B67C01E621DECBF60066EA95 /* bootstrap.min.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		B67C01E721DECBF60066EA95 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01E821DECBF60066EA95 /* glyphicons-halflings-regular.eot */,
+				B67C01E921DECBF60066EA95 /* glyphicons-halflings-regular.svg */,
+				B67C01EA21DECBF60066EA95 /* glyphicons-halflings-regular.ttf */,
+				B67C01EB21DECBF60066EA95 /* glyphicons-halflings-regular.woff */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		B67C01EC21DECBF60066EA95 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01ED21DECBF60066EA95 /* icon.png */,
+				B67C01EE21DECBF60066EA95 /* icon_small.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		B67C01EF21DECBF60066EA95 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01F021DECBF60066EA95 /* bootstrap.min.js */,
+				B67C01F121DECBF60066EA95 /* chart.min.js */,
+				B67C01F221DECBF60066EA95 /* cytoscape.min.js */,
+				B67C01F321DECBF60066EA95 /* dygraph-combined-dev.js */,
+				B67C01F421DECBF60066EA95 /* jquery.min.js */,
+				B67C01F521DECBF60066EA95 /* synchronizer.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		B67C01F621DECBF60066EA95 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				B67C01F721DECBF60066EA95 /* best_lineage.html */,
+				B67C01F821DECBF60066EA95 /* contact.html */,
+				B67C01F921DECBF60066EA95 /* environment_evolution.html */,
+				B67C01FA21DECBF60066EA95 /* help.html */,
+				B67C01FB21DECBF60066EA95 /* last_best_individual.html */,
+				B67C01FC21DECBF60066EA95 /* license.html */,
+				B67C01FD21DECBF60066EA95 /* parameters.html */,
+				B67C01FE21DECBF60066EA95 /* phylogeny.html */,
+				B67C01FF21DECBF60066EA95 /* population_evolution.html */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		B67C021021DECBF60066EA95 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				B67C021121DECBF60066EA95 /* Evo2Sim */,
+			);
+			name = xcode;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B67C021121DECBF60066EA95 /* Evo2Sim */ = {
+			isa = PBXGroup;
+			children = (
+				B67C021221DECBF60066EA95 /* Evo2Sim */,
+				B67C021321DECBF60066EA95 /* Evo2Sim.xcodeproj */,
+			);
+			path = Evo2Sim;
+			sourceTree = "<group>";
+		};
+		B67C021221DECBF60066EA95 /* Evo2Sim */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Evo2Sim;
+			sourceTree = "<group>";
+		};
+		B67C021421DECBF60066EA95 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		B67C015A21DECBD70066EA95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Charles Rocabert";
+			};
+			buildConfigurationList = B67C015D21DECBD70066EA95 /* Build configuration list for PBXProject "Evo2Sim" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B67C015921DECBD70066EA95;
+			productRefGroup = B67C016321DECBD70066EA95 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B67C021421DECBF60066EA95 /* Products */;
+					ProjectRef = B67C021321DECBF60066EA95 /* Evo2Sim.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		B67C016721DECBD70066EA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B67C016821DECBD70066EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B67C015D21DECBD70066EA95 /* Build configuration list for PBXProject "Evo2Sim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B67C016721DECBD70066EA95 /* Debug */,
+				B67C016821DECBD70066EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B67C015A21DECBD70066EA95 /* Project object */;
+}
