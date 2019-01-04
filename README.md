@@ -8,6 +8,7 @@
 </p>
 
 Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account the (ultra-fast) dynamics of metabolic networks, the (fast) dynamics of gene regulatory networks, the (medium to slow) dynamics of resources in the ecosystem and the (slow) evolutionary dynamics of genes and genome structure. Evo<sup>2</sup>Sim is designed to perform <em>in silico</em> experimental evolution experiments, that mimick real experimental evolution protocols.
+
 The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Running simulations can be analyzed thanks to a detailed HTML graphical viewer, tracking and displaying on the fly every simulation events, statistics, phylogeny, and ecological interactions.
 
 Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evoevo.eu/), funded by the European Commission (FP7-ICT-610427, FET Proactive: Evolving Living Technologies).
