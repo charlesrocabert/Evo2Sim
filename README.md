@@ -18,8 +18,9 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 2. [Copyright](#copyright)
 3. [License](#license)
 4. [Community](#community)
-5. [Installation instructions](#installation_instructions)
-6. [Typical usage](#typical_usage)
+5. [Download](#download)
+6. [Installation instructions](#installation_instructions)
+7. [Typical usage](#typical_usage)
 
 ## 1. Publications <a name="publications"></a>
 
@@ -46,16 +47,19 @@ You should have received a copy of the GNU General Public License along with thi
 
 Evo<sup>2</sup>Sim was first developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
 
-## 5. Installation instructions <a name="installation_instructions"></a>
+## 5. Download <a name="download"></a>
+Download the latest release: <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>
+
+## 6. Installation instructions <a name="installation_instructions"></a>
 
 Installation instructions are also available in the [User Manual](doc/user_manual/user_manual.pdf).
 
 Download the latest release of Evo<sup>2</sup>Sim, and save it to a directory of your choice. Open a terminal and use the <code>cd</code> command to navigate to this directory. Then follow the steps below to compile and build the executables.
 
-### 5.1. Supported platforms
+### 6.1. Supported platforms
 Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
 
-### 5.2. Required dependencies
+### 6.2. Required dependencies
 * A C++ compiler (GCC, LLVM, ...)
 * CMake (command line version)
 * zlib
@@ -64,17 +68,17 @@ Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ub
 * TBB
 * R (packages ape and RColorBrewer are required)
 
-### 5.3. Optional dependencies (for graphical outputs)
+### 6.3. Optional dependencies (for graphical outputs)
 * X11 (or XQuartz on latest OSX versions)
 * SFML 2
 * matplotlib (this python library is needed for the script track_cell.py, see below)
 
-### 5.4. HTML viewer dependencies
+### 6.4. HTML viewer dependencies
 * Javascript must be activated in your favorite internet browser
 
 Note, however, that Evo<sup>2</sup>Sim can be compiled without graphical outputs, and hence no needs for X and SFML libraries (see compilation instructions below for more information). This option is useful if you want to run Evo<sup>2</sup>Sim on a computer cluster, for example.
 
-### 5.5. Software compilation
+### 6.5. Software compilation
 
 #### User mode
 To compile Evo<sup>2</sup>Sim, run the following instructions on the command line:
@@ -99,7 +103,7 @@ When Evo<sup>2</sup>Sim is compiled in DEBUG mode, many tests are computed on th
 #### Executable files emplacement
 Binary executable files are in <code>build/bin</code> folder.
 
-## 6. Typical usage <a name="typical_usage"></a>
+## 7. Typical usage <a name="typical_usage"></a>
 
 Evo<sup>2</sup>Sim includes three main executables (<code>evo2sim_create</code>, <code>evo2sim_bootstrap</code> and <code>evo2sim_run</code>), and a set of executables dedicated to post-treatments, data recovery or tests.
 
@@ -107,7 +111,7 @@ Everything in Evo<sup>2</sup>Sim relies on an ad-hoc file organization where all
 
 Open a terminal and use the <code>cd</code> command to navigate to Evo<sup>2</sup>Sim directory. A typical parameters file is provided in the folder <code>example</code> (an exhaustive description of the parameters is available in the [User Manual](doc/user_manual/user_manual.pdf)). Navigate to this folder using the <code>cd</code> command. Then follow the steps below for a first usage of the software.
 
-### 6.1. Create a simulation
+### 7.1. Create a simulation
 Create a fresh simulation from the parameters file (by default <code>parameters.txt</code>):
 
     ../build/bin/evo2sim_create
@@ -117,14 +121,14 @@ Several folders have been created. They mainly contain simulation backups (popul
 * <code>track_cell.py</code>: when executed, this python script displays on the fly the internal protein and metabolic concentrations of the cell at position 0 × 0 on the grid. This script is useful to get an idea of internal cell’s dynamics (metabolic fluxes, regulation,).
 * <code>viewer</code> folder: the viewer is central to the usage of Evo2Sim (see [User Manual](doc/user_manual/user_manual.pdf)). To access the viewer, open the html page <code>viewer/viewer.html</code> in an internet browser.
 
-### 6.2. Generate viable initial conditions with a bootstrap
+### 7.2. Generate viable initial conditions with a bootstrap
 Alternatively to the <code>evo2sim_create</code> executable, use a bootstrap to find a simulation with good initial properties from the parameters file:
 
     ../build/bin/evo2sim_bootstrap
 
 A fresh simulation with an updated parameters file will be automatically created if a suitable seed is found.
 
-### 6.3. Run a simulation
+### 7.3. Run a simulation
 In Evo<sup>2</sup>Sim, running a simulation necessitates to load it from backup files. Here, we will run a simulation from freshly created backups (see above):
 
     ../build/bin/evo2sim_run -b 0 -t 10000 -g
