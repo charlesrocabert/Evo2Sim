@@ -4,7 +4,7 @@
     <br/>
     <em>Evolution of Evolution Simulator</em>
     <br/><br/>
-    <a href="https://github.com/charlesrocabert/MoRIS-development/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>&nbsp;<a href="https://github.com/charlesrocabert/MoRIS-development/releases/latest"><img src="https://img.shields.io/badge/build-passing-green.svg" /></a>&nbsp;<a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/license-GPL v3-blue.svg" /></a>&nbsp;
+    <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>&nbsp;<a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/build-passing-green.svg" /></a>&nbsp;<a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/license-GPL v3-blue.svg" /></a>&nbsp;
 </p>
 
 Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account the (ultra-fast) dynamics of metabolic networks, the (fast) dynamics of gene regulatory networks, the (medium to slow) dynamics of resources in the ecosystem and the (slow) evolutionary dynamics of genes and genome structure. Evo<sup>2</sup>Sim is designed to perform <em>in silico</em> experimental evolution experiments, that mimick real experimental evolution protocols. The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis, and allows for evolvable ecological interactions.
