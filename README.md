@@ -175,12 +175,13 @@ You can track evolution on the fly thanks to the html viewer, and to the script 
 
 In this example, a population is evolved in a periodic environment mimicking a batch culture setup. A stable polymorphism emerges, where one ecotype feeds on the exogenous food and releases by-products, while a second ecotype feeds on the by-product. Thanks to the seasonality of the environment, this interaction is negative frequency-dependent, and stable.
 
+<a href="http://evoevo.liris.cnrs.fr/download/7_-_software/POLYMORPHISM_EXAMPLE.zip">Download the example</a>.
 
 ### 9.2 Lactose-operon-like regulation
 
 In this example, a population is initialized with a predefined genome, encoding for specific genetic regulation and metabolic networks. Due to strong energy trade-offs, the regulation of proteins expression is maintained for thousands of generations.
 
-<button class="button-save large">Big Fat Button</button>
+<a href="http://evoevo.liris.cnrs.fr/download/7_-_software/REGULATION_EXAMPLE.zip">Download the example</a>.
 
 
 
