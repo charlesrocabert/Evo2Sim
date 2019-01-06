@@ -27,8 +27,8 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 5. [Community](#community)
 6. [Download](#download)
 7. [Installation instructions](#installation_instructions)
-9. [Typical usage](#typical_usage)
-10. [Examples](#examples)
+8. [Typical usage](#typical_usage)
+9. [Examples](#examples)
 
 ## 1. Evo<sup>2</sup>Sim overview <a name="overview"></a>
 <p align="center">
@@ -162,6 +162,28 @@ In Evo<sup>2</sup>Sim, running a simulation necessitates to load it from backup 
 with <code>-b</code> the date of the backup, here 0 (fresh simulation), <code>-t</code> the simulation time, here 10,000 time-steps. Option <code>-g</code> activates the graphical output (does not work if the software has been compiled with the no-graphics option). At any moment during the simulation, you can take a closer look at the evolution of the system by opening <code>viewer/viewer.html</code> in an internet browser. You can track internal cell’s dynamics by executing the script <code>track_cell.py</code>.
 
 Other main executables are described in the [User Manual](doc/user_manual/user_manual.pdf) (section “Main executables description”). You can also obtain help by running the executable with the <code>-h</code> option (<em>e.g.</em> <code>evo2sim_create -h</code>)
+
+## 9. Examples <a name="examples"></a>
+
+To test the following simulation examples, please download the attached packages. They contain simulation backups and the associated code version.
+
+Then compile the software, create the simulation from the parameters files, or simply run it from backups files (see the User Manual provided in the package for detailed help).
+
+You can track evolution on the fly thanks to the html viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
+
+### 9.1 Evolution of a stable polymorphism
+
+In this example, a population is evolved in a periodic environment mimicking a batch culture setup. A stable polymorphism emerges, where one ecotype feeds on the exogenous food and releases by-products, while a second ecotype feeds on the by-product. Thanks to the seasonality of the environment, this interaction is negative frequency-dependent, and stable.
+
+
+### 9.2 Lactose-operon-like regulation
+
+In this example, a population is initialized with a predefined genome, encoding for specific genetic regulation and metabolic networks. Due to strong energy trade-offs, the regulation of proteins expression is maintained for thousands of generations.
+
+<button class="button-save large">Big Fat Button</button>
+
+
+
 
 
 
