@@ -28,6 +28,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 6. [Download](#download)
 7. [Installation instructions](#installation_instructions)
 9. [Typical usage](#typical_usage)
+10. [Examples](#examples)
 
 ## 1. Evo<sup>2</sup>Sim overview <a name="overview"></a>
 <p align="center">
