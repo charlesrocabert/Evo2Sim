@@ -12,7 +12,7 @@ Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account 
 </p>
 
 <p align="justify">
-The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to a detailed HTML graphical viewer, tracking and displaying on the fly every simulation events, statistics, phylogeny, and ecological interactions.
+The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to the HTML viewer, tracking and displaying on the fly every simulation events, from the phylogeny to ecological interactions.
 </p>
 
 <p align="justify">
@@ -167,9 +167,9 @@ Other main executables are described in the [User Manual](doc/user_manual/user_m
 
 To test the following simulation examples, please download the attached packages. They contain simulation backups and the associated code version.
 
-Then compile the software, create the simulation from the parameters files, or simply run it from backups files (see the User Manual provided in the package for detailed help).
+Then compile the software, create the simulation from the parameters files, or simply run it from backup files (see the User Manual provided in the package for detailed help).
 
-You can track evolution on the fly thanks to the html viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
+You can track evolution on the fly thanks to the HTML viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
 
 ### 9.1 Evolution of a stable polymorphism
 
