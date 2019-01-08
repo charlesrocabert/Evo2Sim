@@ -36,9 +36,16 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
    - [8.1. Create a simulation](#create)
    - [8.2. Generate viable initial conditions with a bootstrap](#bootstrap)
    - [8.3. Run a simulation](#run)
-9. [Examples](#examples)
-   - [9.1. Evolution of a stable polymorphism](#stable_polymorphism)
-   - [9.2. Lactose-operon-like regulation](#lactose_operon)
+9. [Evo<sup>2</sup>Sim viewer](#viewer)
+   - [9.1. Population viewer](#population_viewer)
+   - [9.2. Best lineage viewer](#best_lineage_viewer)
+   - [9.3. Best individual viewer](#best_individual_viewer)
+   - [9.4. Environment viewer](#environment_viewer)
+   - [9.5. Phylogeny viewer](#phylogeny_viewer)
+   - [9.6. Parameters viewer](#parameters_viewer)
+10. [Examples](#examples)
+   - [10.1. Evolution of a stable polymorphism](#stable_polymorphism)
+   - [10.2. Lactose-operon-like regulation](#lactose_operon)
 
 ## 1. Evo<sup>2</sup>Sim overview <a name="overview"></a>
 <p align="center">
@@ -173,7 +180,33 @@ with <code>-b</code> the date of the backup, here 0 (fresh simulation), <code>-t
 
 Other main executables are described in the [User Manual](doc/user_manual/user_manual.pdf) (section “Main executables description”). You can also obtain help by running the executable with the <code>-h</code> option (<em>e.g.</em> <code>evo2sim_create -h</code>)
 
-## 9. Examples <a name="examples"></a>
+## 9. Evo<sup>2</sup>Sim viewer <a name="viewer"></a>
+
+Evo<sup>2</sup>Sim provides a HTML viewer displaying a very complete set of live statistics. Each new simulation owns a dedicated viewer, that is frequently updated on the fly (by default, every 500 simulation time-steps). This viewer has been developed using `Bootstrap`, `DyGraph`, `CytoscapeJS`, `ChartJS` and `JQuery`.
+
+To access the viewer from a simulation folder, simply open the page `viewer/viewer.html` in your favorite internet browser (Javascript must be enabled). You can find an example here: 
+
+The different tabs are described below.
+
+### 9.1. Population viewer <a name="population_viewer"></a>
+This page displays the evolution of main population statistics (population size, mean genome size, mean score, ...), as well as the evolution of the trophic network (graph of the ecological interactions).
+
+### 9.2. Best lineage viewer <a name="best_lineage_viewer"></a>
+This page displays the evolution of the lineage of the last best aive individual. These informations are the most representative of evolutionary dynamics, since they contains all the mutations fixed since the beginning of the simulation.
+
+### 9.3. Best individual viewer <a name="best_individual_viewer"></a>
+This page displays graphics about the last best alive individual (genome structure, genetic regulation network, metabolic network, internal metabolic state, ...).
+
+### 9.4. Environment viewer <a name="environment_viewer"></a>
+This page displays the evolution of main environmental statistics, as well as its current state.
+
+### 9.5. Phylogeny viewer <a name="phylogeny_viewer"></a>
+This page displays the current phylogenetic tree, as well as some phylogenetic properties through time (number of nodes, common ancestor age, ...).
+
+### 9.6. Parameters viewer <a name="parameters_viewer"></a>
+This page displays the parameters file used to create the simulation, as well as a short description of parameters usage.
+
+## 10. Examples <a name="examples"></a>
 
 To test the following simulation examples, please download the attached packages. They contain simulation backups and the associated code version.
 
@@ -181,13 +214,13 @@ Then compile the software, create the simulation from the parameters files, or s
 
 You can track evolution on the fly thanks to the HTML viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
 
-### 9.1 Evolution of a stable polymorphism <a name="stable_polymorphism"></a>
+### 10.1 Evolution of a stable polymorphism <a name="stable_polymorphism"></a>
 
 In this example, a population is evolved in a periodic environment mimicking a batch culture setup. A stable polymorphism emerges, where one ecotype feeds on the exogenous food and releases by-products, while a second ecotype feeds on the by-product. Thanks to the seasonality of the environment, this interaction is negative frequency-dependent, and stable.
 
 <a href="http://evoevo.liris.cnrs.fr/download/7_-_software/POLYMORPHISM_EXAMPLE.zip">Download the example</a>.
 
-### 9.2 Lactose-operon-like regulation <a name="lactose_operon"></a>
+### 10.2 Lactose-operon-like regulation <a name="lactose_operon"></a>
 
 In this example, a population is initialized with a predefined genome, encoding for specific genetic regulation and metabolic networks. Due to strong energy trade-offs, the regulation of proteins expression is maintained for thousands of generations.
 
