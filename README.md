@@ -12,7 +12,7 @@ Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account 
 </p>
 
 <p align="justify">
-The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to a detailed HTML graphical viewer, tracking and displaying on the fly every simulation events, statistics, phylogeny, and ecological interactions.
+The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to the HTML viewer, tracking and displaying on the fly every simulation events, from the phylogeny to ecological interactions.
 </p>
 
 <p align="justify">
@@ -27,8 +27,24 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 5. [Community](#community)
 6. [Download](#download)
 7. [Installation instructions](#installation_instructions)
+   - [7.1. Supported platforms](#supported_paltforms)
+   - [7.2. Required dependencies](#required_dependencies)
+   - [7.3. Optional dependencies (for graphical outputs)](#optional_dependencies)
+   - [7.4. HTML viewer dependencies](#viewer_dependencies)
+   - [7.5. Software compilation](#compilation)
 8. [Typical usage](#typical_usage)
-9. [Examples](#examples)
+   - [8.1. Create a simulation](#create)
+   - [8.2. Generate viable initial conditions with a bootstrap](#bootstrap)
+   - [8.3. Run a simulation](#run)
+9. [Evo<sup>2</sup>Sim viewer](#viewer)
+   - [9.1. Population viewer](#population_viewer)
+   - [9.2. Best lineage viewer](#best_lineage_viewer)
+   - [9.3. Best individual viewer](#best_individual_viewer)
+   - [9.4. Environment viewer](#environment_viewer)
+   - [9.5. Phylogeny viewer](#phylogeny_viewer)
+10. [Examples](#examples)
+   - [10.1. Evolution of a stable polymorphism](#stable_polymorphism)
+   - [10.2. Lactose-operon-like regulation](#lactose_operon)
 
 ## 1. Evo<sup>2</sup>Sim overview <a name="overview"></a>
 <p align="center">
@@ -81,10 +97,10 @@ Installation instructions are also available in the [User Manual](doc/user_manua
 
 Download the latest release of Evo<sup>2</sup>Sim, and save it to a directory of your choice. Open a terminal and use the <code>cd</code> command to navigate to this directory. Then follow the steps below to compile and build the executables.
 
-### 7.1. Supported platforms
+### 7.1. Supported platforms <a name="supported_platforms"></a>
 Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ubuntu 14.04 LTS, OSX 10.9.5 (Maverick) and OSX 10.10.1 (Yosemite).
 
-### 7.2. Required dependencies
+### 7.2. Required dependencies <a name="required_dependencies"></a>
 * A C++ compiler (GCC, LLVM, ...)
 * CMake (command line version)
 * zlib
@@ -93,17 +109,17 @@ Evo<sup>2</sup>Sim software has been successfully tested on Ubuntu 12.04 LTS, Ub
 * TBB
 * R (packages ape and RColorBrewer are required)
 
-### 7.3. Optional dependencies (for graphical outputs)
+### 7.3. Optional dependencies (for graphical outputs) <a name="optional_dependencies"></a>
 * X11 (or XQuartz on latest OSX versions)
 * SFML 2
 * matplotlib (this python library is needed for the script track_cell.py, see below)
 
-### 7.4. HTML viewer dependencies
+### 7.4. HTML viewer dependencies <a name="viewer_dependencies"></a>
 * Javascript must be activated in your favorite internet browser
 
 Note, however, that Evo<sup>2</sup>Sim can be compiled without graphical outputs, and hence no needs for X and SFML libraries (see compilation instructions below for more information). This option is useful if you want to run Evo<sup>2</sup>Sim on a computer cluster, for example.
 
-### 7.5. Software compilation
+### 7.5. Software compilation <a name="software_compilation"></a>
 
 #### User mode
 To compile Evo<sup>2</sup>Sim, run the following instructions on the command line:
@@ -136,7 +152,7 @@ Everything in Evo<sup>2</sup>Sim relies on an ad-hoc file organization where all
 
 Open a terminal and use the <code>cd</code> command to navigate to Evo<sup>2</sup>Sim directory. A typical parameters file is provided in the folder <code>example</code> (an exhaustive description of the parameters is available in the [User Manual](doc/user_manual/user_manual.pdf)). Navigate to this folder using the <code>cd</code> command. Then follow the steps below for a first usage of the software.
 
-### 8.1. Create a simulation
+### 8.1. Create a simulation <a name="create"></a>
 Create a fresh simulation from the parameters file (by default <code>parameters.txt</code>):
 
     ../build/bin/evo2sim_create
@@ -146,14 +162,14 @@ Several folders have been created. They mainly contain simulation backups (popul
 * <code>track_cell.py</code>: when executed, this python script displays on the fly the internal protein and metabolic concentrations of the cell at position 0 × 0 on the grid. This script is useful to get an idea of internal cell’s dynamics (metabolic fluxes, regulation,).
 * <code>viewer</code> folder: the viewer is central to the usage of Evo2Sim (see [User Manual](doc/user_manual/user_manual.pdf)). To access the viewer, open the html page <code>viewer/viewer.html</code> in an internet browser.
 
-### 8.2. Generate viable initial conditions with a bootstrap
+### 8.2. Generate viable initial conditions with a bootstrap <a name="bootstrap"></a>
 Alternatively to the <code>evo2sim_create</code> executable, use a bootstrap to find a simulation with good initial properties from the parameters file:
 
     ../build/bin/evo2sim_bootstrap
 
 A fresh simulation with an updated parameters file will be automatically created if a suitable seed is found.
 
-### 8.3. Run a simulation
+### 8.3. Run a simulation <a name="run"></a>
 In Evo<sup>2</sup>Sim, running a simulation necessitates to load it from backup files. Here, we will run a simulation from freshly created backups (see above):
 
     ../build/bin/evo2sim_run -b 0 -t 10000 -g
@@ -163,21 +179,44 @@ with <code>-b</code> the date of the backup, here 0 (fresh simulation), <code>-t
 
 Other main executables are described in the [User Manual](doc/user_manual/user_manual.pdf) (section “Main executables description”). You can also obtain help by running the executable with the <code>-h</code> option (<em>e.g.</em> <code>evo2sim_create -h</code>)
 
-## 9. Examples <a name="examples"></a>
+## 9. Evo<sup>2</sup>Sim viewer <a name="viewer"></a>
+
+Evo<sup>2</sup>Sim provides a HTML viewer displaying a very complete set of live statistics. Each new simulation owns a dedicated viewer, that is frequently updated on the fly (by default, every 500 simulation time-steps). This viewer has been developed using `Bootstrap`, `DyGraph`, `CytoscapeJS`, `ChartJS` and `JQuery`.
+
+To access the viewer from a simulation folder, simply open the page `viewer/viewer.html` in your favorite internet browser (Javascript must be enabled).
+
+The different tabs are described below.
+
+### 9.1. Population viewer <a name="population_viewer"></a>
+This page displays the evolution of main population statistics (population size, mean genome size, mean score, ...), as well as the evolution of the trophic network (graph of the ecological interactions).
+
+### 9.2. Best lineage viewer <a name="best_lineage_viewer"></a>
+This page displays the evolution of the lineage of the last best aive individual. These informations are the most representative of evolutionary dynamics, since they contains all the mutations fixed since the beginning of the simulation.
+
+### 9.3. Best individual viewer <a name="best_individual_viewer"></a>
+This page displays graphics about the last best alive individual (genome structure, genetic regulation network, metabolic network, internal metabolic state, ...).
+
+### 9.4. Environment viewer <a name="environment_viewer"></a>
+This page displays the evolution of main environmental statistics, as well as its current state.
+
+### 9.5. Phylogeny viewer <a name="phylogeny_viewer"></a>
+This page displays the current phylogenetic tree, as well as some phylogenetic properties through time (number of nodes, common ancestor age, ...).
+
+## 10. Examples <a name="examples"></a>
 
 To test the following simulation examples, please download the attached packages. They contain simulation backups and the associated code version.
 
-Then compile the software, create the simulation from the parameters files, or simply run it from backups files (see the User Manual provided in the package for detailed help).
+Then compile the software, create the simulation from the parameters files, or simply run it from backup files (see the User Manual provided in the package for detailed help).
 
-You can track evolution on the fly thanks to the html viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
+You can track evolution on the fly thanks to the HTML viewer, and to the script `track_cell.py`, that displays the internal dynamics of a selected individual on the grid.
 
-### 9.1 Evolution of a stable polymorphism
+### 10.1 Evolution of a stable polymorphism <a name="stable_polymorphism"></a>
 
 In this example, a population is evolved in a periodic environment mimicking a batch culture setup. A stable polymorphism emerges, where one ecotype feeds on the exogenous food and releases by-products, while a second ecotype feeds on the by-product. Thanks to the seasonality of the environment, this interaction is negative frequency-dependent, and stable.
 
 <a href="http://evoevo.liris.cnrs.fr/download/7_-_software/POLYMORPHISM_EXAMPLE.zip">Download the example</a>.
 
-### 9.2 Lactose-operon-like regulation
+### 10.2 Lactose-operon-like regulation <a name="lactose_operon"></a>
 
 In this example, a population is initialized with a predefined genome, encoding for specific genetic regulation and metabolic networks. Due to strong energy trade-offs, the regulation of proteins expression is maintained for thousands of generations.
 
