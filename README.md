@@ -42,7 +42,6 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
    - [9.3. Best individual viewer](#best_individual_viewer)
    - [9.4. Environment viewer](#environment_viewer)
    - [9.5. Phylogeny viewer](#phylogeny_viewer)
-   - [9.6. Parameters viewer](#parameters_viewer)
 10. [Examples](#examples)
    - [10.1. Evolution of a stable polymorphism](#stable_polymorphism)
    - [10.2. Lactose-operon-like regulation](#lactose_operon)
@@ -184,7 +183,7 @@ Other main executables are described in the [User Manual](doc/user_manual/user_m
 
 Evo<sup>2</sup>Sim provides a HTML viewer displaying a very complete set of live statistics. Each new simulation owns a dedicated viewer, that is frequently updated on the fly (by default, every 500 simulation time-steps). This viewer has been developed using `Bootstrap`, `DyGraph`, `CytoscapeJS`, `ChartJS` and `JQuery`.
 
-To access the viewer from a simulation folder, simply open the page `viewer/viewer.html` in your favorite internet browser (Javascript must be enabled). You can find an example here: 
+To access the viewer from a simulation folder, simply open the page `viewer/viewer.html` in your favorite internet browser (Javascript must be enabled).
 
 The different tabs are described below.
 
@@ -202,9 +201,6 @@ This page displays the evolution of main environmental statistics, as well as it
 
 ### 9.5. Phylogeny viewer <a name="phylogeny_viewer"></a>
 This page displays the current phylogenetic tree, as well as some phylogenetic properties through time (number of nodes, common ancestor age, ...).
-
-### 9.6. Parameters viewer <a name="parameters_viewer"></a>
-This page displays the parameters file used to create the simulation, as well as a short description of parameters usage.
 
 ## 10. Examples <a name="examples"></a>
 
