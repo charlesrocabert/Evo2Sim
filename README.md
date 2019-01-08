@@ -184,6 +184,7 @@ Other main executables are described in the [User Manual](doc/user_manual/user_m
 Evo<sup>2</sup>Sim provides a HTML viewer displaying a very complete set of live statistics. Each new simulation owns a dedicated viewer, that is frequently updated on the fly (by default, every 500 simulation time-steps). This viewer has been developed using `Bootstrap`, `DyGraph`, `CytoscapeJS`, `ChartJS` and `JQuery`.
 
 To access the viewer from a simulation folder, simply open the page `viewer/viewer.html` in your favorite internet browser (Javascript must be enabled).
+You can downoad an example here: https://github.com/charlesrocabert/Evo2Sim/blob/master/docs/viewer_example.zip.
 
 The different tabs are described below.
 
