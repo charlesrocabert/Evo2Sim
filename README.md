@@ -8,6 +8,10 @@
 </p>
 
 <p align="justify">
+Evolution is the major source of complexity on Earth, at the origin of all the species we can observe, interact with or breed. On a smaller scale, evolution is at the heart of the adaptation process for many species, in particular micro-organisms (e.g. bacteria, viruses...). Microbial evolution results in the emergence of the species itself, and it also contributes to the organisms' adaptation to perturbations or environmental changes. These organisms are not only organised by evolution, they are also organised to evolve (www.evoevo.eu).
+</p>
+
+<p align="justify">
 Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account the (ultra-fast) dynamics of metabolic networks, the (fast) dynamics of gene regulatory networks, the (medium to slow) dynamics of resources in the ecosystem and the (slow) evolutionary dynamics of genes and genome structure. Evo<sup>2</sup>Sim is designed to perform <em>in silico</em> experimental evolution experiments, that mimick real experimental evolution protocols.
 </p>
 
