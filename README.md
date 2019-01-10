@@ -60,7 +60,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 
 ## Copyright <a name="copyright"></a>
 
-Copyright &copy; 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon.
+Copyright &copy; 2014-2019 <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a>, <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>.
 All rights reserved.
 
 ## License <a name="license"></a>
@@ -73,7 +73,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## Community <a name="community"></a>
 
-Evo<sup>2</sup>Sim was first developed by Charles Rocabert, Carole Knibbe and Guillaume Beslon, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
+Evo<sup>2</sup>Sim was first developed by <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a> and <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
 
 ## Download <a name="download"></a>
 Download the latest release: <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>
