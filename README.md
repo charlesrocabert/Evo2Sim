@@ -75,6 +75,16 @@ You should have received a copy of the GNU General Public License along with thi
 
 Evo<sup>2</sup>Sim was first developed by <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a> and <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
 
+<table style="border:none;">
+    <tr>
+        <td><a href="https://www.inria.fr/"><img src="docs/readme_img/logo-inria.jpg" height="50px"></a></td>
+        <td><a href="https://www.insa-lyon.fr/"><img src="docs/readme_img/logo-insa.png" height="50px"></a></td>
+        <td><a href="https://liris.cnrs.fr/"><img src="docs/readme_img/logo-liris.png" height="50px"></a></td>
+        <td><a href="https://www.univ-lyon1.fr/"><img src="docs/readme_img/logo-universite-de-lyon.png" height="50px"></a></td>
+        <td><a href="https://ec.europa.eu/"><img src="docs/readme_img/logo-eu.jpg" height="50px"></a></td>
+    </tr>
+</table>
+
 ## Download <a name="download"></a>
 Download the latest release: <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>
 
