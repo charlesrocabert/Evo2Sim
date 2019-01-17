@@ -73,7 +73,9 @@ You should have received a copy of the GNU General Public License along with thi
 
 ## Community <a name="community"></a>
 
-Evo<sup>2</sup>Sim was first developed by <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a> and <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>, under the EvoEvo project (2013-2016). The list of contributors is displayed in [AUTHORS.md](AUTHORS.md). You shall find more details on EvoEvo community at http://www.evoevo.eu/community/.
+Evo<sup>2</sup>Sim was first developed by <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a> and <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>, under the EvoEvo project (2013-2016).
+
+The list of contributors is displayed in [AUTHORS.md](AUTHORS.md).
 
 <table>
     <tr>
