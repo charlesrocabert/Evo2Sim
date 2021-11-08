@@ -12,7 +12,7 @@ Evolution is the major source of complexity on Earth, at the origin of all the s
 </p>
 
 <p align="justify">
-Evo<sup>2</sup>Sim is a multi-scale evolutionary model which takes into account the (ultra-fast) dynamics of metabolic networks, the (fast) dynamics of gene regulatory networks, the (medium to slow) dynamics of resources in the ecosystem and the (slow) evolutionary dynamics of genes and genome structure. Evo<sup>2</sup>Sim is designed to perform <em>In Silico</em> Experimental Evolution (ISEE) experiments, that mimick real experimental evolution protocols.
+Evo<sup>2</sup>Sim is a digital evolution model which takes into account the (ultra-fast) dynamics of metabolic networks, the (fast) dynamics of gene regulatory networks, the (medium to slow) dynamics of resources in the ecosystem and the (slow) evolutionary dynamics of genes and genome structure. Evo<sup>2</sup>Sim is designed to perform <em>In Silico</em> Experimental Evolution (ISEE) experiments, that mimick real experimental evolution protocols.
 </p>
 
 <p align="justify">
