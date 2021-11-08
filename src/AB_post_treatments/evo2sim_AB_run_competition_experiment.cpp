@@ -3,13 +3,18 @@
  * \file      evo2sim_AB_run_competition_experiment.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      25-12-2014
- * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Run a long-term competition experiments with A/B ecotypes
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Evo2Sim (Evolution of Evolution Simulator)
+ * -------------------------------------------
+ * Digital evolution model dedicated to
+ * bacterial in silico experimental evolution.
+ *
+ * Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,6 +38,7 @@
 #include <cstring>
 #include <sys/stat.h>
 #include <assert.h>
+/* #include <tbb/tbb.h> */
 
 #include "../lib/Macros.h"
 #include "../lib/Enums.h"
@@ -386,10 +392,10 @@ void printUsage( void )
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
   std::cout << "                                                                           \n";
-  std::cout << " Multi-scale and individual-based computational model dedicated            \n";
-  std::cout << " to in silico experimental evolution.                                      \n";
+  std::cout << " Digital evolution model dedicated to                                      \n";
+  std::cout << " bacterial in silico experimental evolution.                               \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
   std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";
@@ -442,10 +448,10 @@ void printHeader( void )
   std::cout << " " << PACKAGE << " " << VERSION_MAJOR << "." << VERSION_MINOR << "." << VERSION_PATCH << " ( release )\n";
 #endif
   std::cout << "                                                                           \n";
-  std::cout << " Multi-scale and individual-based computational model dedicated            \n";
-  std::cout << " to in silico experimental evolution.                                      \n";
+  std::cout << " Digital evolution model dedicated to                                      \n";
+  std::cout << " bacterial in silico experimental evolution.                               \n";
   std::cout << "                                                                           \n";
-  std::cout << " Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
+  std::cout << " Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon \n";
   std::cout << " Web: https://github.com/charlesrocabert/Evo2Sim                           \n";
   std::cout << "                                                                           \n";
   std::cout << " This program comes with ABSOLUTELY NO WARRANTY.                           \n";
@@ -510,6 +516,7 @@ void write_simulation_data( Simulation* simulation )
   }
   else if (simulation->get_parameters()->get_parallel_computing())
   {
+    /*
     tbb::task_group tasks;
     tasks.run([=]{simulation->get_statistics()->write_best_genome_structure_file();});
     tasks.run([=]{simulation->get_statistics()->write_best_genome_file();});
@@ -528,6 +535,7 @@ void write_simulation_data( Simulation* simulation )
       tasks.run([=]{simulation->get_statistics()->write_last_phylogenetic_tree_statistics();});
     }
     tasks.wait();
+     */
   }
 }
 

@@ -1,6 +1,11 @@
 
 #***************************************************************************
-# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+# Evo2Sim (Evolution of Evolution Simulator)
+# -------------------------------------------
+# Digital evolution model dedicated to
+# bacterial in silico experimental evolution.
+#
+# Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
@@ -28,7 +33,7 @@ SEED  20009500
 # PARALLEL COMPUTING
 ########################################################
 
-PARALLEL_COMPUTING  YES (YES, NO)
+PARALLEL_COMPUTING  NO (YES, NO)
 
 
 ########################################################
@@ -58,7 +63,7 @@ HEIGHT  32
 ########################################################
 
 SIMULATION_BACKUP_STEP   1000
-FIGURES_GENERATION_STEP  500
+FIGURES_GENERATION_STEP  10
 
 
 ########################################################

@@ -3,13 +3,18 @@
  * \file      Statistics.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      08-12-2014
- * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Statistics class definition
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Evo2Sim (Evolution of Evolution Simulator)
+ * -------------------------------------------
+ * Digital evolution model dedicated to
+ * bacterial in silico experimental evolution.
+ *
+ * Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -1064,15 +1069,15 @@ void Statistics::plot_population_figures( std::string app_path, std::string exec
   /*--------------------------------------------*/
   /* A) write javascript scripts                */
   /*--------------------------------------------*/
-  std::string command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/statistics_to_js.py -p ./ > /dev/null &";
+  std::string command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/statistics_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
-  command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/genome_to_js.py -p ./ > /dev/null &";
+  command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/genome_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
-  command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/inherited_proteins_to_js.py -p ./ > /dev/null &";
+  command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/inherited_proteins_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
-  command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/networks_to_js.py -p ./ > /dev/null &";
+  command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/networks_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
-  command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/environment_to_js.py -p ./ > /dev/null &";
+  command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/environment_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
   
   /*--------------------------------------------*/
@@ -1140,7 +1145,7 @@ void Statistics::plot_phylogenetic_tree_figures( std::string app_path, std::stri
 void Statistics::plot_trophic_network_figures( std::string app_path, std::string executable_name )
 {
   int success = 0;
-  std::string command = "python " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/trophic_network_to_js.py -p ./ > /dev/null &";
+  std::string command = "python2 " + app_path.substr(0, app_path.size()-executable_name.size()) + "src/lib/scripts/trophic_network_to_js.py -p ./ > /dev/null &";
   success = system(command.c_str());
   (void)success;
 }

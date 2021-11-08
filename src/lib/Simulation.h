@@ -3,13 +3,18 @@
  * \file      Simulation.h
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      08-12-2014
- * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Simulation class declaration
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Evo2Sim (Evolution of Evolution Simulator)
+ * -------------------------------------------
+ * Digital evolution model dedicated to
+ * bacterial in silico experimental evolution.
+ *
+ * Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -37,7 +42,7 @@
 #include <zlib.h>
 #include <string.h>
 #include <assert.h>
-#include <tbb/tbb.h>
+/* #include <tbb/tbb.h> */
 
 #include "Macros.h"
 #include "Enums.h"

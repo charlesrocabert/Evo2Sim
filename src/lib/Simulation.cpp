@@ -3,13 +3,18 @@
  * \file      Simulation.cpp
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      08-12-2014
- * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Simulation class definition
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Evo2Sim (Evolution of Evolution Simulator)
+ * -------------------------------------------
+ * Digital evolution model dedicated to
+ * bacterial in silico experimental evolution.
+ *
+ * Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -280,10 +285,12 @@ void Simulation::update( void )
   }
   else if (_parameters->get_parallel_computing())
   {
+    /*
     tbb::task_group tasks;
     tasks.run([=]{update_trophic_network();});
     tasks.run([=]{update_trees();});
     tasks.wait();
+     */
   }
   
   /*----------------------------------------------*/
@@ -315,6 +322,7 @@ void Simulation::save_simulation( void )
   }
   else if (_parameters->get_parallel_computing())
   {
+    /*
     tbb::task_group tasks;
     tasks.run([=]{save_parameters();});
     tasks.run([=]{save_population();});
@@ -323,6 +331,7 @@ void Simulation::save_simulation( void )
     tasks.run([=]{save_lineage_tree();});
     tasks.run([=]{save_phylogenetic_tree();});
     tasks.wait();
+     */
   }
 }
 
@@ -842,6 +851,7 @@ void Simulation::update_population( void )
   }
   else if (_parameters->get_parallel_computing())
   {
+    /*
     tbb::task_group tasks;
     for (size_t pos = 0; pos < _width*_height; pos++)
     {
@@ -859,6 +869,7 @@ void Simulation::update_population( void )
       }
     }
     tasks.wait();
+     */
   }
   
   /***************************************************************************/

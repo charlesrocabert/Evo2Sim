@@ -1,6 +1,11 @@
 
 #****************************************************************************
-# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+# Evo2Sim (Evolution of Evolution Simulator)
+# -------------------------------------------
+# Digital evolution model dedicated to
+# bacterial in silico experimental evolution.
+#
+# Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
@@ -39,8 +44,8 @@ set(PACKAGE "\"Evo2Sim\"")
 # Define the version number                                                        #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 set(VERSION_MAJOR 1)
-set(VERSION_MINOR 0)
-set(VERSION_PATCH 2)
+set(VERSION_MINOR 1)
+set(VERSION_PATCH 0)
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
@@ -58,7 +63,7 @@ ADD_DEFINITIONS(-std=c++11)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
 # Set DEBUG and RELEASE flags                                                      #
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG -g -pg -Wall -Wextra -pedantic")
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -DDEBUG -g -Wall -Wextra -pedantic")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -DNDEBUG -O2 -Wall -Wextra -pedantic")
 
 
@@ -141,30 +146,6 @@ if(GSL_FOUND)
     target_link_libraries(${AB_HEATMAPS_EXECUTABLE} ${GSL_LIBRARIES})
   endif(AB_POST_TREATMENTS)
 endif(GSL_FOUND)
-
-find_package(TBB REQUIRED)
-if(TBB_FOUND)
-  include_directories(${TBB_INCLUDE_DIR})
-  target_link_libraries(${CREATE_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${BOOTSTRAP_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${RUN_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${GENERATE_FIGURES_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${PARAMETERS_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${UNITARY_TESTS_EXECUTABLE} ${TBB_LIBRARIES})
-  target_link_libraries(${INTEGRATED_TESTS_EXECUTABLE} ${TBB_LIBRARIES})
-
-  if(AB_POST_TREATMENTS)
-    target_link_libraries(${AB_STATISTICS_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_DIVERSITY_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_GROUPS_HISTORY_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_BLACK_QUEEN_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_FREQ_DEP_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_COMPETITION_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_LAST_INDIVIDUALS_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_TROPHIC_STATISTICS_EXECUTABLE} ${TBB_LIBRARIES})
-    target_link_libraries(${AB_HEATMAPS_EXECUTABLE} ${TBB_LIBRARIES})
-  endif(AB_POST_TREATMENTS)
-endif(TBB_FOUND)
 
 find_package(ZLIB REQUIRED)
 if(ZLIB_FOUND)
@@ -318,7 +299,7 @@ elseif(NOT WITH_GRAPHICS_CONTEXT)
   )
 endif(WITH_GRAPHICS_CONTEXT)
 
-target_link_libraries(Evo2Sim z tbb gsl gslcblas)
+target_link_libraries(Evo2Sim z gsl gslcblas)
 
 target_link_libraries(${CREATE_EXECUTABLE} Evo2Sim)
 target_link_libraries(${BOOTSTRAP_EXECUTABLE} Evo2Sim)

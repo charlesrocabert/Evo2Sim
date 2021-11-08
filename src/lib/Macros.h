@@ -3,13 +3,18 @@
  * \file      Macros.h
  * \authors   Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * \date      08-12-2014
- * \copyright Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
+ * \copyright Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon. All rights reserved
  * \license   This project is released under the GNU General Public License
  * \brief     Definition of macros
  */
 
 /****************************************************************************
- * Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+ * Evo2Sim (Evolution of Evolution Simulator)
+ * -------------------------------------------
+ * Digital evolution model dedicated to
+ * bacterial in silico experimental evolution.
+ *
+ * Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
  * Web: https://github.com/charlesrocabert/Evo2Sim
  *
  * This program is free software: you can redistribute it and/or modify
@@ -102,7 +107,7 @@
 /*-------------------------------------*/
 
 #define FRAMERATE      0  /*!< Framerate of the graphic display     */
-#define CELL_SCALE     5  /*!< Cell's scale in the graphic display  */
+#define CELL_SCALE     20  /*!< Cell's scale in the graphic display  */
 #define CELL_SPACE     1  /*!< Space displayed between each cell    */
 #define GRADIENT_SCALE 30 /*!< Gradient's scale                     */
 #define GRADIENT_SIZE  10 /*!< Gradient's size (nb of color points) */

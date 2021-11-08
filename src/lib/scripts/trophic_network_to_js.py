@@ -2,8 +2,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#***************************************************************************
-# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+#****************************************************************************
+# Evo2Sim (Evolution of Evolution Simulator)
+# -------------------------------------------
+# Digital evolution model dedicated to
+# bacterial in silico experimental evolution.
+#
+# Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
@@ -48,7 +53,7 @@ class Node:
 def print_usage():
   print ""
   print "=== WRITE JAVASCRIPT FILES FROM TROPHIC NETWORK FILES ==="
-  print "Usage: python trophic_network_to_js.py [parameters]"
+  print "Usage: python2 trophic_network_to_js.py [parameters]"
   print "Parameters are:"
   print "-h, --help:"
   print "    Print this help, then exit."

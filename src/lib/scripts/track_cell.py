@@ -2,8 +2,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-#***************************************************************************
-# Copyright (C) 2014-2019 Charles Rocabert, Carole Knibbe, Guillaume Beslon
+#****************************************************************************
+# Evo2Sim (Evolution of Evolution Simulator)
+# -------------------------------------------
+# Digital evolution model dedicated to
+# bacterial in silico experimental evolution.
+#
+# Copyright (C) 2014-2021 Charles Rocabert, Carole Knibbe, Guillaume Beslon
 # Web: https://github.com/charlesrocabert/Evo2Sim
 #
 # This program is free software: you can redistribute it and/or modify
