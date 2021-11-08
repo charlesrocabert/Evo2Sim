@@ -93,7 +93,7 @@ The list of contributors is displayed in [AUTHORS.md](AUTHORS.md).
 </table>
 
 ## Download <a name="download"></a>
-Download the latest release: <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest"><img src="https://img.shields.io/badge/version- 1.0.2-green.svg" /></a>
+Download the <a href="https://github.com/charlesrocabert/Evo2Sim/releases/latest">latest release</a>.
 
 ## Evo<sup>2</sup>Sim overview <a name="overview"></a>
 
