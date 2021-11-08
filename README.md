@@ -23,6 +23,11 @@ The software is equipped with the whole tool case of experimental setups, compet
 Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evoevo.eu/), funded by the European Commission (FP7-ICT-610427, FET Proactive: Evolving Living Technologies).
 </p>
 
+<p align="justify">
+The richness of the genotype-to-phenotype mapping and of the environmental model offered by Evo<sup>2</sup>Sim makes it a versatile model, with which many modeling questions can be tackled. With this model, we studied the emergence of a stable polymorphism based on cross-feeding, and in which conditions a stable regulation network could evolve.
+<strong>If you want to try or use this model for research purpose, do not hesitate to contact <a href="mailto:charles[DOT]rocabert[AT]helsinki[DOT]fi">Charles Rocabert</a></strong>.
+</p>
+
 ## Table of contents
 - [Publications](#publications)
 - [Copyright](#copyright)
