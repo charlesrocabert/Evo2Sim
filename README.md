@@ -65,7 +65,7 @@ The richness of the genotype-to-phenotype mapping and of the environmental inter
 
 ## Copyright <a name="copyright"></a>
 
-Copyright &copy; 2014-2019 <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a>, <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>.
+Copyright &copy; 2014-2021 <a href="https://github.com/charlesrocabert">Charles Rocabert</a>, <a href="http://caroleknibbe.fr/">Carole Knibbe</a>, <a href="https://perso.liris.cnrs.fr/guillaume.beslon/G._Beslon_home_page/Welcome.html">Guillaume Beslon</a>.
 All rights reserved.
 
 ## License <a name="license"></a>
