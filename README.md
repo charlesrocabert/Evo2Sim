@@ -16,7 +16,7 @@ Evo<sup>2</sup>Sim is a digital evolution model which takes into account the (ul
 </p>
 
 <p align="justify">
-The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to the HTML viewer, tracking and displaying on the fly every simulation events, from the phylogeny to ecological interactions.
+The software is equipped with the whole tool case of experimental setups, competition assays, phylogenetic analysis. Simulations can be analyzed thanks to the HTML viewer, tracking and displaying on the fly every simulation events, from the phylogeny to ecological interactions (see an example <a href="https://charlesrocabert.github.io/doc/evo2sim_simulation_example/viewer/viewer.html">here</a>).
 </p>
 
 <p align="justify">
@@ -24,8 +24,6 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 </p>
 
 <p align="justify">
-The richness of the genotype-to-phenotype mapping and of the environmental interactions implemented in Evo<sup>2</sup>Sim makes it a versatile model, with which many modeling questions can be tackled. With Evo<sup>2</sup>Sim, we studied the emergence of a stable polymorphism based on cross-feeding, and in which conditions a stable regulation network could evolve.
-
 <strong>:arrow_right: If you want to try or use this model for research purpose, do not hesitate to contact <a href="mailto:charles[DOT]rocabert[AT]helsinki[DOT]fi">Charles Rocabert</a></strong>.
 </p>
 
