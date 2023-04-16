@@ -24,7 +24,7 @@ Evo<sup>2</sup>Sim was first developed during the EvoEvo project (http://www.evo
 </p>
 
 <p align="justify">
-<strong>:arrow_right: If you want to try or use this model for research purpose, do not hesitate to contact <a href="mailto:charles[DOT]rocabert[AT]helsinki[DOT]fi">Charles Rocabert</a></strong>.
+<strong>:arrow_right: If you want to try or use this model for research purpose, do not hesitate to contact <a href="mailto:charles[DOT]rocabert[AT]hhu[DOT]de">Charles Rocabert</a></strong>.
 </p>
 
 ## Table of contents
